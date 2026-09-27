@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World</title>
+    <script>
+        // Same key the interface uses, so a page opened from a dark app is dark.
+        try {
+            if (localStorage.getItem('ignis_dark_mode') === 'true') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
+    </script>
+    <style>
+        :root { --bg:#f8fafc; --fg:#0f172a; --card:#fff; --border:#e2e8f0; --muted:#64748b; }
+        html.dark { --bg:#0f172a; --fg:#f1f5f9; --card:#1e293b; --border:#334155; --muted:#94a3b8; }
+        body {
+            margin:0; padding:2rem; background:var(--bg); color:var(--fg);
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+        }
+        .card { max-width:44rem; padding:1.5rem; border-radius:1rem;
+                background:var(--card); border:1px solid var(--border); }
+        h1 { margin:0 0 .25rem; font-size:1.125rem; }
+        p  { color:var(--muted); font-size:.875rem; line-height:1.6; }
+        pre { background:var(--bg); border:1px solid var(--border); border-radius:.5rem;
+              padding:.75rem; font-size:.8125rem; overflow:auto; max-height:20rem; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Hello World</h1>
+    <p>
+        An example extension. The service writes the machine count to its log
+        every 30 seconds; the count below is read live from the appliance's own
+        API, using the session this browser is already signed in with.
+    </p>
+
+    <p><strong id="count">Reading…</strong></p>
+
+    <h1 style="margin-top:1.5rem">Service log</h1>
+    <pre id="log">Reading…</pre>
+</div>
+
+<script>
+// The page shares an origin with the interface, so the session token in
+// localStorage works here. The path is relative: this page is served from
+// /ext/hello-world/, and the endpoints are two levels up.
+const token = (() => {
+    try { return localStorage.getItem('ignis_session_token') || ''; }
+    catch (e) { return ''; }
+})();
+
+const q = (params) => new URLSearchParams({ ...params, token }).toString();
+
+async function refresh() {
+    try {
+        const r = await fetch(`../../listVMs.cgi?${q({})}`);
+        const d = await r.json();
+        document.getElementById('count').textContent = d.success
+            ? `${(d.vms || []).length} machine(s) defined`
+            : (d.error || 'could not read the machine list');
+    } catch (e) {
+        document.getElementById('count').textContent = e.message;
+    }
+
+    try {
+        const r = await fetch(`../../extManage.cgi?${q({ action: 'log', id: 'hello-world' })}`);
+        const d = await r.json();
+        document.getElementById('log').textContent =
+            (d.success && d.log) ? d.log : 'nothing logged yet';
+    } catch (e) {
+        document.getElementById('log').textContent = e.message;
+    }
+}
+
+refresh();
+setInterval(refresh, 10000);
+</script>
+</body>
+</html>

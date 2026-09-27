@@ -1,0 +1,76 @@
+#!/bin/sh
+#
+# A complete extension, doing the smallest useful thing: a loop that writes the
+# machine count to a log every 30 seconds, and a page that shows it.
+#
+# Every phase is implemented, including the ones that could be omitted, so that
+# copying this file gives a working skeleton rather than a partial one.
+
+PIDFILE="${IG_EXT_DIR}/run.pid"
+LOGFILE="${IG_EXT_DIR}/hello.log"
+
+case "$1" in
+
+install)
+    # Nothing to set up beyond a place to write. IG_EXT_DIR already exists.
+    printf '%s installed\n' "$(date -Iseconds)" >> "${LOGFILE}"
+    ;;
+
+upgrade)
+    # Called instead of install when replacing an existing copy. The log
+    # survives, because it lives in IG_EXT_DIR and only the shipped files are
+    # replaced. A real extension would migrate its state here.
+    printf '%s upgraded\n' "$(date -Iseconds)" >> "${LOGFILE}"
+    ;;
+
+start)
+    # Already running? Say so and succeed: start must be safe to call twice,
+    # because boot and a manual enable can both reach it.
+    if [ -f "${PIDFILE}" ] && kill -0 "$(cat "${PIDFILE}" 2>/dev/null)" 2>/dev/null; then
+        exit 0
+    fi
+    # setsid so the service outlives the control script. Without it the process
+    # is killed with the process group when this returns.
+    setsid sh -c '
+        while :; do
+            n=$(ignis-vm list 2>/dev/null | awk "NR > 1 && NF { n++ } END { printf \"%d\", n + 0 }")
+            printf "%s %s machine(s) defined\n" "$(date -Iseconds)" "${n}" >> "'"${LOGFILE}"'"
+            # Trimmed in place: an unbounded log on an appliance fills the
+            # volume the guests are using.
+            tail -n 200 "'"${LOGFILE}"'" > "'"${LOGFILE}"'.t" && mv "'"${LOGFILE}"'.t" "'"${LOGFILE}"'"
+            sleep 30
+        done
+    ' >/dev/null 2>&1 &
+    echo $! > "${PIDFILE}"
+    ;;
+
+stop)
+    if [ -f "${PIDFILE}" ]; then
+        kill "$(cat "${PIDFILE}" 2>/dev/null)" 2>/dev/null
+        rm -f "${PIDFILE}"
+    fi
+    ;;
+
+status)
+    # Called every time the interface lists extensions, so it does the cheapest
+    # thing that answers the question. It exits directly rather than falling
+    # through to the `exit 0` at the bottom, which would report every extension
+    # as running whatever the real answer was.
+    if [ -f "${PIDFILE}" ] && kill -0 "$(cat "${PIDFILE}" 2>/dev/null)" 2>/dev/null; then
+        exit 0
+    fi
+    exit 1
+    ;;
+
+log)
+    cat "${LOGFILE}" 2>/dev/null
+    ;;
+
+uninstall)
+    # Anything outside IG_EXT_DIR would be undone here. This one owns nothing
+    # else, and the directory is removed for us.
+    :
+    ;;
+
+esac
+exit 0

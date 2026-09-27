@@ -1,0 +1,68 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Extension</title>
+<style>
+  /* Self-contained on purpose. The interface's own stylesheet is name-hashed
+     and changes on every build, so linking to it would break at the next one. */
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0; padding: 2rem;
+    font: 14px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: #f9fafb; color: #111827;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #111827; color: #e5e7eb; }
+    .card { background: #1f2937; border-color: #374151; }
+  }
+  .card {
+    max-width: 40rem; margin: 0 auto; padding: 1.5rem;
+    background: #fff; border: 1px solid #e5e7eb; border-radius: .75rem;
+  }
+  h1 { margin: 0 0 .5rem; font-size: 1.25rem; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: rgba(127,127,127,.15); padding: .1rem .35rem; border-radius: .25rem;
+  }
+</style>
+
+<div class="card">
+  <h1>My Extension</h1>
+  <p>
+    This file is <code>www/index.html</code>, served at <code>/ext/&lt;id&gt;/</code>.
+    Delete the directory if the extension does not need a page.
+  </p>
+  <p>
+    The page itself is a plain file anyone can load, but it shares the
+    interface's origin, so it can call the appliance's endpoints at
+    <code>../../</code> with the session token of whoever is signed in.
+  </p>
+  <p id="out">Asking the appliance what it is running…</p>
+</div>
+
+<script>
+  // A worked example of calling back into the interface: listVMs is the
+  // cheapest endpoint that proves the session is shared. Every endpoint wants
+  // the token the interface keeps in localStorage; without it the answer is
+  // "unauthorized", not an empty list.
+  let token = '';
+  try { token = localStorage.getItem('ignis_session_token') || ''; } catch (e) {}
+
+  fetch(`../../listVMs.cgi?token=${encodeURIComponent(token)}`)
+    .then(r => r.json())
+    .then(d => {
+      if (!d.success) {
+        document.getElementById('out').textContent = d.auth === false
+          ? 'Sign in to the interface first, then reload this page.'
+          : (d.error || 'The appliance refused the request.');
+        return;
+      }
+      const n = (d.vms || []).length;
+      document.getElementById('out').textContent =
+        `The appliance has ${n} machine${n === 1 ? '' : 's'} defined.`;
+    })
+    .catch(() => {
+      document.getElementById('out').textContent =
+        'Could not reach the appliance from this page.';
+    });
+</script>

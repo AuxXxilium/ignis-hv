@@ -1,0 +1,8 @@
+{
+  "id": "hello-world",
+  "name": "Hello World",
+  "version": "1.0.0",
+  "description": "A worked example: a service, a log and a page. Copy it and edit.",
+  "author": "Ignis",
+  "api": 1
+}

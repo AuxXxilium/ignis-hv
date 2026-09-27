@@ -1,0 +1,165 @@
+#!/bin/sh
+#
+# Ignis extension template.
+#
+# Copy this directory, change the id in manifest.json, and edit the two
+# functions below. Everything else is the skeleton the appliance expects and
+# can usually be left alone.
+#
+#   my-extension/
+#     manifest.json     id, name, version -- the id is what it installs as
+#     control           this file
+#     www/index.html    optional; served at /ext/<id>/ if present
+#
+# Package and install it with:
+#   tar czf my-extension.tar.gz my-extension
+# then use Install on the Extensions tab, and Enable.
+#
+# ---------------------------------------------------------------------------
+# What the appliance guarantees
+#
+# control runs as root, with a clean environment -- none of the web request's
+# variables are visible to it -- and these set for you:
+#
+#   IG_EXT_ID     the id from the manifest
+#   IG_EXT_DIR    this directory; yours to write in, and it survives upgrades
+#   IG_EXT_WWW    where www/ is served from
+#   IG_ROOT       the appliance's data volume, /storage/ignis
+#   IG_API        the extension API version, currently 1
+#
+# PATH includes /opt/ignis/bin, so ignis-vm, ignis-storage,
+# ignis-net and the rest are available by name, as are jq and qemu-img.
+#
+# Each phase is run with a timeout: 300 seconds for install, upgrade and
+# uninstall, 60 for everything else. A phase that outlives it is killed.
+# ---------------------------------------------------------------------------
+
+# ------------------------------------------------------------------ settings
+
+INTERVAL=300                        # seconds between runs of DO_WORK
+PIDFILE="${IG_EXT_DIR}/run.pid"
+LOGFILE="${IG_EXT_DIR}/extension.log"
+
+# ------------------------------------------------------------------ your code
+
+# The work. Runs once every INTERVAL seconds while the extension is enabled.
+#
+# Replace this. Whatever it prints goes to the log, which is what the Log
+# button on the Extensions tab shows.
+#
+# If the extension has nothing to do on a timer -- a page, or something that
+# only acts on install -- leave this as it is and set NEEDS_SERVICE=no below.
+# The interface will then show it as installed rather than as stopped.
+DO_WORK() {
+    # awk, not "grep -c ... || echo 0": grep -c prints 0 AND exits 1 when
+    # nothing matches, so the fallback appends a second line and the result
+    # is "0\n0" rather than "0". awk emits one line whatever it is given.
+    printf '%s %s machine(s) defined\n' \
+        "$(date -Iseconds)" \
+        "$(ignis-vm list 2>/dev/null | awk 'NR > 1 && NF { n++ } END { printf "%d", n + 0 }')"
+}
+
+# Set to no for an extension with no background process. status then reports
+# success on the strength of being installed, because "stopped" with a Start
+# button that does nothing is worse than a small inaccuracy.
+NEEDS_SERVICE=yes
+
+# Called once when the extension is first installed. Create whatever the work
+# needs; IG_EXT_DIR already exists.
+ON_INSTALL() {
+    : > "${LOGFILE}"
+}
+
+# Called when a newer copy replaces this one. IG_EXT_DIR survives, so state
+# kept there is still present -- migrate it here if its shape has changed.
+ON_UPGRADE() {
+    :
+}
+
+# Called before the directory is removed. Undo anything created OUTSIDE
+# IG_EXT_DIR -- a file in /etc, a cron entry, an iptables rule. The directory
+# itself is deleted for you.
+ON_UNINSTALL() {
+    :
+}
+
+# ------------------------------------------------------------------- phases
+#
+# Below here is the skeleton. It is written out in full rather than left
+# implicit so that copying this file gives something complete, but editing it
+# is rarely necessary.
+
+case "$1" in
+
+install)
+    ON_INSTALL
+    ;;
+
+upgrade)
+    ON_UPGRADE
+    ;;
+
+start)
+    [ "${NEEDS_SERVICE}" = "yes" ] || exit 0
+
+    # Safe to call twice: boot and a manual enable both reach it, and the
+    # second call must not leave two loops running.
+    if [ -f "${PIDFILE}" ] && kill -0 "$(cat "${PIDFILE}" 2>/dev/null)" 2>/dev/null; then
+        exit 0
+    fi
+
+    # setsid, or the loop is killed with this script's process group the
+    # moment the phase returns.
+    #
+    # The loop calls back into this file rather than repeating DO_WORK inline,
+    # so there is one copy of the work and it can also be run by hand.
+    setsid sh -c '
+        while :; do
+            "'"$0"'" run-once >> "'"${LOGFILE}"'" 2>&1
+            # Trimmed in place. An unbounded log on an appliance eventually
+            # fills the volume the guests are running from.
+            tail -n 500 "'"${LOGFILE}"'" > "'"${LOGFILE}"'.t" 2>/dev/null \
+                && mv "'"${LOGFILE}"'.t" "'"${LOGFILE}"'"
+            sleep '"${INTERVAL}"'
+        done
+    ' >/dev/null 2>&1 &
+    echo $! > "${PIDFILE}"
+    ;;
+
+# Not a phase the appliance calls. The loop above uses it, and so can you
+# while developing:
+#   IG_EXT_DIR=/storage/ignis/extensions/<id> sh /storage/ignis/extensions/<id>/control run-once
+run-once)
+    DO_WORK
+    ;;
+
+stop)
+    if [ -f "${PIDFILE}" ]; then
+        kill "$(cat "${PIDFILE}" 2>/dev/null)" 2>/dev/null
+        rm -f "${PIDFILE}"
+    fi
+    ;;
+
+status)
+    # Asked every time the interface lists extensions, so it does the cheapest
+    # thing that answers the question -- and exits directly, because falling
+    # through to the exit 0 at the bottom would report everything as running
+    # whatever the truth was.
+    [ "${NEEDS_SERVICE}" = "yes" ] || exit 0
+    if [ -f "${PIDFILE}" ] && kill -0 "$(cat "${PIDFILE}" 2>/dev/null)" 2>/dev/null; then
+        exit 0
+    fi
+    exit 1
+    ;;
+
+log)
+    # Whatever this prints is what the Log button shows.
+    cat "${LOGFILE}" 2>/dev/null
+    ;;
+
+uninstall)
+    ON_UNINSTALL
+    ;;
+
+esac
+exit 0

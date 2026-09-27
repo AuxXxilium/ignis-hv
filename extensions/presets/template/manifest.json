@@ -1,0 +1,8 @@
+{
+  "id": "my-extension",
+  "name": "My Extension",
+  "version": "1.0.0",
+  "description": "Copy this, change the id and the name, edit control.",
+  "author": "you",
+  "api": 1
+}
