@@ -32,7 +32,7 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines and
 * **Snapshots and schedules**: take snapshots and roll back to them, and start, shut down or snapshot machines on a timetable. Old snapshots are cleaned up for you
 * **Start at boot**: choose which machines start with the host, and in what order
 * **Import and export**: bring in an `.ova` or disks from ESXi, Hyper-V or VirtualBox, which are converted for you. Export a machine to move it elsewhere
-* **Containers**: run Docker containers and compose projects next to your machines. You can update them by hand or on a schedule, and give each one a disk priority. Docker is an optional extension, installed with one click from the Extensions tab and updated on its own
+* **Containers**: run Docker containers and compose projects next to your machines. You can update them by hand or on a schedule, and give each one a disk priority. Docker is an optional extension, installed from the Extensions tab like any other and updated on its own
 * **Passthrough**: give a machine a real graphics card, network card, disk controller, USB device or whole disk. Ignis shows which devices can be handed over safely
 * **NVIDIA for containers**: an optional extension adds the NVIDIA driver, so containers can use the GPU
 * **Firewall**: an optional extension decides which services on the appliance can be reached, and from where. The web interface, SSH and the consoles always stay open, and a change undoes itself unless you confirm it
