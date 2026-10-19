@@ -32,10 +32,17 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines and
 * **Snapshots and schedules**: take snapshots and roll back to them, and start, shut down or snapshot machines on a timetable. Old snapshots are cleaned up for you
 * **Start at boot**: choose which machines start with the host, and in what order
 * **Import and export**: bring in an `.ova` or disks from ESXi, Hyper-V or VirtualBox, which are converted for you. Export a machine to move it elsewhere
-* **Containers**: run Docker containers and compose projects next to your machines. You can update them by hand or on a schedule, and give each one a disk priority
+* **Containers**: run Docker containers and compose projects next to your machines. You can update them by hand or on a schedule, and give each one a disk priority. Docker is an optional extension, installed with one click from the Extensions tab and updated on its own
 * **Passthrough**: give a machine a real graphics card, network card, disk controller, USB device or whole disk. Ignis shows which devices can be handed over safely
 * **NVIDIA for containers**: an optional extension adds the NVIDIA driver, so containers can use the GPU
+* **Firewall**: an optional extension decides which services on the appliance can be reached, and from where. The web interface, SSH and the consoles always stay open, and a change undoes itself unless you confirm it
+* **AdGuard Home**: an optional extension runs AdGuard Home natively on the appliance as the DNS server for your network, and you control it from inside Ignis
+* **Network shares**: an optional extension shares folders on your storage over SMB, the way a NAS does, with share-only accounts
+* **DSM machines**: an optional extension sets up Synology DSM machines on the Arx loader, ready for DSM's installer on the first start, and keeps their loader up to date
+* **AI**: an optional extension runs language models on the appliance with Ollama, on its NVIDIA, Intel or AMD GPU (CUDA, Vulkan or ROCm), beside online providers such as OpenAI, Anthropic and Gemini with your own keys. One chat for all of them, and one OpenAI- and Ollama-compatible API with its own tokens, so other apps use every model without holding a provider's key
 * **Storage**: install to one disk or several with software RAID, and add more disks later as extra volumes (ext4, XFS or btrfs, alone or as RAID)
+* **Storage health**: see the errors your disks, arrays and filesystems have recorded, run self-tests and read-only surface scans, check all data for silent damage once a month, and let idle disks spin down
+* **History**: what the host and each machine did, recorded in the background — CPU, memory, temperatures, fans, disks and network for the host, and CPU, memory, disk and network for every machine — kept at full detail for two days and as 15-minute averages for a month, with CSV export. Recording never keeps a disk from spinning down
 * **Networking**: private networks with NAT, or bridges that put machines directly on your network. VLANs and bonded network cards are supported
 * **Users and roles**: admin, operator and viewer accounts, each limited to the machines and pages you choose
 * **Host controls**: live monitoring, CPU speed and power settings, fan curves, time, services, and HTTPS with your own certificate or a free one from Let's Encrypt
@@ -66,11 +73,13 @@ Ignis keeps two things apart: **the system**, which is small and replaced as a w
 | **Containers** | Run containers and compose projects, pull images, update and clean up |
 | **Network** | Private and bridged networks for machines, plus the host's own address, VLANs and bonds |
 | **Storage** | Disk images, ISOs, uploads and extra storage volumes |
-| **Schedules** | Timed start, shutdown, snapshot and container update tasks |
+| **Schedules** | Timed start, shutdown, snapshot, container update and data check tasks |
 | **Passthrough** | Graphics cards, PCI devices and USB devices that machines can use |
 | **Users** | Accounts, roles, and which machines and pages each user sees |
 | **System** | Network, time, services, HTTPS and updates |
 | **Monitor** | Live CPU, memory, network and temperature readings, plus CPU and fan control |
+| **History** | What the host and each machine did over the last hour, day, week or month, with CSV export |
+| **Storage Health** | Disk, RAID and filesystem errors, self-tests, surface scans, the monthly data check and disk spin-down |
 | **Extensions** | Install, enable and remove extensions |
 | **Info** | What this host supports, and a report to copy into a bug report |
 

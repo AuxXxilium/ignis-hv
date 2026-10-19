@@ -4,42 +4,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello World</title>
-    <script>
-        // Same key the interface uses, so a page opened from a dark app is dark.
-        try {
-            if (localStorage.getItem('ignis_dark_mode') === 'true') {
-                document.documentElement.classList.add('dark');
-            }
-        } catch (e) {}
-    </script>
-    <style>
-        :root { --bg:#f8fafc; --fg:#0f172a; --card:#fff; --border:#e2e8f0; --muted:#64748b; }
-        html.dark { --bg:#0f172a; --fg:#f1f5f9; --card:#1e293b; --border:#334155; --muted:#94a3b8; }
-        body {
-            margin:0; padding:2rem; background:var(--bg); color:var(--fg);
-            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-        }
-        .card { max-width:44rem; padding:1.5rem; border-radius:1rem;
-                background:var(--card); border:1px solid var(--border); }
-        h1 { margin:0 0 .25rem; font-size:1.125rem; }
-        p  { color:var(--muted); font-size:.875rem; line-height:1.6; }
-        pre { background:var(--bg); border:1px solid var(--border); border-radius:.5rem;
-              padding:.75rem; font-size:.8125rem; overflow:auto; max-height:20rem; }
-    </style>
+    <!-- The interface's look, shared by every extension page. Fixed names, so
+         they survive updates; the script applies the user's dark mode and
+         highlight colour before the body paints. -->
+    <link rel="stylesheet" href="../../ignis-ext.css">
+    <script src="../../ignis-ext.js"></script>
 </head>
 <body>
-<div class="card">
-    <h1>Hello World</h1>
-    <p>
-        An example extension. The service writes the machine count to its log
-        every 30 seconds; the count below is read live from the appliance's own
-        API, using the session this browser is already signed in with.
-    </p>
+<div class="ig-page">
+    <div class="ig-header">
+        <div class="ig-header-title">
+            <span class="ig-icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+            <div>
+                <h1>Hello World</h1>
+                <p>An example extension: a service, a log and a page.</p>
+            </div>
+        </div>
+        <div class="ig-header-actions">
+            <button class="ig-btn" id="refresh">Refresh</button>
+        </div>
+    </div>
 
-    <p><strong id="count">Reading…</strong></p>
+    <div class="ig-stack">
+        <div class="ig-card">
+            <div class="ig-card-header">
+                <div>
+                    <h2>Machines</h2>
+                    <p>Read live from the appliance's own API</p>
+                </div>
+                <span class="ig-badge" id="state">Reading…</span>
+            </div>
+            <div class="ig-card-body">
+                <p>
+                    The service writes the machine count to its log every 30
+                    seconds. The figures below use the session this browser is
+                    already signed in with.
+                </p>
+                <div class="ig-grid">
+                    <div class="ig-stat">
+                        <div class="ig-stat-label">Defined</div>
+                        <div class="ig-stat-value" id="count">—</div>
+                    </div>
+                    <div class="ig-stat">
+                        <div class="ig-stat-label">Running</div>
+                        <div class="ig-stat-value" id="running">—</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <h1 style="margin-top:1.5rem">Service log</h1>
-    <pre id="log">Reading…</pre>
+        <div class="ig-card">
+            <div class="ig-card-header">
+                <h2>Service log</h2>
+            </div>
+            <div class="ig-card-body">
+                <pre id="log">Reading…</pre>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -57,11 +79,24 @@ async function refresh() {
     try {
         const r = await fetch(`../../listVMs.cgi?${q({})}`);
         const d = await r.json();
-        document.getElementById('count').textContent = d.success
-            ? `${(d.vms || []).length} machine(s) defined`
-            : (d.error || 'could not read the machine list');
+        const state = document.getElementById('state');
+        if (d.success) {
+            const vms = d.vms || [];
+            document.getElementById('count').textContent = vms.length;
+            document.getElementById('running').textContent =
+                vms.filter(v => v.status === 'running').length;
+            state.className = 'ig-badge ig-badge-success';
+            state.textContent = 'Connected';
+        } else {
+            state.className = 'ig-badge ig-badge-error';
+            state.textContent = d.auth === false ? 'Signed out' : 'Refused';
+            state.title = d.error || 'could not read the machine list';
+        }
     } catch (e) {
-        document.getElementById('count').textContent = e.message;
+        const state = document.getElementById('state');
+        state.className = 'ig-badge ig-badge-error';
+        state.textContent = 'Offline';
+        state.title = e.message;
     }
 
     try {
@@ -76,6 +111,7 @@ async function refresh() {
 
 refresh();
 setInterval(refresh, 10000);
+document.getElementById('refresh').addEventListener('click', refresh);
 </script>
 </body>
 </html>
