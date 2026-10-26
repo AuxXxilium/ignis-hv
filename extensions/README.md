@@ -42,7 +42,9 @@ and the log.
 ## The extensions made for Ignis
 
 Ignis's own extensions, each installed from the **Extensions** tab like any
-other and updated on its own, apart from Ignis:
+other and updated on its own, apart from Ignis. The tab lists what the
+[releases](https://github.com/AuxXxilium/ignis-hv/releases) of this repository
+publish, and installs or updates it from there:
 
 | Extension | What it is |
 | :-- | :-- |
@@ -52,11 +54,24 @@ other and updated on its own, apart from Ignis:
 | `ignis-shares` | Folders on your storage shared over SMB, like a NAS. Accounts made here open the shares and nothing else. Needs **SMB** on under **System > Services** |
 | `ignis-arx` | Synology DSM machines on the Arx loader. Makes the machine, downloads and checks the newest loader, and can configure it so the first start goes straight to DSM's installer. Updates the loader later while keeping its configuration. The machines are ordinary ones in **Machines**, where their card shows the loader and DSM versions |
 | `ignis-ai` | Local language models with Ollama on the appliance's NVIDIA, Intel or AMD GPU, beside the online providers (OpenAI, Anthropic, Gemini and a dozen more, or any endpoint of your own): one chat, and one OpenAI- and Ollama-compatible API with its own tokens for other apps. Ported from Arc AI. The engine is downloaded from its page, and it and the models live on the data volume: uninstalling removes the engine and keeps the models. Intel and AMD GPUs compute through the Vulkan drivers built into Ignis |
-| `ignis-nvidia` | The NVIDIA driver for containers. Built for one Ignis release's kernel, so it is updated together with Ignis |
+| `ignis-nvidia` | The NVIDIA driver for containers. Built for one Ignis release's kernel: the tab offers only the package for the kernel your system runs, and a release that changes the kernel carries a new one |
+| `ignis-gpu3d` | VirtIO GPU (3D) for Linux machines: their OpenGL and Vulkan drawn on the host's Intel, AMD or NVIDIA GPU, with no card passed through. Nothing is added to the system; only a machine with the 3D display uses it. Built with one Ignis release's QEMU, so after an update the machine editor stops offering 3D until the package for the new release is installed, which the tab offers |
 
-The firewall, AdGuard Home, shares, Arx and AI extensions each have a page with
-an endpoint of its own, the way described under [An endpoint of your
-own](#an-endpoint-of-your-own).
+The firewall, AdGuard Home, shares and Arx extensions each have a page with an
+endpoint of its own, the way described under [An endpoint of your
+own](#an-endpoint-of-your-own). The AI extension's page talks to a gateway of
+its own instead.
+
+### Where they come from
+
+A release does not need to carry every extension. For each one the tab offers
+the newest release that contains it, so a release with only the system update,
+or with one or two extensions, leaves the others as they were. Pre-releases are
+skipped. Every download is checked against the SHA-256 GitHub records for it,
+and one without a checksum is not installed.
+
+Your own extensions are not published there: install them from a file with the
+upload button at the top of the same tab.
 
 ## What's in an extension
 
@@ -92,7 +107,7 @@ my-extension/
   - **A name** draws that icon in the interface's own outline style, so it sits
     with the built-in pages and follows the theme. Written exactly as here, as
     the extensions made for Ignis use them: `activity`, `ban`, `battery`, `box`,
-    `brickWall`, `camera`, `clock`, `containers`, `copy`, `cores`, `cpu`,
+    `brickWall`, `camera`, `check`, `clock`, `containers`, `copy`, `cores`, `cpu`,
     `database`, `disc`, `display`, `download`, `edit`, `eraser`, `expand`,
     `extensions`, `file`, `fileText`, `folder`, `folderOpen`, `folderPlus`,
     `folderShare`, `gauge`, `globe`, `gpu`, `hardDrive`, `health`, `heart`,
