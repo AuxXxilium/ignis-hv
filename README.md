@@ -149,6 +149,26 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
     <td width="50%"><img alt="Extensions: apps to download and the ones installed" src="assets/screenshots/extensions.png"><br><sub><b>Extensions</b>: install the apps you want, each updated on its own</sub></td>
     <td width="50%"><img alt="Virtual Machines in the dark mode" src="assets/screenshots/machines.png"><br><sub><b>Virtual Machines</b>: everything about a machine at a glance</sub></td>
   </tr>
+  <tr>
+    <td colspan="2"><img alt="The desktop layout: Virtual Machines, Monitor and Containers in windows of their own" src="assets/screenshots/desktop.png"><br><sub><b>Desktop</b>: every page in a window of its own, with desktop icons and a taskbar</sub></td>
+  </tr>
+</table>
+
+### 🧩 Apps in action
+
+<table>
+  <tr>
+    <td width="50%"><img alt="Web Station: websites with WordPress, HTTPS and a PHP version each" src="assets/screenshots/apps/web.png"><br><sub><b>Web Station</b>: your websites, each with its own certificate and PHP version</sub></td>
+    <td width="50%"><img alt="Game Servers: Minecraft, Valheim and more, with players and usage" src="assets/screenshots/apps/games.png"><br><sub><b>Game Servers</b>: start a server in a few clicks and see who is playing</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img alt="Download Station: downloads and torrents with their progress" src="assets/screenshots/apps/downloads.png"><br><sub><b>Download Station</b>: links, torrents and magnet links in one queue</sub></td>
+    <td width="50%"><img alt="VPN: a WireGuard server with phone, laptop and tablet" src="assets/screenshots/apps/vpn.png"><br><sub><b>VPN</b>: add a device and scan its QR code</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img alt="Mail Server: the DNS records to set for a domain, checked" src="assets/screenshots/apps/mail.png"><br><sub><b>Mail Server</b>: shows which DNS records to set, and checks them</sub></td>
+    <td width="50%"></td>
+  </tr>
 </table>
 
 <sub>Screenshots of the real interface with sample data.</sub>
