@@ -50,19 +50,19 @@ publish, and installs or updates it from there:
 | :-- | :-- |
 | `ignis-docker` | Docker for the Containers page. Images and containers stay on disk while it is turned off |
 | `ignis-shares` | Network Shares: folders shared over SMB like a NAS, and over SFTP and FTPS if you want. Accounts made here open the shares and nothing else |
-| `ignis-drive` | Drive: the shared folders in the browser, with uploads, previews and share links for people without an account |
+| `ignis-drive` | Drive: the shared folders in the browser, with uploads, previews and share links for people without an account. Needs Network Shares |
 | `ignis-photos` | Photos: a timeline, albums, people, places and things, editing and sharing |
 | `ignis-video` | Video Station: movies and TV shows in the browser, and a DLNA server for TVs, consoles and Kodi |
 | `ignis-surveillance` | Surveillance: records IP cameras, live view, motion events and playback, and recognises people, vehicles, faces and plates |
 | `ignis-downloads` | Download Station: links, torrents and magnet links into a folder you choose |
-| `ignis-web` | Web Station: your own websites with PHP and databases, WordPress in one click. Takes ports 80 and 443, so the interface moves to 8080 and 8443 |
-| `ignis-mail` | Mail Server: email for your own domain, with webmail and a spam filter. Needs Web Station for webmail |
+| `ignis-web` | Web Station: your own websites with PHP 8.3, 8.4 or 8.5 and databases, WordPress in one click, memcached, and a DNS server for your own domains on the network cards you choose. Takes ports 80 and 443, so the interface moves to 8080 and 8443 |
+| `ignis-mail` | Mail Server: email for your own domain, with webmail and a spam filter. Works best with Web Station: webmail, certificates, and its DNS server gets the mail records by itself |
 | `ignis-vpn` | VPN: WireGuard, OpenVPN, IPsec and Tailscale, to reach home or to send machines and containers through a VPN |
 | `ignis-san` | SAN Manager: storage for other computers over iSCSI |
 | `ignis-games` | Game Servers: about 150 games, with a console, backups and timetables. Needs Docker |
 | `ignis-ai` | AI: language models on your own GPU beside online services, in one chat, with an API for other apps |
 | `ignis-arx` | Synology DSM machines on the Arx loader, kept up to date |
-| `ignis-adguard` | AdGuard Home as the DNS server for your network. Needs port 53, so dnsmasq must be off under **System > Services** |
+| `ignis-adguard` | AdGuard Home as the DNS server for your network, on the network cards you choose; it can share port 53 with Web Station's DNS server on another card. dnsmasq must be off under **System > Services** |
 | `ignis-dhcp` | A DHCP server for the networks you choose |
 | `ignis-firewall` | Who can reach which service, and filtering between two network ports. The interface, SSH and the consoles always stay open, and a change undoes itself unless you confirm it. Locked out anyway? `ignis-ext disable ignis-firewall` on the console |
 | `ignis-nvidia` | The NVIDIA driver for containers. Made for one Ignis release's kernel, so the tab offers the one that fits your system |
@@ -109,6 +109,8 @@ my-extension/
   the extension is installed as, whatever its folder is called
 - **`name`** and **`version`**: shown on the Extensions tab
 - **`api`**: leave it at `1`
+- **`requires`** and **`recommends`** (optional): other extensions yours needs, or works better with, each with a short reason, e.g. `"requires": [{"id": "ignis-docker", "why": "runs each server as a container"}]`. The Extensions tab shows them, offers to install them, and will not turn yours on while something it requires is missing
+- **`schedules`** (optional): tasks yours offers on the Schedules tab, each with an `id`, a `label` and its settings; Ignis runs them with the `schedule` script in your extension's folder (`schedule run <task> <settings.json>`)
 - **`icon`** and **`perm`** (optional): the sidebar entry for the extension's
   page, below, and the extension's row on the Extensions tab. `perm` is the
   permission an account needs to see the entry and to call the extension's

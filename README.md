@@ -36,6 +36,7 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 * **Windows and Linux**: create, edit, clone and run Windows, Windows Server and Linux machines. Each machine can have its own TPM 2.0 and Secure Boot with Microsoft's keys, so Windows 11 installs without workarounds
 * **Screen in the browser**: open a machine's display in a browser tab. You can change its CD/DVD, and shut it down, reset it or power it off from the same window
 * **Snapshots and backups**: save a machine's state and go back to it. Back it up on a timetable, and old snapshots are cleaned up for you
+* **Schedules for everything**: plan machine tasks, container updates and the tasks of your apps, such as nightly website and mail backups, in one place
 * **Import and export**: bring in machines from ESXi, Hyper-V, VirtualBox or an `.ova` file, and export them as `.ova` for other systems
 * **Your choice of CPU**: give a machine the host's own processor, or a fixed generation it keeps when you move it to other hardware
 * **Passthrough**: give a machine a real graphics card, network card, disk controller, USB device or a whole disk
@@ -67,25 +68,25 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 ### 🧩 Apps
 
-Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis.
+Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis. When an app needs another one, the tab tells you and installs it with a click, and apps you have switched on start by themselves when Ignis starts.
 
 | App | What it does |
 | :-- | :-- |
 | **Docker** | Runs containers on the Containers page |
 | **Network Shares** | Shares folders over SMB like a NAS, and over SFTP and FTPS if you want |
-| **Drive** | Your shared folders in the browser: upload, preview, and share files with a link, also with people who have no account |
+| **Drive** | Your shared folders in the browser: upload, preview, and share files with a link, also with people who have no account. Needs Network Shares |
 | **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
 | **Video Station** | Your movies and TV shows with posters, played in the browser. Also plays on TVs, consoles and Kodi |
 | **Surveillance** | Records your IP cameras, live view in a grid, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you |
 | **Download Station** | Downloads links, torrents and magnet links into a folder you choose |
-| **Web Station** | Hosts your own websites with PHP and databases, including WordPress in one click, each with its own certificate |
-| **Mail Server** | Email for your own domain, with webmail, a spam filter and help with the DNS settings |
+| **Web Station** | Hosts your own websites with PHP 8.3, 8.4 or 8.5 and databases, including WordPress in one click, each with its own certificate. Also a DNS server for your own domains that fills in its records by itself |
+| **Mail Server** | Email for your own domain, with webmail, a spam filter and help with the DNS settings. Works best with Web Station |
 | **VPN** | Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN |
 | **SAN Manager** | Offers storage to other computers over iSCSI |
-| **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables |
+| **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables. Needs Docker |
 | **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
 | **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
-| **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server |
+| **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose |
 | **DHCP Server** | Hands out addresses on the networks you choose |
 | **Firewall** | Decides who can reach which service on Ignis, and can filter traffic between two network ports |
 | **NVIDIA** | The NVIDIA driver, so containers can use the GPU |
@@ -93,7 +94,7 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 | **Vision Runtime** | The image recognition that Photos and Surveillance use |
 
 > [!NOTE]
-> Some of these apps are brand new. If one is not on the Extensions tab yet, it comes with one of the next releases. **Web Station** needs ports 80 and 443 for your websites, so it moves the Ignis interface to ports 8080 and 8443. It asks you to confirm the move first.
+> Some of these apps are brand new. If one is not on the Extensions tab yet, it comes with one of the next releases. **Web Station** needs ports 80 and 443 for your websites, so it moves the Ignis interface to ports 8080 and 8443. It asks you to confirm the move first. Web Station's DNS server and AdGuard Home can run side by side, each on its own network card: for example the DNS server on the card that faces the internet and AdGuard Home on your home network's.
 
 You can also make an app of your own. See [extensions](extensions/README.md).
 
@@ -122,12 +123,12 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **Containers** | Run containers and compose projects, see their logs and usage, update and clean up |
 | **Network** | Networks for your machines, VLANs and bonds |
 | **Storage** | Disk images, ISOs, uploads and extra volumes, shown like a file manager |
-| **Schedules** | Timed start, shutdown, snapshot, backup, container and data check tasks |
+| **Schedules** | Timed start, shutdown, snapshot, backup, container and data check tasks, and the tasks your apps offer: website and mail backups, WordPress updates, downloads only at night, cameras on and off, and more |
 | **Passthrough** | Graphics cards, PCI and USB devices your machines can use |
 | **Monitor** | The host right now, its **History** over time, and **Storage Health** |
 | **Users** | Accounts, roles, and who sees which machines and pages |
 | **System** | The host's name, network, time, CPU and fans, linked hosts, the smart home interface, email, services, updates and a terminal |
-| **Extensions** | Install, update, turn on and remove apps |
+| **Extensions** | Install, update, turn on, restart and remove apps, and see which apps need each other |
 | **Info** | What this host supports, and a report to copy into a bug report |
 
 Every page has a **?** button with help for that page.
