@@ -79,7 +79,7 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 | **Video Station** | Your movies and TV shows with posters, played in the browser. Also plays on TVs, consoles and Kodi |
 | **Surveillance** | Records your IP cameras, live view in a grid, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you |
 | **Download Station** | Downloads links, torrents and magnet links into a folder you choose |
-| **Web Station** | Hosts your own websites with PHP 8.3, 8.4 or 8.5 and databases, including WordPress in one click, each with its own certificate. Also a DNS server for your own domains that fills in its records by itself |
+| **Web Station** | Hosts your own websites and their subdomains with PHP 8.3, 8.4 or 8.5 and databases, including WordPress in one click, each with its own certificate. Also a DNS server for your own domains that fills in its records by itself |
 | **Mail Server** | Email for your own domain, with webmail, a spam filter and help with the DNS settings. Works best with Web Station |
 | **VPN** | Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN |
 | **SAN Manager** | Offers storage to other computers over iSCSI |
@@ -167,7 +167,7 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
     <td width="50%"><img alt="Drive: a folder of pictures as thumbnails" src="assets/screenshots/apps/drive.png"><br><sub><b>Drive</b>: your shared folders in the browser, with share links</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img alt="Web Station: websites with their PHP version and certificate" src="assets/screenshots/apps/web.png"><br><sub><b>Web Station</b>: your websites with HTTPS, PHP 8.3 to 8.5 per site and WordPress in one click</sub></td>
+    <td width="50%"><img alt="Web Station: example.com with its docs and shop subdomains, each with its PHP version, certificate and buttons" src="assets/screenshots/apps/web.png"><br><sub><b>Web Station</b>: each website in a box with its controls, subdomains nested inside, PHP 8.3 to 8.5 and HTTPS per site</sub></td>
     <td width="50%"><img alt="Game Servers: five servers with players and usage" src="assets/screenshots/apps/games.png"><br><sub><b>Game Servers</b>: Minecraft, Valheim and about 150 more, with console and backups</sub></td>
   </tr>
   <tr>
