@@ -48,19 +48,29 @@ publish, and installs or updates it from there:
 
 | Extension | What it is |
 | :-- | :-- |
-| `ignis-docker` | Docker Engine, containerd, runc and Compose for the Containers tab: Docker's own static release, so it survives Ignis updates and is updated on its own. Docker still starts at boot, as it always did. Images and containers stay on disk while it is disabled |
-| `ignis-firewall` | Which services on the appliance can be reached, and from where. The web interface, SSH and the consoles always stay open, and every change undoes itself after a minute unless you confirm it. Locked out anyway? `ignis-ext disable ignis-firewall` on the console |
-| `ignis-adguard` | AdGuard Home, running natively as the DNS server for your network. Controlled from its page in Ignis, with AdGuard's own interface a click away. Needs port 53, so dnsmasq must be off under **System > Services** |
-| `ignis-shares` | Folders on your storage shared over SMB, like a NAS. Accounts made here open the shares and nothing else. Needs **SMB** on under **System > Services** |
-| `ignis-arx` | Synology DSM machines on the Arx loader. Makes the machine, downloads and checks the newest loader, and can configure it so the first start goes straight to DSM's installer. Updates the loader later while keeping its configuration. The machines are ordinary ones in **Machines**, where their card shows the loader and DSM versions |
-| `ignis-ai` | Local language models with Ollama on the appliance's NVIDIA, Intel or AMD GPU, beside the online providers (OpenAI, Anthropic, Gemini and a dozen more, or any endpoint of your own): one chat, and one OpenAI- and Ollama-compatible API with its own tokens for other apps. Ported from Arc AI. The engine is downloaded from its page, and it and the models live on the data volume: uninstalling removes the engine and keeps the models. Intel and AMD GPUs compute through the Vulkan drivers built into Ignis |
-| `ignis-nvidia` | The NVIDIA driver for containers. Built for one Ignis release's kernel: the tab offers only the package for the kernel your system runs, and a release that changes the kernel carries a new one |
-| `ignis-gpu3d` | VirtIO GPU (3D) for Linux machines: their OpenGL and Vulkan drawn on the host's Intel, AMD or NVIDIA GPU, with no card passed through. Nothing is added to the system; only a machine with the 3D display uses it. Built with one Ignis release's QEMU, so after an update the machine editor stops offering 3D until the package for the new release is installed, which the tab offers |
+| `ignis-docker` | Docker for the Containers page. Images and containers stay on disk while it is turned off |
+| `ignis-shares` | Network Shares: folders shared over SMB like a NAS, and over SFTP and FTPS if you want. Accounts made here open the shares and nothing else |
+| `ignis-drive` | Drive: the shared folders in the browser, with uploads, previews and share links for people without an account |
+| `ignis-photos` | Photos: a timeline, albums, people, places and things, editing and sharing |
+| `ignis-video` | Video Station: movies and TV shows in the browser, and a DLNA server for TVs, consoles and Kodi |
+| `ignis-surveillance` | Surveillance: records IP cameras, live view, motion events and playback, and recognises people, vehicles, faces and plates |
+| `ignis-downloads` | Download Station: links, torrents and magnet links into a folder you choose |
+| `ignis-web` | Web Station: your own websites with PHP and databases, WordPress in one click. Takes ports 80 and 443, so the interface moves to 8080 and 8443 |
+| `ignis-mail` | Mail Server: email for your own domain, with webmail and a spam filter. Needs Web Station for webmail |
+| `ignis-vpn` | VPN: WireGuard, OpenVPN, IPsec and Tailscale, to reach home or to send machines and containers through a VPN |
+| `ignis-san` | SAN Manager: storage for other computers over iSCSI |
+| `ignis-games` | Game Servers: about 150 games, with a console, backups and timetables. Needs Docker |
+| `ignis-ai` | AI: language models on your own GPU beside online services, in one chat, with an API for other apps |
+| `ignis-arx` | Synology DSM machines on the Arx loader, kept up to date |
+| `ignis-adguard` | AdGuard Home as the DNS server for your network. Needs port 53, so dnsmasq must be off under **System > Services** |
+| `ignis-dhcp` | A DHCP server for the networks you choose |
+| `ignis-firewall` | Who can reach which service, and filtering between two network ports. The interface, SSH and the consoles always stay open, and a change undoes itself unless you confirm it. Locked out anyway? `ignis-ext disable ignis-firewall` on the console |
+| `ignis-nvidia` | The NVIDIA driver for containers. Made for one Ignis release's kernel, so the tab offers the one that fits your system |
+| `ignis-vcrt` | Video Compute Runtime: video conversion on the GPU for the media apps, and 3D graphics for Linux machines. Made for one Ignis release, so the tab offers the one that fits |
+| `ignis-vision` | Vision Runtime: the image recognition Photos and Surveillance use |
 
-The firewall, AdGuard Home, shares and Arx extensions each have a page with an
-endpoint of its own, the way described under [An endpoint of your
-own](#an-endpoint-of-your-own). The AI extension's page talks to a gateway of
-its own instead.
+Every extension with a page has an endpoint of its own next to it, the way
+described under [An endpoint of your own](#an-endpoint-of-your-own).
 
 ### Where they come from
 
@@ -117,7 +127,10 @@ my-extension/
     `restart`, `schedules`, `search`, `shield`, `shutdown`, `sliders`,
     `sparkles`, `spinner`, `start`, `stop`, `storage`, `sun`, `system`, `tag`,
     `terminal`, `thermometer`, `timer`, `trash`, `upload`, `usb`, `user`,
-    `userPlus`, `users`, `warning`, `zap`
+    `userPlus`, `users`, `warning`, `zap`, and since November also `apps`,
+    `arrowUp`, `chevronDown`, `close`, `eye`, `film`, `gamepad`, `helpCircle`,
+    `image`, `layoutDesktop`, `layoutSidebar`, `mail`, `maximize`, `minimize`,
+    `pin`, `restoreWindow`, `showDesktop`, `snapLeft`, `snapRight`
   - **Anything else** is shown as written, which is how an emoji works. A name
     Ignis does not have is shown as plain text too, so check the spelling
     against the file

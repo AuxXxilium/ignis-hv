@@ -2,9 +2,9 @@
 
 <img width="160" alt="Ignis" src="assets/ignis.svg">
 
-### Ignis — Hypervisor for your own hardware
+### Ignis — The all-in-one hypervisor for your own hardware
 
-Run virtual machines and containers on your own x86-64 PC or server.<br>
+Run virtual machines, containers and apps on your own x86-64 PC or server.<br>
 Install it once, then manage everything from your browser.
 
 <a href="https://github.com/AuxXxilium/ignis-hv/releases/latest"><img alt="Download" src="https://img.shields.io/badge/download-red?style=for-the-badge&label=latest&color=%23FF0000"></a>
@@ -29,86 +29,125 @@ Install it once, then manage everything from your browser.
 
 ## ✨ What Ignis does
 
-Ignis turns a PC or server into a small, dedicated host for virtual machines and containers. You install it from a USB stick, and from then on everything is done in the browser at `https://<your-ignis-address>`. No desktop, no separate management tool.
+Ignis turns a PC or server into a small, dedicated host for virtual machines, containers and apps. You install it from a USB stick, and from then on you do everything in your browser at `https://<your-ignis-address>`. You don't need a desktop or any other program.
 
-* **Virtual machines**: create, edit, clone and run Windows, Windows Server and Linux machines, with BIOS or UEFI and Secure Boot. Each machine can have its own TPM 2.0, so Windows 11 installs without workarounds
-* **CPU of your choice**: give a machine the host's own processor, or a named generation from Core 2 to Zen 5 that it can keep when it moves to other hardware. Ignis says what the host cannot provide
-* **Screen in the browser**: open any machine's display in a browser tab, change its CD/DVD while it runs, and read its serial output even after it has stopped
-* **Snapshots and schedules**: take snapshots and roll back to them, and start, shut down, snapshot or back up machines on a timetable. Old snapshots are cleaned up for you
+### 🖥️ Virtual machines
+
+* **Windows and Linux**: create, edit, clone and run Windows, Windows Server and Linux machines. Each machine can have its own TPM 2.0 and Secure Boot with Microsoft's keys, so Windows 11 installs without workarounds
+* **Screen in the browser**: open a machine's display in a browser tab. You can change its CD/DVD, and shut it down, reset it or power it off from the same window
+* **Snapshots and backups**: save a machine's state and go back to it. Back it up on a timetable, and old snapshots are cleaned up for you
+* **Import and export**: bring in machines from ESXi, Hyper-V, VirtualBox or an `.ova` file, and export them as `.ova` for other systems
+* **Your choice of CPU**: give a machine the host's own processor, or a fixed generation it keeps when you move it to other hardware
+* **Passthrough**: give a machine a real graphics card, network card, disk controller, USB device or a whole disk
 * **Start at boot**: choose which machines start with the host, and in what order
-* **Import and export**: bring in an `.ova` or disks from ESXi, Hyper-V or VirtualBox, which are converted for you. Export a machine as an `.ova` that other hypervisors accept, in the background with a progress bar, or on a schedule as a backup
-* **Containers**: run Docker containers and compose projects next to your machines. You can update them by hand or on a schedule, and give each one a disk priority. Docker is an optional extension, installed from the Extensions tab like any other and updated on its own
-* **Passthrough**: give a machine a real graphics card, network card, disk controller, USB device or whole disk. Ignis shows which devices can be handed over safely
-* **NVIDIA for containers**: an optional extension adds the NVIDIA driver, so containers can use the GPU
-* **3D graphics for Linux machines**: an optional extension adds a VirtIO GPU (3D), which draws a Linux guest's OpenGL and Vulkan on the host's Intel, AMD or NVIDIA GPU, with no card passed through
-* **Firewall**: an optional extension decides which services on the appliance can be reached, and from where. The web interface, SSH and the consoles always stay open, and a change undoes itself unless you confirm it
-* **AdGuard Home**: an optional extension runs AdGuard Home natively on the appliance as the DNS server for your network, and you control it from inside Ignis
-* **Network shares**: an optional extension shares folders on your storage over SMB, the way a NAS does, with share-only accounts
-* **DSM machines**: an optional extension sets up Synology DSM machines on the Arx loader, ready for DSM's installer on the first start, and keeps their loader up to date
-* **AI**: an optional extension runs language models on the appliance with Ollama, on its NVIDIA, Intel or AMD GPU (CUDA, Vulkan or ROCm), beside online providers such as OpenAI, Anthropic and Gemini with your own keys. One chat for all of them, and one OpenAI- and Ollama-compatible API with its own tokens, so other apps use every model without holding a provider's key
-* **Storage**: install to one disk or several with software RAID, and add more disks later as extra volumes (ext4, XFS or btrfs, alone or as RAID)
-* **Storage health**: see the errors your disks, arrays and filesystems have recorded, run self-tests and read-only surface scans, check all data for silent damage once a month, and let idle disks spin down
-* **History**: what the host and each machine did, recorded in the background — CPU, memory, temperatures, fans, disks and network for the host, and CPU, memory, disk and network for every machine — kept at full detail for two days and as 15-minute averages for a month, with CSV export. Recording never keeps a disk from spinning down
-* **Networking**: private networks with NAT, or bridges that put machines directly on your network. VLANs and bonded network cards are supported
+
+### 📦 Containers
+
+* **Docker in the browser**: create and run containers and compose projects, see their logs and live usage, and manage their networks and volumes
+* **Easy updates**: update by hand or on a timetable. If an update fails, the old version comes back
+
+### 🗄️ Storage and the host
+
+* **Disks your way**: the system on one disk or a mirror, your data on one disk or software RAID. Add more disks later as extra volumes
+* **Storage Health**: see disk errors, run disk tests, check your data for hidden damage once a month, and let idle disks spin down
+* **Monitor and History**: what the host and every machine are doing right now, and over the last hour, day, week or month
+* **Several hosts as one**: link your Ignis hosts and run their machines from one interface. A machine can have a standby copy on a second host, ready if the first one fails
+* **For your smart home**: a read-only interface for Home Assistant, Prometheus and similar apps
+
+### 🌐 Network
+
+* **Networks for your machines**: private networks, or bridges that put machines straight on your network. VLANs and bonded network cards are supported, also per machine
+* **HTTPS**: with your own certificate or a free one from Let's Encrypt
+
+### 🔐 Sign-in and security
+
 * **Users and roles**: admin, operator and viewer accounts, each limited to the machines and pages you choose
-* **Host controls**: live monitoring, CPU speed and power settings, fan curves, time, services, and HTTPS with your own certificate or a free one from Let's Encrypt
-* **Extensions**: add services, commands or pages to the appliance, and they survive updates. Install and update them from the Ignis releases on the Extensions tab, or upload your own
-* **Safe updates**: install the newest release straight from the System tab, or a version from a file or a link. The previous version is kept, so you can go back to it from the boot menu
+* **Two-factor sign-in**: with an authenticator app, recovery codes for emergencies and codes by email. A browser you trust can skip the code for 30 days
+* **Screen lock**: Ignis locks itself after the time you choose, and you unlock it with your password
+
+### 🧩 Apps
+
+Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis.
+
+| App | What it does |
+| :-- | :-- |
+| **Docker** | Runs containers on the Containers page |
+| **Network Shares** | Shares folders over SMB like a NAS, and over SFTP and FTPS if you want |
+| **Drive** | Your shared folders in the browser: upload, preview, and share files with a link, also with people who have no account |
+| **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
+| **Video Station** | Your movies and TV shows with posters, played in the browser. Also plays on TVs, consoles and Kodi |
+| **Surveillance** | Records your IP cameras, live view in a grid, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you |
+| **Download Station** | Downloads links, torrents and magnet links into a folder you choose |
+| **Web Station** | Hosts your own websites with PHP and databases, including WordPress in one click, each with its own certificate |
+| **Mail Server** | Email for your own domain, with webmail, a spam filter and help with the DNS settings |
+| **VPN** | Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN |
+| **SAN Manager** | Offers storage to other computers over iSCSI |
+| **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables |
+| **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
+| **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
+| **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server |
+| **DHCP Server** | Hands out addresses on the networks you choose |
+| **Firewall** | Decides who can reach which service on Ignis, and can filter traffic between two network ports |
+| **NVIDIA** | The NVIDIA driver, so containers can use the GPU |
+| **Video Compute Runtime** | Video conversion on your GPU for the media apps, and 3D graphics for Linux machines without passing a card through |
+| **Vision Runtime** | The image recognition that Photos and Surveillance use |
+
+> [!NOTE]
+> Some of these apps are brand new. If one is not on the Extensions tab yet, it comes with one of the next releases. **Web Station** needs ports 80 and 443 for your websites, so it moves the Ignis interface to ports 8080 and 8443. It asks you to confirm the move first.
+
+You can also make an app of your own. See [extensions](extensions/README.md).
 
 ---
 
 ## 🧭 How it works
 
 ```
-USB stick → Installer → choose disks and RAID → Ignis on the machine's own disks
-                                                   └─ web interface at https://<address>
-                                                        ├─ virtual machines (KVM/QEMU)
-                                                        ├─ containers (Docker)
-                                                        └─ host: storage, network, users, updates
+USB stick → Installer → choose disks → Ignis on the machine's own disks
+                                          └─ web interface at https://<address>
+                                               ├─ virtual machines
+                                               ├─ containers
+                                               ├─ apps
+                                               └─ host: storage, network, users, updates
 ```
 
-Ignis keeps two things apart: **the system**, which is small and replaced as a whole by each update, and **your data**: machines, disk images, ISOs, containers and settings. Your data lives on its own volume, so an update never touches it and a failed update can be undone.
+Ignis keeps two things apart: **the system**, which each update replaces as a whole, and **your data**: machines, disk images, containers, apps and settings. Your data lives on a volume of its own, so an update never touches it, and a failed update can be undone.
 
 ---
 
-## 🖥️ The web interface
+## 🖱️ The web interface
 
 | Page | What you do there |
 | :-- | :-- |
-| **Virtual Machines** | Create, start, stop and edit machines, open their display, change discs, take snapshots, clone, import and export as `.ova` |
-| **Containers** | Run containers and compose projects, pull images, update and clean up |
-| **Network** | Private and bridged networks for machines, plus the host's own address, VLANs and bonds |
-| **Storage** | Disk images, ISOs, uploads and extra storage volumes |
-| **Schedules** | Timed start, shutdown, snapshot, `.ova` backup, container update and data check tasks |
-| **Passthrough** | Graphics cards, PCI devices and USB devices that machines can use |
-| **Users** | Accounts, roles, and which machines and pages each user sees |
-| **System** | Network, time, services, HTTPS and updates |
-| **Monitor** | Live CPU, memory, network and temperature readings, plus CPU and fan control |
-| **History** | What the host and each machine did over the last hour, day, week or month, with CSV export |
-| **Storage Health** | Disk, RAID and filesystem errors, self-tests, surface scans, the monthly data check and disk spin-down |
-| **Extensions** | Install, update, enable and remove extensions, from the Ignis releases or your own upload |
+| **Virtual Machines** | Create, start, stop and edit machines, open their display, take snapshots, clone, import and export |
+| **Containers** | Run containers and compose projects, see their logs and usage, update and clean up |
+| **Network** | Networks for your machines, VLANs and bonds |
+| **Storage** | Disk images, ISOs, uploads and extra volumes, shown like a file manager |
+| **Schedules** | Timed start, shutdown, snapshot, backup, container and data check tasks |
+| **Passthrough** | Graphics cards, PCI and USB devices your machines can use |
+| **Monitor** | The host right now, its **History** over time, and **Storage Health** |
+| **Users** | Accounts, roles, and who sees which machines and pages |
+| **System** | The host's name, network, time, CPU and fans, linked hosts, the smart home interface, email, services, updates and a terminal |
+| **Extensions** | Install, update, turn on and remove apps |
 | **Info** | What this host supports, and a report to copy into a bug report |
 
-Every page has a **?** button with help written for that page, including what common error messages mean.
+Every page has a **?** button with help for that page.
 
-On **Monitor**, **History** and **Storage Health** you arrange the cards yourself: drag them where you want them and make them as wide as you like.
-
-The interface has a light and a dark mode and several accent colours to choose from.
+Pick the look you like from the account menu: a light or dark mode, an accent colour, and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar and wallpapers.
 
 ### 📸 A look inside
 
 <table>
   <tr>
-    <td width="50%"><img alt="Monitor: live CPU, memory, load and every core" src="assets/screenshots/monitor.png"><br><sub><b>Monitor</b>: the host right now, down to every core and its clock</sub></td>
-    <td width="50%"><img alt="History: the last day of CPU, memory, temperatures, fans and network" src="assets/screenshots/history.png"><br><sub><b>History</b>: the last hour, day, week or month, host and machines</sub></td>
+    <td width="50%"><img alt="Monitor: live CPU, memory, load and every core" src="assets/screenshots/monitor.png"><br><sub><b>Monitor</b>: the host right now, down to every core</sub></td>
+    <td width="50%"><img alt="History: the last day of CPU, memory, temperatures, fans and network" src="assets/screenshots/history.png"><br><sub><b>History</b>: the last hour, day, week or month</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img alt="The machine editor on its General tab" src="assets/screenshots/vm-editor.png"><br><sub><b>Machine editor</b>: CPU, memory, firmware, TPM and the guest's OS on one tab</sub></td>
-    <td width="50%"><img alt="Containers: Docker, its containers and a compose project" src="assets/screenshots/containers.png"><br><sub><b>Containers</b>: Docker containers and compose projects beside the machines</sub></td>
+    <td width="50%"><img alt="The machine editor on its General tab" src="assets/screenshots/vm-editor.png"><br><sub><b>Machine editor</b>: CPU, memory, firmware and TPM on one tab</sub></td>
+    <td width="50%"><img alt="Containers: the container list with an immich compose project" src="assets/screenshots/containers.png"><br><sub><b>Containers</b>: containers with their logs, details and updates, beside the machines</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img alt="Extensions: Docker, Arx DSM, AI, AdGuard Home, Firewall and Network Shares" src="assets/screenshots/extensions.png"><br><sub><b>Extensions</b>: add only what you use, each updated on its own</sub></td>
-    <td width="50%"><img alt="Virtual Machines in the dark mode" src="assets/screenshots/machines.png"><br><sub><b>Virtual Machines</b>: guest agent, addresses and passthrough at a glance</sub></td>
+    <td width="50%"><img alt="Extensions: apps to download and the ones installed" src="assets/screenshots/extensions.png"><br><sub><b>Extensions</b>: install the apps you want, each updated on its own</sub></td>
+    <td width="50%"><img alt="Virtual Machines in the dark mode" src="assets/screenshots/machines.png"><br><sub><b>Virtual Machines</b>: everything about a machine at a glance</sub></td>
   </tr>
 </table>
 
@@ -118,49 +157,49 @@ The interface has a light and a dark mode and several accent colours to choose f
 
 ## 📋 What you need
 
-* An x86-64 machine you own, with virtualisation (Intel VT-x or AMD-V) turned on in the bios
-* For passthrough: an IOMMU (Intel VT-d or AMD-Vi), also turned on in the bios
+* An x86-64 PC or server, with virtualisation (Intel VT-x or AMD-V) turned on in the BIOS
+* For passthrough: Intel VT-d or AMD-Vi, also turned on in the BIOS
 * A USB stick for the installer
-* One or more disks for Ignis. 64 GB or more is a good start, and your machines need room on top of that
+* At least one disk for Ignis. 64 GB or more is a good start, plus room for your machines
 * Two or more disks if you want RAID
 * A wired network
 
-The **Info** page shows what your host supports once Ignis is running, and says what is missing if something is.
+Once Ignis is running, the **Info** page shows what your host supports, and what is missing.
 
 ---
 
 ## 💿 Installing
 
 1. Download the latest ISO from the [releases](https://github.com/AuxXxilium/ignis-hv/releases/latest) and write it to a USB stick
-2. Boot the machine from the stick and choose **Install**
+2. Start the machine from the stick and choose **Install**
 3. Pick the disks to install to. **Everything on them is erased**
-4. Choose how the disks work together, for the system and for your data separately: a single disk, a mirror, or another RAID level. Only the levels your disk count allows are offered
+4. Choose where the system goes (one disk or a mirror) and how the disks for your data work together. Only the options your disks allow are offered
 5. Set a root password
-6. Remove the stick and reboot. The screen shows the address to open in your browser. Sign in as `root`
+6. Remove the stick and restart. The screen shows the address to open in your browser. Sign in as `root`
 
-With several disks, Ignis puts a boot loader on every one of them, so the machine still boots if one disk fails.
+With several disks, every disk can start Ignis, so the machine still boots if one of them fails.
 
 ---
 
 ## ⬆️ Updates
 
-Updates are done under **System → Update**. It shows the newest release that carries an update, and **Download and stage** fetches it on the appliance and checks it against the SHA-256 GitHub records for the file. You can also give it an update file, or a link to one from the [releases](https://github.com/AuxXxilium/ignis-hv/releases/latest). Ignis prepares the new version next to the running one, and your machines keep running while it does. When you click **Apply**, it restarts into the new version.
+Ignis checks for new releases by itself and tells you through the bell at the top. You install them under **System → Update**: **Download and stage** fetches the new version and checks it, and your machines keep running meanwhile. **Apply** restarts into the new version.
 
-Extensions are updated on their own, from the **Extensions** tab: it lists what the releases offer for your system and installs or updates it there.
+Apps are updated on their own, on the **Extensions** tab.
 
-Your settings, passwords and certificates are carried across. Machines, disk images, containers, networks and users are never touched by an update.
+Your settings, passwords and certificates are kept. Machines, disk images, containers, networks, users and app data are never touched by an update.
 
-The previous version is kept for one update cycle. If something is wrong, choose it from the boot menu to go back.
+The previous version is kept. If something is wrong after an update, choose it from the boot menu to go back.
 
 ---
 
 ## 🔒 Security
 
-* Every action in the interface checks who is signed in and what they are allowed to do. Hiding a page in the interface is not what protects it
-* Failed sign-ins are rate-limited, and repeated guessing at the login page or SSH gets the address blocked for a while
-* A machine's display is only reachable through the signed-in web interface, never directly over the network
-* HTTPS is available with a self-signed certificate, one you upload, or a free one from Let's Encrypt
-* Extensions and containers run with a lot of access to the host, so install only what you trust. Only admins can manage them
+* Every action checks who is signed in and what they may do
+* Repeated wrong passwords at the login page or over SSH get the address blocked for a while
+* Two-factor sign-in and the screen lock protect your account, even on a shared computer
+* A machine's display can only be opened through the signed-in web interface
+* Apps and containers have a lot of access to the host, so install only what you trust. Only admins can manage them
 
 ---
 
