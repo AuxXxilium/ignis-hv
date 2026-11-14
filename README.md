@@ -150,7 +150,7 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
     <td width="50%"><img alt="Virtual Machines in the dark mode" src="assets/screenshots/machines.png"><br><sub><b>Virtual Machines</b>: everything about a machine at a glance</sub></td>
   </tr>
   <tr>
-    <td colspan="2"><img alt="The desktop layout: Virtual Machines, Monitor and Containers in windows of their own" src="assets/screenshots/desktop.png"><br><sub><b>Desktop</b>: every page in a window of its own, with desktop icons and a taskbar</sub></td>
+    <td colspan="2"><img alt="The desktop layout: Virtual Machines, Monitor and Containers in windows of their own" src="assets/screenshots/desktop.png"><br><sub><b>Desktop</b>: every page in a window of its own, with a taskbar and your wallpaper</sub></td>
   </tr>
 </table>
 
@@ -158,15 +158,23 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
 
 <table>
   <tr>
-    <td width="50%"><img alt="Web Station: websites with WordPress, HTTPS and a PHP version each" src="assets/screenshots/apps/web.png"><br><sub><b>Web Station</b>: your websites, each with its own certificate and PHP version</sub></td>
-    <td width="50%"><img alt="Game Servers: Minecraft, Valheim and more, with players and usage" src="assets/screenshots/apps/games.png"><br><sub><b>Game Servers</b>: start a server in a few clicks and see who is playing</sub></td>
+    <td width="50%"><img alt="Photos: a timeline of pictures grouped by day" src="assets/screenshots/apps/photos.png"><br><sub><b>Photos</b>: your pictures as a timeline, by people, places and things</sub></td>
+    <td width="50%"><img alt="Video Station: posters under Continue watching and Recently added" src="assets/screenshots/apps/video.png"><br><sub><b>Video Station</b>: your films and shows with posters, in the browser and on your TV</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img alt="Download Station: downloads and torrents with their progress" src="assets/screenshots/apps/downloads.png"><br><sub><b>Download Station</b>: links, torrents and magnet links in one queue</sub></td>
-    <td width="50%"><img alt="VPN: a WireGuard server with phone, laptop and tablet" src="assets/screenshots/apps/vpn.png"><br><sub><b>VPN</b>: add a device and scan its QR code</sub></td>
+    <td width="50%"><img alt="Surveillance: four cameras live in a grid" src="assets/screenshots/apps/surveillance.png"><br><sub><b>Surveillance</b>: live view, recordings and alerts for your IP cameras</sub></td>
+    <td width="50%"><img alt="Drive: a folder of pictures as thumbnails" src="assets/screenshots/apps/drive.png"><br><sub><b>Drive</b>: your shared folders in the browser, with share links</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img alt="Mail Server: the DNS records to set for a domain, checked" src="assets/screenshots/apps/mail.png"><br><sub><b>Mail Server</b>: shows which DNS records to set, and checks them</sub></td>
+    <td width="50%"><img alt="Web Station: websites with their PHP version and certificate" src="assets/screenshots/apps/web.png"><br><sub><b>Web Station</b>: your websites with HTTPS, PHP 8.3 to 8.5 per site and WordPress in one click</sub></td>
+    <td width="50%"><img alt="Game Servers: five servers with players and usage" src="assets/screenshots/apps/games.png"><br><sub><b>Game Servers</b>: Minecraft, Valheim and about 150 more, with console and backups</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img alt="Download Station: a download queue with progress" src="assets/screenshots/apps/downloads.png"><br><sub><b>Download Station</b>: links and torrents straight onto your storage</sub></td>
+    <td width="50%"><img alt="VPN: WireGuard devices with their QR codes" src="assets/screenshots/apps/vpn.png"><br><sub><b>VPN</b>: WireGuard, OpenVPN, IPsec and Tailscale, with a QR code per device</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img alt="Mail Server: the DNS records to set for a domain" src="assets/screenshots/apps/mail.png"><br><sub><b>Mail Server</b>: email for your own domain, with a DNS check</sub></td>
     <td width="50%"></td>
   </tr>
 </table>
