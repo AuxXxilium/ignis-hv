@@ -176,7 +176,7 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
   </tr>
   <tr>
     <td width="50%"><img alt="Mail Server: the DNS records to set for a domain" src="assets/screenshots/apps/mail.png"><br><sub><b>Mail Server</b>: email for your own domain, with a DNS check</sub></td>
-    <td width="50%"></td>
+    <td width="50%"><img alt="Web Station's DNS tab: the DNS server on the internet-facing adapter, and zones with records from Web Station and Mail Server" src="assets/screenshots/apps/dns.png"><br><sub><b>DNS server</b>: your domains' records, filled in by your websites and mail</sub></td>
   </tr>
 </table>
 
