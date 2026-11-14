@@ -178,6 +178,10 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
     <td width="50%"><img alt="Mail Server: the DNS records to set for a domain" src="assets/screenshots/apps/mail.png"><br><sub><b>Mail Server</b>: email for your own domain, with a DNS check</sub></td>
     <td width="50%"><img alt="Web Station's DNS tab: the DNS server on the internet-facing adapter, and zones with records from Web Station and Mail Server" src="assets/screenshots/apps/dns.png"><br><sub><b>DNS server</b>: your domains' records, filled in by your websites and mail</sub></td>
   </tr>
+  <tr>
+    <td width="50%"><img alt="Drive: three share links in boxes, with their limits and buttons" src="assets/screenshots/apps/drive-links.png"><br><sub><b>Drive</b>: share links for files and folders, with passwords, expiry, download limits and upload requests</sub></td>
+    <td width="50%"><img alt="Game Servers: a Minecraft server's Add-ons tab with its installed Modrinth plugins" src="assets/screenshots/apps/games-addons.png"><br><sub><b>Game Servers</b>: add mods and plugins from Modrinth, with a console, config files and backups per server</sub></td>
+  </tr>
 </table>
 
 <sub>Screenshots of the real interface with sample data.</sub>
