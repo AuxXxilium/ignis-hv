@@ -68,13 +68,13 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 ### 🧩 Apps
 
-Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis. When an app needs another one, the tab tells you and installs it with a click, and apps you have switched on start by themselves when Ignis starts.
+Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis. When an app requires another one, the tab tells you and installs it with a click, and apps you have switched on start by themselves when Ignis starts.
 
 | App | What it does |
 | :-- | :-- |
 | **Docker** | Runs containers on the Containers page |
 | **Network Shares** | Shares folders over SMB like a NAS, and over SFTP and FTPS if you want |
-| **Drive** | Your shared folders in the browser: upload, preview, and share files with a link, also with people who have no account. Needs Network Shares |
+| **Drive** | Your shared folders in the browser: upload, preview, and share files with a link, also with people who have no account. Requires Network Shares |
 | **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
 | **Video Station** | Your movies and TV shows with posters, played in the browser. Also plays on TVs, consoles and Kodi |
 | **Surveillance** | Records your IP cameras, live view in a grid, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you |
@@ -83,7 +83,7 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 | **Mail Server** | Email for your own domain, with webmail, a spam filter and help with the DNS settings. Works best with Web Station |
 | **VPN** | Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN |
 | **SAN Manager** | Offers storage to other computers over iSCSI |
-| **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables. Needs Docker |
+| **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables. Requires Docker |
 | **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
 | **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
 | **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose |

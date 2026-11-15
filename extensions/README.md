@@ -50,7 +50,7 @@ publish, and installs or updates it from there:
 | :-- | :-- |
 | `ignis-docker` | Docker for the Containers page. Images and containers stay on disk while it is turned off |
 | `ignis-shares` | Network Shares: folders shared over SMB like a NAS, and over SFTP and FTPS if you want. Accounts made here open the shares and nothing else |
-| `ignis-drive` | Drive: the shared folders in the browser, with uploads, previews and share links for people without an account. Needs Network Shares |
+| `ignis-drive` | Drive: the shared folders in the browser, with uploads, previews and share links for people without an account. Requires Network Shares |
 | `ignis-photos` | Photos: a timeline, albums, people, places and things, editing and sharing |
 | `ignis-video` | Video Station: movies and TV shows in the browser, and a DLNA server for TVs, consoles and Kodi |
 | `ignis-surveillance` | Surveillance: records IP cameras, live view, motion events and playback, and recognises people, vehicles, faces and plates |
@@ -59,7 +59,7 @@ publish, and installs or updates it from there:
 | `ignis-mail` | Mail Server: email for your own domain, with webmail and a spam filter. Works best with Web Station: webmail, certificates, and its DNS server gets the mail records by itself |
 | `ignis-vpn` | VPN: WireGuard, OpenVPN, IPsec and Tailscale, to reach home or to send machines and containers through a VPN |
 | `ignis-san` | SAN Manager: storage for other computers over iSCSI |
-| `ignis-games` | Game Servers: about 150 games, with a console, backups and timetables. Needs Docker |
+| `ignis-games` | Game Servers: about 150 games, with a console, backups and timetables. Requires Docker |
 | `ignis-ai` | AI: language models on your own GPU beside online services, in one chat, with an API for other apps |
 | `ignis-arx` | Synology DSM machines on the Arx loader, kept up to date |
 | `ignis-adguard` | AdGuard Home as the DNS server for your network, on the network cards you choose; it can share port 53 with Web Station's DNS server on another card. dnsmasq must be off under **System > Services** |
