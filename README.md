@@ -184,6 +184,10 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
     <td width="50%"><img alt="Drive: three share links in boxes, with their limits and buttons" src="assets/screenshots/apps/drive-links.png"><br><sub><b>Drive</b>: share links for files and folders, with passwords, expiry, download limits and upload requests</sub></td>
     <td width="50%"><img alt="Game Servers: a Minecraft server's Add-ons tab with its installed Modrinth plugins" src="assets/screenshots/apps/games-addons.png"><br><sub><b>Game Servers</b>: add mods and plugins from Modrinth, with a console, config files and backups per server</sub></td>
   </tr>
+  <tr>
+    <td width="50%"><img alt="Web Browser settings: start page, downloads folder on a share, and switches for the internet and the home network" src="assets/screenshots/apps/browser.png"><br><sub><b>Web Browser</b>: a browser on Ignis, inside the page; you choose what it may reach and where downloads go</sub></td>
+    <td width="50%"><img alt="Windows Apps: two bottles, each with its drives and buttons" src="assets/screenshots/apps/winapps.png"><br><sub><b>Windows Apps</b>: Windows programs in your browser, each set in a bottle that sees only the folders you allow</sub></td>
+  </tr>
 </table>
 
 <sub>Screenshots of the real interface with sample data.</sub>
