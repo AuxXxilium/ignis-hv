@@ -85,6 +85,8 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 | **SAN Manager** | Offers storage to other computers over iSCSI |
 | **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables. Requires Docker |
 | **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
+| **Web Browser** | A browser that runs on Ignis and shows inside the page. Open your router, cameras and other devices on your home network from anywhere, look something up while you work, and save downloads straight to a shared folder. You choose whether it may reach the internet, your home network or both |
+| **Windows Apps** | Runs Windows programs on Ignis and shows them in your browser, without a Windows licence. Each set of programs gets its own Windows with its own drive C:, and sees only the shared folders you allow, plus a folder of your own that all your programs share |
 | **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
 | **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose |
 | **DHCP Server** | Hands out addresses on the networks you choose |
