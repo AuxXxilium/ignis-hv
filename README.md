@@ -46,6 +46,7 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 * **Docker in the browser**: create and run containers and compose projects, see their logs and live usage, and manage their networks and volumes
 * **Easy updates**: update by hand or on a timetable. If an update fails, the old version comes back
+* **Linux containers (LXC)**: whole Linux systems that start in seconds, on their own page. Pick Debian, Ubuntu, Alpine and many more from a list of ready images, or bring your own. Each one gets a console in the browser, CPU and memory limits, your machines' networks and the shared folders you choose, with snapshots, backups and clones. They are kept apart from the host by default
 
 ### 🗄️ Storage and the host
 
@@ -77,6 +78,7 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 | **Drive** | Your shared folders in the browser: upload, preview, and share files with a link, also with people who have no account. Requires Network Shares |
 | **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
 | **Video Station** | Your movies and TV shows with posters, played in the browser. Also plays on TVs, consoles and Kodi |
+| **Audio Station** | Your music by album, artist, genre and folder, with playlists, favourites, lyrics and internet radio. Plays in the browser, in music apps that speak Subsonic, and on receivers, speakers and TVs |
 | **Surveillance** | Records your IP cameras, live view in a grid, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you |
 | **Download Station** | Downloads links, torrents and magnet links into a folder you choose |
 | **Web Station** | Hosts your own websites and their subdomains with PHP 8.3, 8.4 or 8.5 and databases, including WordPress in one click, each with its own certificate. Also a DNS server for your own domains that fills in its records by itself |
@@ -87,6 +89,8 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 | **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
 | **Web Browser** | A browser that runs on Ignis and shows inside the page. Open your router, cameras and other devices on your home network from anywhere, look something up while you work, and save downloads straight to a shared folder. You choose whether it may reach the internet, your home network or both |
 | **Windows Apps** | Runs Windows programs on Ignis and shows them in your browser, without a Windows licence. Each set of programs gets its own Windows with its own drive C:, and sees only the shared folders you allow, plus a folder of your own that all your programs share |
+| **Android Apps** | Runs Android apps on Ignis and shows them in your browser, each in a window of its own or as a whole Android screen. You choose Android with Google's apps or without. Requires Display Runtime |
+| **Display Runtime** | The screen that Web Browser, Windows Apps and Android Apps run on. Uses your graphics card when one is free. Installed by itself with the apps that need it |
 | **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
 | **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose |
 | **DHCP Server** | Hands out addresses on the networks you choose |
@@ -122,6 +126,7 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | Page | What you do there |
 | :-- | :-- |
 | **Virtual Machines** | Create, start, stop and edit machines, open their display, take snapshots, clone, import and export |
+| **LXC** | Linux containers from ready images: start, stop, console, snapshots, backups and clones |
 | **Containers** | Run containers and compose projects, see their logs and usage, update and clean up |
 | **Network** | Networks for your machines, VLANs and bonds |
 | **Storage** | Disk images, ISOs, uploads and extra volumes, shown like a file manager |
