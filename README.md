@@ -63,7 +63,7 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 ### 🔐 Sign-in and security
 
-* **Users and roles**: admin, operator and viewer accounts, each limited to the machines and pages you choose
+* **Users and roles**: admin, operator and viewer accounts, each limited to the machines and pages you choose. Every permission says what it allows, and which of your apps it opens
 * **Two-factor sign-in**: with an authenticator app, recovery codes for emergencies and codes by email. A browser you trust can skip the code for 30 days
 * **Screen lock**: Ignis locks itself after the time you choose, and you unlock it with your password
 
@@ -133,14 +133,14 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **Schedules** | Timed start, shutdown, snapshot, backup, container and data check tasks, and the tasks your apps offer: website and mail backups, WordPress updates, downloads only at night, cameras on and off, and more |
 | **Passthrough** | Graphics cards, PCI and USB devices your machines can use |
 | **Monitor** | The host right now, its **History** over time, and **Storage Health** |
-| **Users** | Accounts, roles, and who sees which machines and pages |
-| **System** | The host's name, network, time, CPU (governor, turbo and clock limits) and fans, linked hosts, the smart home interface, email, services, updates and a terminal |
+| **Users** | Accounts, roles and their permissions, and who sees which machines and pages |
+| **System** | The host's name, network, time, CPU (governor, turbo and clock limits) and fans, linked hosts, the smart home interface, email, services, updates, a terminal, and **shortlinks**: addresses of your own such as `http://<ip>/download` that open a page straight away |
 | **Extensions** | Install, update, turn on, restart and remove apps, see which apps need each other and what each package includes |
 | **Info** | What this host supports, and a report to copy into a bug report |
 
 Every page has a **?** button with help for that page.
 
-Pick the look you like from the account menu: a light or dark mode, an accent colour, a wallpaper (northern lights, mountains, waves, dunes and more, or a picture of your own) and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar. Settings are switches, and a short note at the bottom of the screen confirms what you saved.
+Pick the look you like from the account menu: a light or dark mode, an accent colour, a wallpaper (northern lights, mountains, waves, dunes and more, or a picture of your own) and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar. Your language and a 12- or 24-hour clock are saved with your account. The account menu is also where you restart or shut down Ignis, if your account may. Settings are switches, and a short note at the bottom of the screen confirms what you saved. The address bar shows just Ignis's address, whatever page you are on.
 
 ### 📸 A look inside
 
@@ -174,7 +174,7 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
     <td width="50%"><img alt="Drive: a folder of pictures as thumbnails" src="assets/screenshots/apps/drive.png"><br><sub><b>Drive</b>: your shared folders in the browser, with share links</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img alt="Web Station: example.com with its docs and shop subdomains, each with its PHP version, certificate and buttons" src="assets/screenshots/apps/web.png"><br><sub><b>Web Station</b>: each website in a box with its controls, subdomains nested inside, PHP 8.3 to 8.5 and HTTPS per site</sub></td>
+    <td width="50%"><img alt="Web &amp; Mail on its Web Station tab: example.com with its docs and shop subdomains, each with its PHP version, certificate and buttons" src="assets/screenshots/apps/web.png"><br><sub><b>Web &amp; Mail</b>: Web Station's websites, each in a box with its controls, subdomains nested inside, PHP 8.3 to 8.5 and HTTPS per site; Mail Server is a tab away</sub></td>
     <td width="50%"><img alt="Game Servers: five servers with players and usage" src="assets/screenshots/apps/games.png"><br><sub><b>Game Servers</b>: Minecraft, Valheim and about 150 more, with console and backups</sub></td>
   </tr>
   <tr>
