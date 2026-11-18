@@ -52,7 +52,7 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 * **Disks your way**: the system on one disk or a mirror, your data on one disk or software RAID. Add more disks later as extra volumes
 * **Storage Health**: see disk errors, run disk tests, check your data for hidden damage once a month, and let idle disks spin down
-* **Monitor and History**: what the host and every machine are doing right now, and over the last hour, day, week or month
+* **Monitor and History**: what the host and every machine are doing right now, and over the last hour, day, week or month. Live readings refresh every few seconds, and you can switch that off
 * **Several hosts as one**: link your Ignis hosts and run their machines from one interface. A machine can have a standby copy on a second host, ready if the first one fails
 * **For your smart home**: a read-only interface for Home Assistant, Prometheus and similar apps
 
@@ -87,7 +87,7 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 | **SAN Manager** | Offers storage to other computers over iSCSI |
 | **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables. Requires Docker |
 | **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
-| **Web Browser** | A browser that runs on Ignis and shows inside the page. Open your router, cameras and other devices on your home network from anywhere, look something up while you work, and save downloads straight to a shared folder. You choose whether it may reach the internet, your home network or both |
+| **Web Browser** | A browser that runs on Ignis and shows inside the page, with tabs and a toolbar like the browser you know. Open your router, cameras and other devices on your home network from anywhere, look something up while you work, and save downloads straight to a shared folder. You choose whether it may reach the internet, your home network or both |
 | **Windows Apps** | Runs Windows programs on Ignis and shows them in your browser, without a Windows licence. Each set of programs gets its own Windows with its own drive C:, and sees only the shared folders you allow, plus a folder of your own that all your programs share |
 | **Android Apps** | Runs Android apps on Ignis and shows them in your browser, each in a window of its own or as a whole Android screen. You choose Android with Google's apps or without. Requires Display Runtime |
 | **Display Runtime** | The screen that Web Browser, Windows Apps and Android Apps run on. Uses your graphics card when one is free. Installed by itself with the apps that need it |
@@ -129,18 +129,18 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **LXC** | Linux containers from ready images: start, stop, console, snapshots, backups and clones |
 | **Containers** | Run containers and compose projects, see their logs and usage, update and clean up |
 | **Network** | Networks for your machines, VLANs and bonds |
-| **Storage** | Disk images, ISOs, uploads and extra volumes, shown like a file manager |
+| **Storage** | Disk images, ISOs, uploads and extra volumes, shown like a file manager. You choose how large an upload may be (4 GB unless you change it) |
 | **Schedules** | Timed start, shutdown, snapshot, backup, container and data check tasks, and the tasks your apps offer: website and mail backups, WordPress updates, downloads only at night, cameras on and off, and more |
 | **Passthrough** | Graphics cards, PCI and USB devices your machines can use |
 | **Monitor** | The host right now, its **History** over time, and **Storage Health** |
 | **Users** | Accounts, roles, and who sees which machines and pages |
-| **System** | The host's name, network, time, CPU and fans, linked hosts, the smart home interface, email, services, updates and a terminal |
+| **System** | The host's name, network, time, CPU (governor, turbo and clock limits) and fans, linked hosts, the smart home interface, email, services, updates and a terminal |
 | **Extensions** | Install, update, turn on, restart and remove apps, and see which apps need each other |
 | **Info** | What this host supports, and a report to copy into a bug report |
 
 Every page has a **?** button with help for that page.
 
-Pick the look you like from the account menu: a light or dark mode, an accent colour, and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar and wallpapers.
+Pick the look you like from the account menu: a light or dark mode, an accent colour, a wallpaper (northern lights, mountains, waves, dunes and more, or a picture of your own) and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar. Settings are switches, and a short note at the bottom of the screen confirms what you saved.
 
 ### 📸 A look inside
 
@@ -190,7 +190,7 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
     <td width="50%"><img alt="Game Servers: a Minecraft server's Add-ons tab with its installed Modrinth plugins" src="assets/screenshots/apps/games-addons.png"><br><sub><b>Game Servers</b>: add mods and plugins from Modrinth, with a console, config files and backups per server</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img alt="Web Browser settings: start page, downloads folder on a share, and switches for the internet and the home network" src="assets/screenshots/apps/browser.png"><br><sub><b>Web Browser</b>: a browser on Ignis, inside the page; you choose what it may reach and where downloads go</sub></td>
+    <td width="50%"><img alt="Web Browser settings: start page, downloads folder, the switches for the internet and the home network, and the screen" src="assets/screenshots/apps/browser.png"><br><sub><b>Web Browser</b>: a browser on Ignis, inside the page, with tabs; you choose what it may reach and where downloads go</sub></td>
     <td width="50%"><img alt="Windows Apps: two bottles, each with its drives and buttons" src="assets/screenshots/apps/winapps.png"><br><sub><b>Windows Apps</b>: Windows programs in your browser, each set in a bottle that sees only the folders you allow</sub></td>
   </tr>
 </table>
@@ -227,7 +227,7 @@ With several disks, every disk can start Ignis, so the machine still boots if on
 
 ## ⬆️ Updates
 
-Ignis checks for new releases by itself and tells you through the bell at the top. You install them under **System → Update**: **Download and stage** fetches the new version and checks it, and your machines keep running meanwhile. **Apply** restarts into the new version.
+Ignis checks for new releases by itself and tells you through the bell at the top. You install them under **System → Update**: **Download and stage** fetches the new version and checks it, and your machines keep running meanwhile. **Apply** asks once more and restarts into the new version; the page waits for Ignis to come back and then reloads by itself.
 
 Apps are updated on their own, on the **Extensions** tab.
 
