@@ -71,9 +71,11 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis. When an app requires another one, the tab tells you and installs it with a click, and apps you have switched on start by themselves when Ignis starts.
 
+Apps that belong together come as one package: **Web & Mail**, the **Graphics Runtime**, and **Docker** with App Station. One switch turns the whole package on or off, updates and removes it, and its page has a tab for each part. If you had one of the parts installed on its own before, it moves into its package with everything it holds.
+
 | App | What it does |
 | :-- | :-- |
-| **Docker** | Runs containers on the Containers page |
+| **Docker** | Runs containers on the Containers page. With **App Station**: popular self-hosted apps such as Jellyfin, Immich, Nextcloud and Home Assistant in one click |
 | **Network Shares** | Shares folders over SMB like a NAS, and over SFTP and FTPS if you want |
 | **Drive** | Your shared folders in the browser: upload, preview, and share files with a link, also with people who have no account. Requires Network Shares |
 | **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
@@ -81,26 +83,24 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 | **Audio Station** | Your music by album, artist, genre and folder, with playlists, favourites, lyrics and internet radio. Plays in the browser, in music apps that speak Subsonic, and on receivers, speakers and TVs |
 | **Surveillance** | Records your IP cameras, live view in a grid, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you |
 | **Download Station** | Downloads links, torrents and magnet links into a folder you choose |
-| **Web Station** | Hosts your own websites and their subdomains with PHP 8.3, 8.4 or 8.5 and databases, including WordPress in one click, each with its own certificate. Also a DNS server for your own domains that fills in its records by itself |
-| **Mail Server** | Email for your own domain, with webmail, a spam filter and help with the DNS settings. Works best with Web Station |
+| **Web & Mail** | **Web Station** hosts your own websites and their subdomains with PHP 8.3, 8.4 or 8.5 and databases, including WordPress and phpMyAdmin in one click, each with its own certificate, and a DNS server for your own domains that fills in its records by itself. **Mail Server** is email for your own domain, with a spam filter and help with the DNS settings, and **Webmail** reads it in the browser |
 | **VPN** | Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN |
 | **SAN Manager** | Offers storage to other computers over iSCSI |
 | **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables. Requires Docker |
 | **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
 | **Web Browser** | A browser that runs on Ignis and shows inside the page, with tabs and a toolbar like the browser you know. Open your router, cameras and other devices on your home network from anywhere, look something up while you work, and save downloads straight to a shared folder. You choose whether it may reach the internet, your home network or both |
 | **Windows Apps** | Runs Windows programs on Ignis and shows them in your browser, without a Windows licence. Each set of programs gets its own Windows with its own drive C:, and sees only the shared folders you allow, plus a folder of your own that all your programs share |
-| **Android Apps** | Runs Android apps on Ignis and shows them in your browser, each in a window of its own or as a whole Android screen. You choose Android with Google's apps or without. Requires Display Runtime |
-| **Display Runtime** | The screen that Web Browser, Windows Apps and Android Apps run on. Uses your graphics card when one is free. Installed by itself with the apps that need it |
+| **Android Apps** | Runs Android apps on Ignis and shows them in your browser, each in a window of its own or as a whole Android screen. You choose Android with Google's apps or without. Requires the Graphics Runtime |
+| **Graphics Runtime** | The screen that Web Browser, Windows Apps and Android Apps run on (Display Runtime), using your graphics card when one is free, and video conversion on your GPU for the media apps with 3D graphics for Linux machines without passing a card through (Video Compute Runtime). Installed by itself with the apps that need it |
 | **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
 | **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose |
 | **DHCP Server** | Hands out addresses on the networks you choose |
 | **Firewall** | Decides who can reach which service on Ignis, and can filter traffic between two network ports |
 | **NVIDIA** | The NVIDIA driver, so containers can use the GPU |
-| **Video Compute Runtime** | Video conversion on your GPU for the media apps, and 3D graphics for Linux machines without passing a card through |
 | **Vision Runtime** | The image recognition that Photos and Surveillance use |
 
 > [!NOTE]
-> Some of these apps are brand new. If one is not on the Extensions tab yet, it comes with one of the next releases. **Web Station** needs ports 80 and 443 for your websites, so it moves the Ignis interface to ports 8080 and 8443. It asks you to confirm the move first. Web Station's DNS server and AdGuard Home can run side by side, each on its own network card: for example the DNS server on the card that faces the internet and AdGuard Home on your home network's.
+> Some of these apps are brand new. If one is not on the Extensions tab yet, it comes with one of the next releases. **Web & Mail** needs ports 80 and 443 for your websites, so it moves the Ignis interface to ports 8080 and 8443. It asks you to confirm the move first. Web Station's DNS server and AdGuard Home can run side by side, each on its own network card: for example the DNS server on the card that faces the internet and AdGuard Home on your home network's.
 
 You can also make an app of your own. See [extensions](extensions/README.md).
 
@@ -135,7 +135,7 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **Monitor** | The host right now, its **History** over time, and **Storage Health** |
 | **Users** | Accounts, roles, and who sees which machines and pages |
 | **System** | The host's name, network, time, CPU (governor, turbo and clock limits) and fans, linked hosts, the smart home interface, email, services, updates and a terminal |
-| **Extensions** | Install, update, turn on, restart and remove apps, and see which apps need each other |
+| **Extensions** | Install, update, turn on, restart and remove apps, see which apps need each other and what each package includes |
 | **Info** | What this host supports, and a report to copy into a bug report |
 
 Every page has a **?** button with help for that page.
