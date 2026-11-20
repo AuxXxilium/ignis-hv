@@ -59,6 +59,7 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 ### 🌐 Network
 
 * **Networks for your machines**: private networks, or bridges that put machines straight on your network. VLANs and bonded network cards are supported, also per machine
+* **Network & Firewall**: Ignis's own addresses, a firewall that decides who reaches which service, blocklists, countries and port scans, port forwards, and a **router**: one network card to the internet, the others as local networks. Each local network can reach the internet or stay local only, may or may not reach the other local networks, and gets its own DHCP range if you switch it on. A device list shows who is connected, with names of your own and fixed addresses
 * **HTTPS**: with your own certificate or a free one from Let's Encrypt
 
 ### 🔐 Sign-in and security
@@ -69,15 +70,16 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 ### 🧩 Apps
 
-Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis. When an app requires another one, the tab tells you and installs it with a click, and apps you have switched on start by themselves when Ignis starts.
+Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis. In the sidebar your apps sit right under the machines, grouped into **Files**, **Media**, **Web & Mail**, **Network**, **Apps** and **Misc**, and each group can be folded away. When an app requires another one, the tab tells you and installs it with a click, and apps you have switched on start by themselves when Ignis starts.
 
-Apps that belong together come as one package: **Web & Mail**, the **Graphics Runtime**, and **Docker** with App Station. One switch turns the whole package on or off, updates and removes it, and its page has a tab for each part. If you had one of the parts installed on its own before, it moves into its package with everything it holds.
+Apps that belong together come as one package: **Web & Mail**, **Shares & Drive**, **Backup & Sync**, the **Graphics Runtime**, and **Docker** with App Station. One switch turns the whole package on or off, updates and removes it, and its page has a tab for each part. If you had one of the parts installed on its own before, it moves into its package with everything it holds.
 
 | App | What it does |
 | :-- | :-- |
 | **Docker** | Runs containers on the Containers page. With **App Station**: popular self-hosted apps such as Jellyfin, Immich, Nextcloud and Home Assistant in one click |
-| **Network Shares** | Shares folders over SMB like a NAS, and over SFTP and FTPS if you want |
-| **Drive** | Your shared folders in the browser: upload, preview, and share files with a link, also with people who have no account. Requires Network Shares |
+| **Shares & Drive** | **Network Shares** shares folders over SMB like a NAS, and over SFTP and FTPS if you want. **Drive** shows them in the browser: upload, preview, and share files with a link, also with people who have no account |
+| **Backup & Sync** | **Backup** makes encrypted, versioned backups of your folders, your computers and your VMware and Hyper-V machines, to a disk, another Ignis or the cloud, on a schedule. **Cloud Sync** keeps folders in step with Google Drive, OneDrive, Dropbox, S3 and many more |
+| **Ignis Sync** | Keeps folders the same on your phones and computers, peer to peer and end-to-end encrypted, with the Syncthing apps |
 | **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
 | **Video Station** | Your movies and TV shows with posters, played in the browser. Also plays on TVs, consoles and Kodi |
 | **Audio Station** | Your music by album, artist, genre and folder, with playlists, favourites, lyrics and internet radio. Plays in the browser, in music apps that speak Subsonic, and on receivers, speakers and TVs |
@@ -94,8 +96,6 @@ Apps that belong together come as one package: **Web & Mail**, the **Graphics Ru
 | **Graphics Runtime** | The screen that Web Browser, Windows Apps and Android Apps run on (Display Runtime), using your graphics card when one is free, and video conversion on your GPU for the media apps with 3D graphics for Linux machines without passing a card through (Video Compute Runtime). Installed by itself with the apps that need it |
 | **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
 | **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose |
-| **DHCP Server** | Hands out addresses on the networks you choose |
-| **Firewall** | Decides who can reach which service on Ignis, and can filter traffic between two network ports |
 | **NVIDIA** | The NVIDIA driver, so containers can use the GPU |
 | **Vision Runtime** | The image recognition that Photos and Surveillance use |
 
@@ -134,7 +134,8 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **Passthrough** | Graphics cards, PCI and USB devices your machines can use |
 | **Monitor** | The host right now, its **History** over time, and **Storage Health** |
 | **Users** | Accounts, roles and their permissions, and who sees which machines and pages |
-| **System** | The host's name, network, time, CPU (governor, turbo and clock limits) and fans, linked hosts, the smart home interface, email, services, updates, a terminal, and **shortlinks**: addresses of your own such as `http://<ip>/download` that open a page straight away |
+| **Network & Firewall** | Ignis's own network cards and addresses, the router with its local networks, DHCP and connected devices, and the firewall: access, zones, protection, outgoing traffic, port forwards and what was blocked |
+| **System** | The host's name, time, CPU (governor, turbo and clock limits) and fans, linked hosts, the smart home interface, email, services, updates, a terminal, and **shortlinks**: addresses of your own such as `http://<ip>/download` that open a page straight away |
 | **Extensions** | Install, update, turn on, restart and remove apps, see which apps need each other and what each package includes |
 | **Info** | What this host supports, and a report to copy into a bug report |
 
@@ -155,7 +156,7 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
   </tr>
   <tr>
     <td width="50%"><img alt="Extensions: apps to download and the ones installed" src="assets/screenshots/extensions.png"><br><sub><b>Extensions</b>: install the apps you want, each updated on its own</sub></td>
-    <td width="50%"><img alt="Virtual Machines in the dark mode" src="assets/screenshots/machines.png"><br><sub><b>Virtual Machines</b>: everything about a machine at a glance</sub></td>
+    <td width="50%"><img alt="Network &amp; Firewall on its Access tab: the ports always open and the ones opened for apps" src="assets/screenshots/network-firewall.png"><br><sub><b>Network &amp; Firewall</b>: addresses, router, DHCP and the firewall in one place; your apps grouped in the sidebar</sub></td>
   </tr>
   <tr>
     <td colspan="2"><img alt="The desktop layout: Virtual Machines, Monitor and Containers in windows of their own" src="assets/screenshots/desktop.png"><br><sub><b>Desktop</b>: every page in a window of its own, with a taskbar and your wallpaper</sub></td>
