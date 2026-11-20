@@ -2,6 +2,21 @@
 
 What each Ignis release brings, the newest first.
 
+## Next
+
+### 🌐 Network & WiFi
+- **WiFi:** Ignis now has the drivers and tools for WiFi cards from Intel, MediaTek, Realtek, Qualcomm Atheros and Broadcom. The pages to use it as an access point or to join a WiFi follow.
+- **Router devices:** give a device a name of your own and an address of your choice; it gets it the next time it connects, and answers to its name on your network.
+
+### 🎨 Easier to use
+- **Getting started:** a short checklist on the Virtual Machines page for new installations (your own admin account, email, two-factor sign-in, apps, backups). Every step opens the right page and ticks itself.
+- **Email & notifications** are one page now, with one click for Gmail, Outlook, iCloud, GMX, web.de, Yahoo or this appliance's own Mail Server.
+- **Schedules:** ready-made tasks such as nightly snapshots, start and shut-down times, weekly backups and a monthly data check.
+- **Storage:** the Disk images and ISOs tiles show what they hold.
+- **Virtual Networks** is the new name of the page for your machines' networks, so it is not confused with Network & Firewall.
+- **Extensions** are grouped like the sidebar and can be searched.
+- Hints that name a place in Ignis are links that take you there.
+
 ## 26.11.20
 
 *2026-11-20*
