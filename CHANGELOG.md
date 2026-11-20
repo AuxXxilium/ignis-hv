@@ -25,6 +25,7 @@ Everything that changed since the first release (26.11.16).
   - **Backup:** now also backs up your VMware and Hyper-V machines.
   - **Speedtest**, and **LED Control** for UGREEN NAS cases.
 - **App screens are smoother:** Web Browser, Windows Apps and Android Apps now stream with sound, adapt to your connection, and use your graphics card when one is free.
+- **AdGuard Home 1.0:** a fresh look, faster and lighter. New installs use Cloudflare as their DNS server; yours keeps its settings.
 - **Video Station:** pick H.264, H.265 or AV1 for converted videos, with HDR shown correctly.
 - **Many fixes:** Mail Server sends and receives reliably, new game servers start, SAN logins with CHAP work, SMB is reachable from your network, and Android Apps also starts on processors that used to stop it.
 
