@@ -21,6 +21,9 @@ What each Ignis release brings, the newest first.
 
 - **Right-click menus in the apps:** right-click a row, a tile or a box (or press and hold it on a touch screen) in AdGuard, VPN, Surveillance, Download Station, Game Servers, Photos, Video Station, Audio Station, Web & Mail and Network Shares for its actions, such as blocking a domain right from the query log.
 
+### 🛠️ Smaller fixes
+- **SSD trim:** Ignis now tells your SSDs once a week which space is free, so they stay fast and wear evenly (Monitor › Storage Health, with Trim now). Virtual machines already free the space of files you delete inside them.
+
 ## 26.11.20
 
 *2026-11-20*
