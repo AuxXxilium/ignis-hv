@@ -5,7 +5,8 @@ What each Ignis release brings, the newest first.
 ## Next
 
 ### 🌐 Network & WiFi
-- **WiFi:** Ignis now has the drivers and tools for WiFi cards from Intel, MediaTek, Realtek, Qualcomm Atheros and Broadcom. The pages to use it as an access point or to join a WiFi follow.
+- **WiFi:** a new **WiFi** app brings the drivers for WiFi cards from Intel, MediaTek, Realtek, Qualcomm Atheros and Broadcom, so only appliances with a WiFi card download them. With it, Network & Firewall › Adapters lets a WiFi card join a WiFi (even as the internet connection) or serve one of its own, with WPA2/WPA3, 2.4 or 5 GHz and an automatic channel. Ticked as a local network under Router, your WiFi gets its own addresses and rules, like a guest WiFi.
+- **WiFi timer:** choose for each weekday when your WiFi is on, turn it off now until the next on-time, or keep it always on.
 - **Router devices:** give a device a name of your own and an address of your choice; it gets it the next time it connects, and answers to its name on your network.
 
 ### 🎨 Easier to use
