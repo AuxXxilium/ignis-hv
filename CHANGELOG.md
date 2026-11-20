@@ -7,6 +7,7 @@ What each Ignis release brings, the newest first.
 ### 🌐 Network & WiFi
 - **WiFi:** a new **WiFi** app brings the drivers for WiFi cards from Intel, MediaTek, Realtek, Qualcomm Atheros and Broadcom, so only appliances with a WiFi card download them. With it, Network & Firewall › Adapters lets a WiFi card join a WiFi (even as the internet connection) or serve one of its own, with WPA2/WPA3, 2.4 or 5 GHz and an automatic channel. Ticked as a local network under Router, your WiFi gets its own addresses and rules, like a guest WiFi.
 - **WiFi timer:** choose for each weekday when your WiFi is on, turn it off now until the next on-time, or keep it always on.
+- **Dual band and more:** tick 2.4, 5 and 6 GHz for your WiFi -- each band needs a radio of its own, such as two WiFi cards or a card that is two radios. Keep one name and password on all bands, so devices move between them, or give every band its own WiFi and network, like a guest WiFi on 2.4 GHz beside a private one on 5 GHz. Wider channels and WiFi 6 and 7 are used where your card supports them.
 - **Router devices:** give a device a name of your own and an address of your choice; it gets it the next time it connects, and answers to its name on your network.
 
 ### 🎨 Easier to use
