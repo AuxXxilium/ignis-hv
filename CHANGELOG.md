@@ -2,6 +2,11 @@
 
 What each Ignis release brings, the newest first.
 
+## Next
+
+### 🛠️ Smaller fixes
+- Old task files of the scheduler and old sign-in tokens of linked hosts are cleaned up again.
+
 ## 26.11.20
 
 *2026-11-20*
@@ -57,3 +62,5 @@ Everything that changed since the first release (26.11.16).
 - Error pages now look like the rest of Ignis and use your language.
 - Machines on a bridged network keep working when Docker is running.
 - No more log spam on machines without a serial port.
+- The Vision Runtime uses the system's Python now, like every other app, and is smaller.
+- Arx DSM and App Station clean up their old downloads and leftover folders again.
