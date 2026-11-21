@@ -32,7 +32,7 @@ What each Ignis release brings, the newest first.
 - **Internet and Home network per bottle:** switch each off under **Network** on a bottle, or with a right-click on it in Apps or Bottles. Both off, the programs have no network at all; the screen keeps working. New and existing bottles have both on.
 - **Drives you share with a bottle as read and write**, and your shared folder, can be written to again from Windows programs.
 - **Faster app screens:** the browser no longer holds every picture back for about 70 ms, so clicks, typing and the pointer answer sooner in the Web Browser, Windows Apps, Android Apps and machine consoles.
-- **A port for each kind of app screen:** Web Browser 6172, Windows Apps 6173, Android Apps 6174, machine consoles 6175 (UDP and TCP), each with its own named entry in the firewall. Change them under Graphics Runtime. Several people and sessions share an app's port.
+- **A port for each kind of app screen:** Web Browser 6172, Windows Apps 6173, Android Apps 6174, machine consoles 6175, Remote Desktop 6176 (UDP and TCP), each with its own named entry in the firewall. Change them under Graphics Runtime. Several people and sessions share an app's port.
 - The Sessions and Screen settings of Windows Apps, Web Browser and Android Apps are tidied into one row, with what the screen is drawn on shown beside them.
 
 ### 📁 Drive & Shares
@@ -56,6 +56,13 @@ What each Ignis release brings, the newest first.
 - **Scan new files as they arrive** (optional): files copied into the shares are checked within seconds. It needs the scanner kept loaded, which takes about 1 GB of memory; otherwise the scanner loads only while a scan runs.
 - The virus definitions download at the first start and update every day. Findings appear under the bell, and by email or webhook if your notifications send security messages there.
 - **Leave out** folders you pick by name and kinds of files (`*.iso`, `*.log` …); every scan skips them, new files included. A finding's menu has **Exclude this folder**.
+
+### 🖥️ Remote Desktop (new)
+- **Remote Desktop** opens the PCs, servers and virtual machines on your network inside the page, over **RDP** (Windows), **VNC** and **SSH**. Add a connection with its name, address, user and password; the password is kept encrypted on Ignis, or asked each time you connect.
+- **RDP** fits the remote screen to your browser window, passes copy and paste and sound, and can show a shared folder of yours in Windows as a drive; **Upload** puts files into it. Network Level Authentication and TLS are chosen by themselves, or set by hand.
+- **On the screen:** Ctrl+Alt+Del, Clipboard, full screen and Disconnect. Several people can watch the same connection; one has control at a time and the others can take it.
+- **Groups and sharing:** sort connections into groups, keep them for yourself or share them with all users or the ones you pick. The list shows which computers answer, the ones used last come first, and **Test** tries a connection before you save it. **Wake** starts a PC that sleeps (Wake-on-LAN). Your Ignis machines' consoles stay on the Virtual Machines page.
+- It shows on its own port, **6176** (UDP and TCP), with an entry of its own in the firewall; change it under Graphics Runtime. Requires the Graphics Runtime.
 
 ### 🛠️ Smaller fixes
 - **Network Shares:** accounts made for shares can sign in again; before, only root got in. Each account now sees just the shares it may open.
