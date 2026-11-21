@@ -16,6 +16,7 @@ What each Ignis release brings, the newest first.
 - **Recordings:** record now, from the guide, at a time you set, or by series rules (title, keyword, channel, weekdays, time of day), with extra minutes before and after. When there are more recordings at once than tuners, the page says which ones can't be recorded. Recordings are saved as MKV in a folder you choose — by default one Video Station shows — and can be kept to the last few of a series or deleted after a number of days. Started, finished and failed recordings and a lost tuner reach the bell, email and webhooks.
 - **For Plex, Jellyfin, Kodi, VLC and TVs:** switch on **Other players** to get a playlist and guide address, and Ignis also shows up as an HDHomeRun tuner. The port opens in the firewall only while this is on.
 - Tuners in the box need the next system update, which brings their drivers.
+- **The picture fits the window:** the player takes the room under the tabs, so the whole stream shows without scrolling, on wide screens too; the channel list beside it scrolls on its own. On a phone the player comes first, the channels below.
 
 ### 👥 One account for everything
 - **Network Shares use your Ignis users.** A user's password for the web interface now also opens the shares (SMB) — no second account to make. Who may use a share is still set per share; the **Users** tab in Drive & Shares lists the users and links to the **Users** page.
