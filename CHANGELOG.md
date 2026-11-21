@@ -4,6 +4,12 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 📹 Surveillance
+- **HTTP cameras:** when you add a camera, choose what its address is: an RTSP stream, an MJPEG stream, a snapshot picture fetched every few seconds, or an HLS stream. An example address is shown for each. **Test** now works for https cameras too, without the Video Compute Runtime, and says what the camera sends.
+- **Streams for other apps:** in a camera's settings, switch on RTSP, MJPEG, HLS or a snapshot picture for Home Assistant, VLC or a TV. Each stream has its own private address with **Copy**; **New address** or switching the stream off shuts the old address out. RTSP opens only on the networks you pick (Cameras › Streams for other apps), with an entry per camera in the firewall. MJPEG, HLS and the snapshot need the next system update.
+- **Before, one user and password let other apps watch every camera over RTSP.** If that was on, each camera now has its RTSP stream switched on instead, at a new address. Copy the new addresses from the cameras' settings into your other apps.
+- **Live view fits the screen:** 1, 4, 9 or 16 cameras fill the page without scrolling, and full screen shows every camera whole, on wide monitors too.
+
 ### 🛠️ Smaller fixes
 - No more false "data volume is not mounted" message on the console at every start.
 - **Android Apps** start on Intel and AMD graphics cards again (faster than on the processor). If Android cannot start on the card, it switches to the processor by itself and tells you.
