@@ -72,6 +72,7 @@ What each Ignis release brings, the newest first.
 - It shows on its own port, **6176** (UDP and TCP), with an entry of its own in the firewall; change it under Graphics Runtime. Requires the Graphics Runtime.
 
 ### 🛠️ Smaller fixes
+- **Network Shares**: Ignis shows up by itself under Network in Windows Explorer, in the Finder on a Mac and in Linux file managers (a switch on the Connect tab turns it off).
 - **Network Shares:** accounts made for shares can sign in again; before, only root got in. Each account now sees just the shares it may open.
 - **Ignis Recovery** shows French, Spanish, German and Russian correctly on every screen; accents and Cyrillic letters were garbled before.
 - The last user account with user rights can be deleted when root has a password, since root still signs in as an admin then.
