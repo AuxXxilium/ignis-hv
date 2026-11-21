@@ -42,6 +42,7 @@ What each Ignis release brings, the newest first.
 - Each sidebar group has its own colour (Files, Media, Web & Mail, Network, Apps and the rest), on the desktop's app launcher and icons too.
 - Pages show their key numbers under the title: running and stopped machines, vCPUs and memory in use out of the host's, free space, images and more.
 - Machine, LXC and container cards show their state as a coloured edge, and running machines show small CPU and memory rings.
+- The same state edge everywhere something runs: installed extensions, game servers, cameras, Windows Apps bottles, downloads, VPN servers, devices and tunnels, backup tasks, websites, iSCSI targets and LUNs, apps from App Station, DSM machines and the AI engine. Running containers, LXC containers and game servers show CPU and memory rings too, and the apps' boxes lift off the background like the rest.
 - Pages and dialogs open with a short, gentle animation (off if your system asks for less motion).
 
 ### 🛠️ Smaller fixes
