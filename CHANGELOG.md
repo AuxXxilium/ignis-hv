@@ -30,6 +30,13 @@ What each Ignis release brings, the newest first.
 - **A port for each kind of app screen:** Web Browser 6172, Windows Apps 6173, Android Apps 6174, machine consoles 6175 (UDP and TCP), each with its own named entry in the firewall. Change them under Graphics Runtime. Several people and sessions share an app's port.
 - The Sessions and Screen settings of Windows Apps, Web Browser and Android Apps are tidied into one row, with what the screen is drawn on shown beside them.
 
+### 📁 Drive & Shares
+- **Shares & Drive is now called Drive & Shares**, and opens on Drive.
+- **Previews for office files**: Word (.docx, .docm, .dotx, .dotm) and PowerPoint (.pptx, .pptm, .ppsx, .ppsm, .potx, .potm) as pages and slides; Excel (.xlsx, .xlsm, .xltx, .xltm, .xlsb, .xls, .xlt, .xlw) and Lotus sheets as a table with a tab per sheet; OpenDocument (.odt, .ods, .odp and their templates) and the old OpenOffice 1.x files.
+- **The old Office formats too**: .doc, .dot, .ppt, .pot, .pps and Works .wps show their text (slide by slide for presentations, with their pictures); Download gives you the original.
+- **More previews**: .rtf, .epub e-books, Markdown, code and settings files with line numbers and colours, .csv and .tsv as a table, what is inside .zip and .tar archives, HEIC and TIFF pictures. Share links show the same previews.
+- Previews open in a closed-off frame that cannot reach your session; very large and password-protected files are not previewed, Download opens them.
+
 ### 🛠️ Smaller fixes
 - **Network Shares** follow a changed network address again: after Shares had restarted once, every later update of its addresses got stuck in the background, and the stuck updates piled up.
 - No more false "data volume is not mounted" message on the console at every start.

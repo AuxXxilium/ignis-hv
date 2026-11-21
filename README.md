@@ -72,12 +72,12 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis. In the sidebar your apps sit right under the machines, grouped into **Files**, **Media**, **Web & Mail**, **Network**, **Apps** and **Misc**, and each group can be folded away. When an app requires another one, the tab tells you and installs it with a click, and apps you have switched on start by themselves when Ignis starts.
 
-Apps that belong together come as one package: **Web & Mail**, **Shares & Drive**, **Backup & Sync**, the **Graphics Runtime**, and **Docker** with App Station. One switch turns the whole package on or off, updates and removes it, and its page has a tab for each part. If you had one of the parts installed on its own before, it moves into its package with everything it holds.
+Apps that belong together come as one package: **Web & Mail**, **Drive & Shares**, **Backup & Sync**, the **Graphics Runtime**, and **Docker** with App Station. One switch turns the whole package on or off, updates and removes it, and its page has a tab for each part. If you had one of the parts installed on its own before, it moves into its package with everything it holds.
 
 | App | What it does |
 | :-- | :-- |
 | **Docker** | Runs containers on the Containers page. With **App Station**: popular self-hosted apps such as Jellyfin, Immich, Nextcloud and Home Assistant in one click |
-| **Shares & Drive** | **Network Shares** shares folders over SMB like a NAS, and over SFTP and FTPS if you want. **Drive** shows them in the browser: upload, preview, and share files with a link, also with people who have no account |
+| **Drive & Shares** | **Drive** shows your shared folders in the browser: upload, preview and share files with a link, also with people who have no account. The preview opens Word, Excel and PowerPoint files (the old .doc, .xls and .ppt too), OpenDocument, PDF, e-books, Markdown and code, and lists what is inside archives. **Network Shares** shares the folders over SMB like a NAS, and over SFTP and FTPS if you want |
 | **Backup & Sync** | **Backup** makes encrypted, versioned backups of your folders, your computers and your VMware and Hyper-V machines, to a disk, another Ignis or the cloud, on a schedule. **Cloud Sync** keeps folders in step with Google Drive, OneDrive, Dropbox, S3 and many more |
 | **Ignis Sync** | Keeps folders the same on your phones and computers, peer to peer and end-to-end encrypted, with the Syncthing apps |
 | **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
@@ -172,7 +172,7 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
   </tr>
   <tr>
     <td width="50%"><img alt="Surveillance: four cameras live in a grid" src="assets/screenshots/apps/surveillance.png"><br><sub><b>Surveillance</b>: live view that fits your screen, recordings, alerts, and streams for other apps</sub></td>
-    <td width="50%"><img alt="Drive: a folder of pictures as thumbnails" src="assets/screenshots/apps/drive.png"><br><sub><b>Drive</b>: your shared folders in the browser, with share links</sub></td>
+    <td width="50%"><img alt="Drive: a folder of pictures as thumbnails" src="assets/screenshots/apps/drive.png"><br><sub><b>Drive</b>: your shared folders in the browser, with previews of documents, sheets and slides, and share links</sub></td>
   </tr>
   <tr>
     <td width="50%"><img alt="Web &amp; Mail on its Web Station tab: example.com with its docs and shop subdomains, each with its PHP version, certificate and buttons" src="assets/screenshots/apps/web.png"><br><sub><b>Web &amp; Mail</b>: Web Station's websites, each in a box with its controls, subdomains nested inside, its PHP version and HTTPS per site; Mail Server is a tab away</sub></td>
