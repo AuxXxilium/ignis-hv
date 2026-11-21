@@ -2,7 +2,9 @@
 
 What each Ignis release brings, the newest first.
 
-## Next
+## 26.11.21
+
+*2026-11-21*
 
 ### 🚑 Starting your computer
 - **Ignis starts again on newer UEFI computers.** On computers whose firmware protects its memory (common on recent mainboards), an installed Ignis stopped right after the boot menu and the computer went back to its firmware setup. The boot loader is fixed, and an update now brings the fixed boot loader to your disks too, so an installed Ignis keeps starting.
