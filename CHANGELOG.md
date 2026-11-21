@@ -10,6 +10,15 @@ What each Ignis release brings, the newest first.
 - **Before, one user and password let other apps watch every camera over RTSP.** If that was on, each camera now has its RTSP stream switched on instead, at a new address. Copy the new addresses from the cameras' settings into your other apps.
 - **Live view fits the screen:** 1, 4, 9 or 16 cameras fill the page without scrolling, and full screen shows every camera whole, on wide monitors too.
 
+### 🪟 Windows Apps and app screens
+- **Uploading into a bottle works again** ("could not write the file into the bottle"), and the Windows desktop shows instead of staying black.
+- **Install and upload from the Desktop view:** **Install a program** and **Upload file** sit in the Desktop view's toolbar, and you can drop files onto the screen: installers (.exe, .msi) go to C:\Installers and start, other files land on the Windows desktop.
+- **Internet and Home network per bottle:** switch each off under **Network** on a bottle, or with a right-click on it in Apps or Bottles. Both off, the programs have no network at all; the screen keeps working. New and existing bottles have both on.
+- **Drives you share with a bottle as read and write**, and your shared folder, can be written to again from Windows programs.
+- **Faster app screens:** the browser no longer holds every picture back for about 70 ms, so clicks, typing and the pointer answer sooner in the Web Browser, Windows Apps, Android Apps and machine consoles.
+- **A port for each kind of app screen:** Web Browser 6172, Windows Apps 6173, Android Apps 6174, machine consoles 6175 (UDP and TCP), each with its own named entry in the firewall. Change them under Graphics Runtime. Several people and sessions share an app's port.
+- The Sessions and Screen settings of Windows Apps, Web Browser and Android Apps are tidied into one row, with what the screen is drawn on shown beside them.
+
 ### 🛠️ Smaller fixes
 - No more false "data volume is not mounted" message on the console at every start.
 - **Android Apps** start on Intel and AMD graphics cards again (faster than on the processor). If Android cannot start on the card, it switches to the processor by itself and tells you.
