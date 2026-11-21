@@ -38,6 +38,7 @@ What each Ignis release brings, the newest first.
 - Previews open in a closed-off frame that cannot reach your session; very large and password-protected files are not previewed, Download opens them.
 
 ### 🛠️ Smaller fixes
+- **Android Apps** has Android's taskbar at the bottom of the full screen: your pinned apps, all apps and Back, Home and Recents, for switching between apps like on a tablet. Switch it off under Settings › Screen; it shows from the next start.
 - **Android Apps** opens on the full Android screen with its home screen by default. With **One window per app**, the page now says that Android shows only the apps you open, with buttons to open an app or switch to the full screen, and **Home** opens the app list.
 - **Calendar** and the desktop clock's calendar start the week on Monday.
 - **Network Shares** follow a changed network address again: after Shares had restarted once, every later update of its addresses got stuck in the background, and the stuck updates piled up.
