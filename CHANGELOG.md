@@ -2,6 +2,11 @@
 
 What each Ignis release brings, the newest first.
 
+## Next
+
+### 🛠️ Smaller fixes
+- **Android Apps** start on Intel and AMD graphics cards again (faster than on the processor). If Android cannot start on the card, it switches to the processor by itself and tells you.
+
 ## 26.11.21
 
 *2026-11-21*
