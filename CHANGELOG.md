@@ -4,6 +4,12 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 📊 Storage Analyzer (new)
+- **Monitor › Storage Analyzer** shows what uses the space on your volumes: a map of the folders you can click into, the space by kind of file and by when files last changed, the biggest files and folders, files that are there more than once, empty folders, files nobody has changed for three years, and a line of how the used space grows day by day.
+- It scans every night (02:30 unless you choose another time) or when you press **Scan now**, at the lowest priority so your machines don't notice. Duplicates are compared by their content; what was read once is remembered, so later scans are quick.
+- A right-click opens a file or folder in **Storage**, copies its path, or moves a file in a share to that share's recycle bin, where Drive can restore it. Every list can be saved as CSV.
+- **Storage** has a button that leads straight there.
+
 ### 👥 One account for everything
 - **Network Shares use your Ignis users.** A user's password for the web interface now also opens the shares (SMB) — no second account to make. Who may use a share is still set per share; the **Users** tab in Drive & Shares lists the users and links to the **Users** page.
 - **FTP, FTPS and SFTP** sign in with the Ignis users too, for users given the new permission **FTP, FTPS and SFTP** on the Users page. Admins have it.

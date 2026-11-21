@@ -52,6 +52,7 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 * **Disks your way**: the system on one disk or a mirror, your data on one disk or software RAID. Add more disks later as extra volumes
 * **Storage Health**: see disk errors, run disk tests, check your data for hidden damage once a month, and let idle disks spin down
+* **Storage Analyzer**: what uses the space, folder by folder in a map, by kind of file and by age, with the biggest files and folders, duplicates, empty folders, files nobody changed for three years, and how the used space grows. It scans at night, at the lowest priority
 * **Monitor and History**: what the host and every machine are doing right now, and over the last hour, day, week or month. Live readings refresh every few seconds, and you can switch that off
 * **Several hosts as one**: link your Ignis hosts and run their machines from one interface. A machine can have a standby copy on a second host, ready if the first one fails
 * **For your smart home**: a read-only interface for Home Assistant, Prometheus and similar apps
@@ -136,7 +137,7 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **Storage** | Disk images, ISOs, uploads, extra volumes and the drives in your box, shown like a file manager. You choose how large an upload may be (4 GB unless you change it) |
 | **Schedules** | Timed start, shutdown, snapshot, backup, container and data check tasks, and the tasks your apps offer: website and mail backups, WordPress updates, downloads only at night, cameras on and off, and more |
 | **Passthrough** | Graphics cards, PCI and USB devices your machines can use |
-| **Monitor** | The host right now, its **History** over time, and **Storage Health** |
+| **Monitor** | The host right now, its **History** over time, **Storage Health**, and the **Storage Analyzer**: what uses the space |
 | **Users** | Accounts, roles and their permissions, and who sees which machines and pages |
 | **Network & Firewall** | Ignis's own network cards and addresses, the router with its local networks, DHCP and connected devices, and the firewall: access, zones, protection, outgoing traffic, port forwards and what was blocked |
 | **System** | The host's name, time, CPU (governor, turbo and clock limits) and fans, linked hosts, the smart home interface, email, services, updates, a terminal, and **shortlinks**: addresses of your own such as `http://<ip>/download` that open a page straight away |
