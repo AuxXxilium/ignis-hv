@@ -89,7 +89,7 @@ What each Ignis release brings, the newest first.
 - **Antivirus** scans your shares for viruses and other malware with ClamAV. **Scan everything** checks every share (and any folders you add), **Scan this folder** just one; a **Scan for viruses** task on the Schedules tab does it regularly. Disk images and ISOs are left out unless you say otherwise.
 - Infected files go into a **quarantine** that only the appliance can read, or are only reported, as you choose. **Restore** puts a file back with its owner and permissions; **Not a threat** stops a signature from being reported again.
 - **Scan new files as they arrive** (optional): files copied into the shares are checked within seconds. It needs the scanner kept loaded, which takes about 1 GB of memory; otherwise the scanner loads only while a scan runs.
-- The virus definitions download at the first start and update every day. Findings appear under the bell, and by email or webhook if your notifications send security messages there.
+- The virus definitions download at the first start and update by themselves every 24 hours, or as often as you set under **Settings › Virus definitions**; switch that off to update only by hand or on a schedule. **Update before each scan** fetches new ones before every full, folder and scheduled scan (unless they are under an hour old); if that fails, the scan still runs and History says so. Findings appear under the bell, and by email or webhook if your notifications send security messages there.
 - **Leave out** folders you pick by name and kinds of files (`*.iso`, `*.log` …); every scan skips them, new files included. A finding's menu has **Exclude this folder**.
 
 ### 🖥️ Remote Desktop (new)
