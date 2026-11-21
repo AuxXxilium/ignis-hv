@@ -38,6 +38,8 @@ What each Ignis release brings, the newest first.
 - Previews open in a closed-off frame that cannot reach your session; very large and password-protected files are not previewed, Download opens them.
 
 ### 🛠️ Smaller fixes
+- **Android Apps** opens on the full Android screen with its home screen by default. With **One window per app**, the page now says that Android shows only the apps you open, with buttons to open an app or switch to the full screen, and **Home** opens the app list.
+- **Calendar** and the desktop clock's calendar start the week on Monday.
 - **Network Shares** follow a changed network address again: after Shares had restarted once, every later update of its addresses got stuck in the background, and the stuck updates piled up.
 - No more false "data volume is not mounted" message on the console at every start.
 - **Android Apps** start on Intel and AMD graphics cards again (faster than on the processor). If Android cannot start on the card, it switches to the processor by itself and tells you.
