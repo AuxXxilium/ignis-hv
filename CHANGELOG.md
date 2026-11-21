@@ -21,7 +21,8 @@ What each Ignis release brings, the newest first.
 - **Network boot:** Network & Firewall › Network boot lets computers on the networks you pick start from Ignis over the network: Ignis Recovery, ISOs from your storage, or netboot.xyz. Choose the default entry and how long the menu waits. It is off until you switch it on, its ports open only while it is on, and only accounts with the new **Network boot** permission can change it.
 
 ### 💾 Backups
-- **System backups:** Backup & Sync keeps a copy of a computer's whole disk, every partition with its layout. Open a partition of any system backup right on the page and restore single files from it into a share. For now Linux computers make system backups with a small script; the Ignis app follows.
+- **System backups:** Backup & Sync keeps a copy of a computer's whole disk, every partition with its layout. Open a partition of any system backup right on the page and restore single files from it into a share. Linux computers make system backups with a small script; Windows computers with the Ignis app (below).
+- **Whole Windows computer:** the Ignis app for Windows backs up the whole system disk, block by block, while you keep working: Windows, programs, settings and files, with free space costing nothing. Back up now or every week or day, also when nobody is signed in. Windows asks once for administrator rights. Ignis Recovery puts it back onto an empty disk.
 - **Ignis Recovery:** a small boot system to put a whole computer back from a system backup. Download it on the Backup & Sync page as an ISO or an image for a USB stick, or start it over the network. It finds your Ignis, signs you in, and lets you pick the computer, the date and the disk to write to, in English, German, French, Spanish or Russian. Over the network it starts on computers in BIOS (legacy) mode for now; for the others, use the USB stick.
 
 ### 🎨 Easier to use
