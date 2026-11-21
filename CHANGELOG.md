@@ -55,6 +55,7 @@ What each Ignis release brings, the newest first.
 - Infected files go into a **quarantine** that only the appliance can read, or are only reported, as you choose. **Restore** puts a file back with its owner and permissions; **Not a threat** stops a signature from being reported again.
 - **Scan new files as they arrive** (optional): files copied into the shares are checked within seconds. It needs the scanner kept loaded, which takes about 1 GB of memory; otherwise the scanner loads only while a scan runs.
 - The virus definitions download at the first start and update every day. Findings appear under the bell, and by email or webhook if your notifications send security messages there.
+- **Leave out** folders you pick by name and kinds of files (`*.iso`, `*.log` …); every scan skips them, new files included. A finding's menu has **Exclude this folder**.
 
 ### 🛠️ Smaller fixes
 - **Ignis Recovery** shows French, Spanish, German and Russian correctly on every screen; accents and Cyrillic letters were garbled before.
