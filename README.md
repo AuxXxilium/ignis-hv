@@ -134,6 +134,7 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 
 | Page | What you do there |
 | :-- | :-- |
+| **Overview** | The whole box at a glance: its hardware, what runs, the latest messages and every app, with Getting started for a new box |
 | **Virtual Machines** | Create, start, stop and edit machines, open their display, take snapshots, clone, import and export |
 | **LXC** | Linux containers from ready images: start, stop, console, snapshots, backups and clones |
 | **Containers** | Run containers and compose projects, see their logs and usage, update and clean up |

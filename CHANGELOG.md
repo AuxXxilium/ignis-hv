@@ -4,6 +4,12 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 🏠 Overview (new first page)
+- **Overview** is the first page in the sidebar and where admins land after signing in: what the box is (name, Ignis version and whether an update is out, uptime, processor, memory, graphics cards, network cards with speed and address, drives, the UPS), what runs on it (machines, LXC and containers running of all, CPU, memory and storage, the space used per volume), the newest bell messages, and every installed app as a tile in its sidebar section. Every line and tile opens its page; **Add apps** leads to Extensions.
+- **Getting started** moved here from Virtual Machines, with **Hide** and **Don't show again** as before.
+- In the desktop layout Overview is the first icon too.
+- **The Host statistics** are now a small **Host** tab on the bottom edge, at the right. Click it and the statistics slide up; click again and they slide away. Pages keep only that tab's height free at the bottom, so a long page no longer ends with a big gap.
+
 ### 📝 Office Editor (new app) and editing in Drive
 - **Edit Word, Excel and PowerPoint files right in Drive:** with the new **Office Editor** installed, Drive's preview has an **Edit** button for .docx, .xlsx, .pptx and the OpenDocument files (.odt, .ods, .odp) and their older kin. The file opens in a full office editor in the same window and is saved straight back into the share as you work. Several people can edit the same file at once and see each other's changes.
 - **Edit** is also in the right-click menu and in the bar that appears when you select a file. Only people who may write to that share get it.
