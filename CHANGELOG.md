@@ -45,6 +45,12 @@ What each Ignis release brings, the newest first.
 - The same state edge everywhere something runs: installed extensions, game servers, cameras, Windows Apps bottles, downloads, VPN servers, devices and tunnels, backup tasks, websites, iSCSI targets and LUNs, apps from App Station, DSM machines and the AI engine. Running containers, LXC containers and game servers show CPU and memory rings too, and the apps' boxes lift off the background like the rest.
 - Pages and dialogs open with a short, gentle animation (off if your system asks for less motion).
 
+### 🛡️ Antivirus (new)
+- **Antivirus** scans your shares for viruses and other malware with ClamAV. **Scan everything** checks every share (and any folders you add), **Scan this folder** just one; a **Scan for viruses** task on the Schedules tab does it regularly. Disk images and ISOs are left out unless you say otherwise.
+- Infected files go into a **quarantine** that only the appliance can read, or are only reported, as you choose. **Restore** puts a file back with its owner and permissions; **Not a threat** stops a signature from being reported again.
+- **Scan new files as they arrive** (optional): files copied into the shares are checked within seconds. It needs the scanner kept loaded, which takes about 1 GB of memory; otherwise the scanner loads only while a scan runs.
+- The virus definitions download at the first start and update every day. Findings appear under the bell, and by email or webhook if your notifications send security messages there.
+
 ### 🛠️ Smaller fixes
 - **Ignis Recovery** shows French, Spanish, German and Russian correctly on every screen; accents and Cyrillic letters were garbled before.
 - The last user account with user rights can be deleted when root has a password, since root still signs in as an admin then.
