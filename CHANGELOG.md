@@ -4,6 +4,12 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 💽 RAID installs: important fix
+- **The data volume now mounts on machines installed with RAID.** On an install across several disks, the data volume was not mounted when Ignis started, so machines, settings and apps were stored on the much smaller system volume instead. After this update the data volume is used, and everything that ended up on the system volume is moved onto it automatically at the first start; nothing is lost. If something exists in both places, the copy from the system volume is kept in the hidden folder `.from-system-volume` on the data volume. The first start after the update can take a little longer while this happens.
+- **A RAID keeps working with one disk missing.** If a disk fails or is unplugged, Ignis now starts the data volume with the remaining disks instead of without it, and says so on the console. Replace the disk soon: until then there is no spare copy.
+- **A disk that comes back is taken in again.** A disk that was missing for a while (a loose cable, unplugged for one start) is added back to its RAID by itself and rebuilt in the background.
+- If the data volume can't be started at all — a disk is missing *and* the machine was not shut down cleanly — the console and the **Storage** page now say so and what to do, instead of only "did not mount".
+
 ### 🏠 Overview (new first page)
 - **Overview** is the first page in the sidebar and where admins land after signing in: what the box is (name, Ignis version and whether an update is out, uptime, processor, memory, graphics cards, network cards with speed and address, drives, the UPS), what runs on it (machines, LXC and containers running of all, CPU, memory and storage, the space used per volume), the newest bell messages, and every installed app as a tile in its sidebar section. Every line and tile opens its page; **Add apps** leads to Extensions.
 - **Getting started** moved here from Virtual Machines, with **Hide** and **Don't show again** as before.
