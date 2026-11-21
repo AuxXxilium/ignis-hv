@@ -37,6 +37,13 @@ What each Ignis release brings, the newest first.
 - **More previews**: .rtf, .epub e-books, Markdown, code and settings files with line numbers and colours, .csv and .tsv as a table, what is inside .zip and .tar archives, HEIC and TIFF pictures. Share links show the same previews.
 - Previews open in a closed-off frame that cannot reach your session; very large and password-protected files are not previewed, Download opens them.
 
+### 🎨 A fresher look
+- Boxes lift off the background with a soft shadow, and box titles carry a touch of your highlight colour.
+- Each sidebar group has its own colour (Files, Media, Web & Mail, Network, Apps and the rest), on the desktop's app launcher and icons too.
+- Pages show their key numbers under the title: running and stopped machines, vCPUs and memory in use out of the host's, free space, images and more.
+- Machine, LXC and container cards show their state as a coloured edge, and running machines show small CPU and memory rings.
+- Pages and dialogs open with a short, gentle animation (off if your system asks for less motion).
+
 ### 🛠️ Smaller fixes
 - **Android Apps** has Android's taskbar at the bottom of the full screen: your pinned apps, all apps and Back, Home and Recents, for switching between apps like on a tablet. Switch it off under Settings › Screen; it shows from the next start.
 - **Android Apps** opens on the full Android screen with its home screen by default. With **One window per app**, the page now says that Android shows only the apps you open, with buttons to open an app or switch to the full screen, and **Home** opens the app list.
