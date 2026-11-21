@@ -4,6 +4,11 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 🔋 UPS (new app)
+- **UPS** watches the UPS your box runs on: plugged in by USB (the right driver is suggested for your model), through its network card (SNMP), or followed from another NUT server such as a Synology. The page shows the battery, the runtime left, the load and the voltages, a day of history and every event; going on battery, coming back, a low battery and a shutdown also reach the bell, email and webhooks.
+- **When the power fails**, it shuts down cleanly whichever comes first: after a number of minutes on battery, below a battery level, or below a runtime. Your machines, LXC containers, Docker containers and apps go down in the order you set, each with its own time, then Ignis. The UPS can switch itself off and back on with the mains, so the box starts again by itself, and whatever was running before starts again too.
+- **Share the UPS**: switch on the NUT server and a Synology, another Ignis or a PC on the same UPS follows it through Ignis and shuts down with it (port 3493, opened only on the adapters you pick).
+
 ### 🌐 Network boot
 - **UEFI computers start from the network too:** Network & Firewall › Network boot now also starts newer computers that boot with UEFI, both on networks where Ignis hands out the addresses and next to your router. They get a short menu with **Ignis Recovery**; the ISO images and netboot.xyz are one entry further. Secure Boot has to be off on that computer for network boot.
 - **Network boot no longer stops answering** after a computer's second try, and it no longer keeps a processor core busy. Android Apps now starts while network boot is on.

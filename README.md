@@ -97,6 +97,7 @@ Apps that belong together come as one package: **Web & Mail**, **Drive & Shares*
 | **Graphics Runtime** | The screen that Web Browser, Windows Apps and Android Apps run on (Display Runtime), using your graphics card when one is free, and video conversion on your GPU for the media apps with 3D graphics for Linux machines without passing a card through (Video Compute Runtime). Installed by itself with the apps that need it |
 | **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
 | **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose |
+| **UPS** | Watches the UPS your box runs on, over USB, its network card or another NUT server such as a Synology: battery, runtime and load, with a day of history. When the power fails it shuts down your machines, containers and apps in the order you choose, then Ignis, and starts them again when the power is back. Other devices on the same UPS can follow it through Ignis |
 | **NVIDIA** | The NVIDIA driver, so containers can use the GPU |
 | **Vision Runtime** | The image recognition that Photos and Surveillance use |
 
