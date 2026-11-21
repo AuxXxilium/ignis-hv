@@ -47,6 +47,7 @@ What each Ignis release brings, the newest first.
 ### 🛠️ Smaller fixes
 - **SSD trim:** Ignis now tells your SSDs once a week which space is free, so they stay fast and wear evenly (Monitor › Storage Health, with Trim now). Virtual machines already free the space of files you delete inside them.
 - **Manage in Drive:** the links from Photos, Video Station and Audio Station open Drive at that link again, instead of wherever Drive was last.
+- Arx DSM shows the progress bar of a loader update again.
 
 ## 26.11.20
 
