@@ -135,7 +135,7 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **Virtual Machines** | Create, start, stop and edit machines, open their display, take snapshots, clone, import and export |
 | **LXC** | Linux containers from ready images: start, stop, console, snapshots, backups and clones |
 | **Containers** | Run containers and compose projects, see their logs and usage, update and clean up |
-| **Network** | Networks for your machines, VLANs and bonds |
+| **Virtual Networks** | The networks your machines and containers use: private networks, or bridges that put them straight on your network, with VLANs and bonded network cards |
 | **Storage** | Disk images, ISOs, uploads, extra volumes and the drives in your box, shown like a file manager. You choose how large an upload may be (4 GB unless you change it) |
 | **Schedules** | Timed start, shutdown, snapshot, backup, container and data check tasks, and the tasks your apps offer: website and mail backups, WordPress updates, downloads only at night, cameras on and off, and more |
 | **Passthrough** | Graphics cards, PCI and USB devices your machines can use |
