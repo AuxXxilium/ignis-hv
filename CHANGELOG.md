@@ -11,6 +11,11 @@ What each Ignis release brings, the newest first.
 - **Live view fits the screen:** 1, 4, 9 or 16 cameras fill the page without scrolling, and full screen shows every camera whole, on wide monitors too.
 - **One camera at a time:** click a camera in the Cameras list (or right-click it and choose **Watch live**) to watch it live in a window of its own, with full screen and a shortcut to its recordings.
 
+### 📅 Calendar & Contacts 1.1.0
+- **Calendars and contacts open on the page:** the new **Calendar** tab shows month, week and list views of all your calendars, each in its colour, with your tasks beside them; the **Contacts** tab lists your contacts by letter with a search and shows the one you pick. Under Calendars and address books, **Open** (or a click on the name) takes you there.
+- Add, change and delete events: all day or with times in a time zone, repeating daily, weekly, monthly or yearly, with reminders. Changing or deleting one event of a series asks whether it is for this one or all of them. Drag events to another day or time, or their lower edge to make them longer.
+- Add and change contacts in place: photo, phone numbers, email addresses, addresses, websites, birthday, notes and groups. Contacts' birthdays can be shown in the calendar. Your phones and Thunderbird see every change.
+
 ### 🪟 Windows Apps and app screens
 - **Uploading into a bottle works again** ("could not write the file into the bottle"), and the Windows desktop shows instead of staying black.
 - **Install and upload from the Desktop view:** **Install a program** and **Upload file** sit in the Desktop view's toolbar, and you can drop files onto the screen: installers (.exe, .msi) go to C:\Installers and start, other files land on the Windows desktop.
