@@ -5,6 +5,7 @@ What each Ignis release brings, the newest first.
 ## Next
 
 ### 🛠️ Smaller fixes
+- No more false "data volume is not mounted" message on the console at every start.
 - **Android Apps** start on Intel and AMD graphics cards again (faster than on the processor). If Android cannot start on the card, it switches to the processor by itself and tells you.
 
 ## 26.11.21
