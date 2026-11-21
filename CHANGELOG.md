@@ -4,6 +4,13 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 👥 One account for everything
+- **Network Shares use your Ignis users.** A user's password for the web interface now also opens the shares (SMB) — no second account to make. Who may use a share is still set per share; the **Users** tab in Drive & Shares lists the users and links to the **Users** page.
+- **FTP, FTPS and SFTP** sign in with the Ignis users too, for users given the new permission **FTP, FTPS and SFTP** on the Users page. Admins have it.
+- A user whose password was set before this shows **Shares: set the password once more** on the Users page: set it once and it works for the shares as well.
+- The separate share accounts of earlier versions are removed.
+- SMB and FTP can't ask for a second factor: users with two-factor sign-in open the shares with their password alone.
+
 ### 🔋 UPS (new app)
 - **UPS** watches the UPS your box runs on: plugged in by USB (the right driver is suggested for your model), through its network card (SNMP), or followed from another NUT server such as a Synology. The page shows the battery, the runtime left, the load and the voltages, a day of history and every event; going on battery, coming back, a low battery and a shutdown also reach the bell, email and webhooks.
 - **When the power fails**, it shuts down cleanly whichever comes first: after a number of minutes on battery, below a battery level, or below a runtime. Your machines, LXC containers, Docker containers and apps go down in the order you set, each with its own time, then Ignis. The UPS can switch itself off and back on with the mains, so the box starts again by itself, and whatever was running before starts again too.
