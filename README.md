@@ -61,6 +61,7 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 * **Networks for your machines**: private networks, or bridges that put machines straight on your network. VLANs and bonded network cards are supported, also per machine
 * **Network & Firewall**: Ignis's own addresses, a firewall that decides who reaches which service, blocklists, countries and port scans, port forwards, and a **router**: one network card to the internet, the others as local networks. Each local network can reach the internet or stay local only, may or may not reach the other local networks, and gets its own DHCP range if you switch it on. A device list shows who is connected, with names of your own and fixed addresses
+* **Network boot**: Ignis can start the computers on your network over the network, BIOS and UEFI alike: Ignis Recovery, ISOs from Storage, or netboot.xyz's menu. One switch turns it on
 * **HTTPS**: with your own certificate or a free one from Let's Encrypt
 
 ### 🔐 Sign-in and security
@@ -81,12 +82,13 @@ Apps that belong together come as one package: **Web & Mail**, **Drive & Shares*
 | **Drive & Shares** | **Drive** shows your shared folders in the browser: upload, preview and share files with a link, also with people who have no account. The preview opens Word, Excel and PowerPoint files (the old .doc, .xls and .ppt too), OpenDocument, PDF, e-books, Markdown and code, and lists what is inside archives. **Network Shares** shares the folders over SMB like a NAS, and over SFTP and FTPS if you want |
 | **Antivirus** | Scans your shares for viruses and other malware with ClamAV: by hand, on a schedule, and new files as they arrive. Infected files go into a quarantine you can restore from or empty, and the virus definitions update themselves every day |
 | **Documents** | A paperless archive: scans, PDFs and photos of letters become searchable PDFs, filed by correspondent, type and tags with suggestions learned from what you file. Feed it from a scanner, a mailbox or the page, and find any letter again by a word in it |
-| **Backup & Sync** | **Backup** makes encrypted, versioned backups of your folders, your computers and your VMware and Hyper-V machines, to a disk, another Ignis or the cloud, on a schedule. **Cloud Sync** keeps folders in step with Google Drive, OneDrive, Dropbox, S3 and many more |
+| **Backup & Sync** | **Backup** makes encrypted, versioned backups of your folders, your computers and your VMware and Hyper-V machines, to a disk, another Ignis or the cloud, on a schedule. A computer that fails is brought back whole with **Ignis Recovery**, started from a USB stick, a CD image or over the network. **Cloud Sync** keeps folders in step with Google Drive, OneDrive, Dropbox, S3 and many more |
+| **Calendar & Contacts** | Your calendars, tasks and contacts on Ignis, for every phone and computer (CalDAV and CardDAV). In the browser too: month, week and list views with repeating events, reminders and tasks, and an address book with photos |
 | **Ignis Sync** | Keeps folders the same on your phones and computers, peer to peer and end-to-end encrypted, with the Syncthing apps |
 | **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
 | **Video Station** | Your movies and TV shows with posters, played in the browser. Also plays on TVs, consoles and Kodi |
 | **Audio Station** | Your music by album, artist, genre and folder, with playlists, favourites, lyrics and internet radio. Plays in the browser, in music apps that speak Subsonic, and on receivers, speakers and TVs |
-| **Surveillance** | Records your IP cameras (RTSP, or HTTP: MJPEG, snapshots and HLS), live view in a grid that fits your screen, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you. Each camera can also be passed on to Home Assistant, VLC or another recorder, at an address of its own that you can renew at any time |
+| **Surveillance** | Records your IP cameras (RTSP, or HTTP: MJPEG, snapshots and HLS), live view in a grid that fits your screen, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you. Each camera can also be passed on to Home Assistant, VLC or another recorder, at an address of its own that you can renew at any time. Open any camera from the list in a window of its own; pass cameras on to Home Assistant or VLC at addresses you can renew |
 | **Download Station** | Downloads links, torrents and magnet links into a folder you choose |
 | **Web & Mail** | **Web Station** hosts your own websites and their subdomains with the newest PHP or one of the two before it, and databases, including WordPress and phpMyAdmin in one click, each with its own certificate, and a DNS server for your own domains that fills in its records by itself. **Mail Server** is email for your own domain, with a spam filter and help with the DNS settings, and **Webmail** reads it in the browser |
 | **VPN** | Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN |
@@ -95,8 +97,8 @@ Apps that belong together come as one package: **Web & Mail**, **Drive & Shares*
 | **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
 | **Web Browser** | A browser that runs on Ignis and shows inside the page, with tabs and a toolbar like the browser you know. Open your router, cameras and other devices on your home network from anywhere, look something up while you work, and save downloads straight to a shared folder. You choose whether it may reach the internet, your home network or both |
 | **Remote Desktop** | Reach the PCs, servers and machines on your network in the browser, over RDP, VNC and SSH. Save connections in groups, for you or shared with others, with the password kept encrypted or asked each time; wake a PC that sleeps; copy and paste, Ctrl+Alt+Del, full screen, and a shared folder Windows sees as a drive. Requires the Graphics Runtime |
-| **Windows Apps** | Runs Windows programs on Ignis and shows them in your browser, without a Windows licence. Each set of programs gets its own Windows with its own drive C:, and sees only the shared folders you allow, plus a folder of your own that all your programs share. Per set, you choose whether it may reach the internet and your home network. Drop an installer or a file on the screen to install or upload it |
-| **Android Apps** | Runs Android apps on Ignis and shows them in your browser, each in a window of its own or as a whole Android screen. You choose Android with Google's apps or without. Requires the Graphics Runtime |
+| **Windows Apps** | Runs Windows programs on Ignis and shows them in your browser, without a Windows licence. Each set of programs gets its own Windows with its own drive C:, and sees only the shared folders you allow, plus a folder of your own that all your programs share. Per set, you choose whether it may reach the internet and your home network. Programs open on their own, each filling the screen without the Windows desktop, or on a whole Windows desktop. Drop an installer or a file on the screen to install or upload it |
+| **Android Apps** | Runs Android apps on Ignis and shows them in your browser, as a whole Android screen with its home screen and a taskbar, or each app in a window of its own. You choose Android with Google's apps or without. Requires the Graphics Runtime |
 | **Graphics Runtime** | The screen that Web Browser, Windows Apps, Android Apps and Remote Desktop run on (Display Runtime), using your graphics card when one is free, and video conversion on your GPU for the media apps with 3D graphics for Linux machines without passing a card through (Video Compute Runtime). Installed by itself with the apps that need it |
 | **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
 | **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose |
@@ -146,7 +148,7 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 
 Every page has a **?** button with help for that page.
 
-Pick the look you like from the account menu: a light or dark mode, an accent colour, a wallpaper (northern lights, mountains, waves, dunes and more, or a picture of your own) and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar. Both layouts share one top bar, and the layout looks the same whether you choose solid or glass boxes. Your language and a 12- or 24-hour clock are saved with your account. The account menu is also where you restart or shut down Ignis, if your account may. Settings are switches, and a short note at the bottom of the screen confirms what you saved. The address bar shows just Ignis's address, whatever page you are on.
+Pick the look you like from the account menu: a light or dark mode, an accent colour, a wallpaper (northern lights, mountains, waves, dunes and more, or a picture of your own) and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar. Both layouts share one top bar, and the layout looks the same whether you choose solid or glass boxes. Each group in the sidebar has its own colour, pages show their key numbers at the top, and whatever runs has a coloured edge for its state, with live CPU and memory rings for machines and containers. Your language and a 12- or 24-hour clock are saved with your account. The account menu is also where you restart or shut down Ignis, if your account may. Settings are switches, and a short note at the bottom of the screen confirms what you saved. The address bar shows just Ignis's address, whatever page you are on.
 
 ### 📸 A look inside
 
@@ -250,6 +252,17 @@ The previous version is kept. If something is wrong after an update, choose it f
 * Two-factor sign-in and the screen lock protect your account, even on a shared computer
 * A machine's display can only be opened through the signed-in web interface
 * Apps and containers have a lot of access to the host, so install only what you trust. Only admins can manage them
+
+---
+
+## 📥 Downloads
+
+Besides Ignis itself, on the [tools](tools/README.md) page:
+
+* **The Ignis app** for Windows, macOS and Linux: Drive, your cameras, and backups of your computer (on Windows with the whole-system backup for Ignis Recovery)
+* **Ignis Recovery**, to bring a computer back from its backup: a CD image or a USB stick image. Ignis also offers it over the network, and on the Backup & Sync page
+
+These are on a release of their own, so Ignis never takes them for an update.
 
 ---
 
