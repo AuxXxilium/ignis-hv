@@ -83,7 +83,7 @@ Apps that belong together come as one package: **Web & Mail**, **Shares & Drive*
 | **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
 | **Video Station** | Your movies and TV shows with posters, played in the browser. Also plays on TVs, consoles and Kodi |
 | **Audio Station** | Your music by album, artist, genre and folder, with playlists, favourites, lyrics and internet radio. Plays in the browser, in music apps that speak Subsonic, and on receivers, speakers and TVs |
-| **Surveillance** | Records your IP cameras, live view in a grid, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you |
+| **Surveillance** | Records your IP cameras (RTSP, or HTTP: MJPEG, snapshots and HLS), live view in a grid that fits your screen, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you. Each camera can also be passed on to Home Assistant, VLC or another recorder, at an address of its own that you can renew at any time |
 | **Download Station** | Downloads links, torrents and magnet links into a folder you choose |
 | **Web & Mail** | **Web Station** hosts your own websites and their subdomains with the newest PHP or one of the two before it, and databases, including WordPress and phpMyAdmin in one click, each with its own certificate, and a DNS server for your own domains that fills in its records by itself. **Mail Server** is email for your own domain, with a spam filter and help with the DNS settings, and **Webmail** reads it in the browser |
 | **VPN** | Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN |
@@ -91,7 +91,7 @@ Apps that belong together come as one package: **Web & Mail**, **Shares & Drive*
 | **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables. Requires Docker |
 | **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
 | **Web Browser** | A browser that runs on Ignis and shows inside the page, with tabs and a toolbar like the browser you know. Open your router, cameras and other devices on your home network from anywhere, look something up while you work, and save downloads straight to a shared folder. You choose whether it may reach the internet, your home network or both |
-| **Windows Apps** | Runs Windows programs on Ignis and shows them in your browser, without a Windows licence. Each set of programs gets its own Windows with its own drive C:, and sees only the shared folders you allow, plus a folder of your own that all your programs share |
+| **Windows Apps** | Runs Windows programs on Ignis and shows them in your browser, without a Windows licence. Each set of programs gets its own Windows with its own drive C:, and sees only the shared folders you allow, plus a folder of your own that all your programs share. Per set, you choose whether it may reach the internet and your home network. Drop an installer or a file on the screen to install or upload it |
 | **Android Apps** | Runs Android apps on Ignis and shows them in your browser, each in a window of its own or as a whole Android screen. You choose Android with Google's apps or without. Requires the Graphics Runtime |
 | **Graphics Runtime** | The screen that Web Browser, Windows Apps and Android Apps run on (Display Runtime), using your graphics card when one is free, and video conversion on your GPU for the media apps with 3D graphics for Linux machines without passing a card through (Video Compute Runtime). Installed by itself with the apps that need it |
 | **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
@@ -129,7 +129,7 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **LXC** | Linux containers from ready images: start, stop, console, snapshots, backups and clones |
 | **Containers** | Run containers and compose projects, see their logs and usage, update and clean up |
 | **Network** | Networks for your machines, VLANs and bonds |
-| **Storage** | Disk images, ISOs, uploads and extra volumes, shown like a file manager. You choose how large an upload may be (4 GB unless you change it) |
+| **Storage** | Disk images, ISOs, uploads, extra volumes and the drives in your box, shown like a file manager. You choose how large an upload may be (4 GB unless you change it) |
 | **Schedules** | Timed start, shutdown, snapshot, backup, container and data check tasks, and the tasks your apps offer: website and mail backups, WordPress updates, downloads only at night, cameras on and off, and more |
 | **Passthrough** | Graphics cards, PCI and USB devices your machines can use |
 | **Monitor** | The host right now, its **History** over time, and **Storage Health** |
@@ -141,7 +141,7 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 
 Every page has a **?** button with help for that page.
 
-Pick the look you like from the account menu: a light or dark mode, an accent colour, a wallpaper (northern lights, mountains, waves, dunes and more, or a picture of your own) and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar. Your language and a 12- or 24-hour clock are saved with your account. The account menu is also where you restart or shut down Ignis, if your account may. Settings are switches, and a short note at the bottom of the screen confirms what you saved. The address bar shows just Ignis's address, whatever page you are on.
+Pick the look you like from the account menu: a light or dark mode, an accent colour, a wallpaper (northern lights, mountains, waves, dunes and more, or a picture of your own) and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar. Both layouts share one top bar, and the layout looks the same whether you choose solid or glass boxes. Your language and a 12- or 24-hour clock are saved with your account. The account menu is also where you restart or shut down Ignis, if your account may. Settings are switches, and a short note at the bottom of the screen confirms what you saved. The address bar shows just Ignis's address, whatever page you are on.
 
 ### 📸 A look inside
 
@@ -171,7 +171,7 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
     <td width="50%"><img alt="Video Station: posters under Continue watching and Recently added" src="assets/screenshots/apps/video.png"><br><sub><b>Video Station</b>: your films and shows with posters, in the browser and on your TV</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img alt="Surveillance: four cameras live in a grid" src="assets/screenshots/apps/surveillance.png"><br><sub><b>Surveillance</b>: live view, recordings and alerts for your IP cameras</sub></td>
+    <td width="50%"><img alt="Surveillance: four cameras live in a grid" src="assets/screenshots/apps/surveillance.png"><br><sub><b>Surveillance</b>: live view that fits your screen, recordings, alerts, and streams for other apps</sub></td>
     <td width="50%"><img alt="Drive: a folder of pictures as thumbnails" src="assets/screenshots/apps/drive.png"><br><sub><b>Drive</b>: your shared folders in the browser, with share links</sub></td>
   </tr>
   <tr>
@@ -192,7 +192,7 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
   </tr>
   <tr>
     <td width="50%"><img alt="Web Browser settings: start page, downloads folder, the switches for the internet and the home network, and the screen" src="assets/screenshots/apps/browser.png"><br><sub><b>Web Browser</b>: a browser on Ignis, inside the page, with tabs; you choose what it may reach and where downloads go</sub></td>
-    <td width="50%"><img alt="Windows Apps: two bottles, each with its drives and buttons" src="assets/screenshots/apps/winapps.png"><br><sub><b>Windows Apps</b>: Windows programs in your browser, each set in a bottle that sees only the folders you allow</sub></td>
+    <td width="50%"><img alt="Windows Apps: two bottles, each with its drives and buttons, one without internet" src="assets/screenshots/apps/winapps.png"><br><sub><b>Windows Apps</b>: Windows programs in your browser, each set in a bottle that sees only the folders and networks you allow</sub></td>
   </tr>
 </table>
 
