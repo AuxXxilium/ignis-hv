@@ -56,6 +56,12 @@ What each Ignis release brings, the newest first.
 - Previews open in a closed-off frame that cannot reach your session; very large and password-protected files are not previewed, Download opens them.
 - **Convert files** (Drive and Video Station): videos into H.264 in MP4, which plays almost everywhere (or H.265 / AV1), at their size or at most 1080p or 720p; music into AAC or MP3; HEIC, TIFF and WebP pictures into JPEG. Beside the original or into another folder, and the original into the recycle bin if you like. **Convert new files here…** on a folder converts everything that arrives there once its upload is finished. The **Conversions** tab shows the progress, and the bell tells you when it is done. Uses the graphics card when it can; needs the Graphics Runtime.
 
+### 🎬 Video Station and Audio Station
+
+- **Videos that have to be converted for the browser play again** in Video Station; before, the player stopped with "The stream stopped: manifestLoadError".
+- **TVs and players find the media servers again:** the DLNA servers of Video Station and Audio Station stopped right after starting.
+- **Convert new files…** on a library folder starts with videos only, so posters and fan art stay as they are.
+
 ### 🎨 A fresher look
 - Boxes lift off the background with a soft shadow, and box titles carry a touch of your highlight colour.
 - Each sidebar group has its own colour (Files, Media, Web & Mail, Network, Apps and the rest), on the desktop's app launcher and icons too.
