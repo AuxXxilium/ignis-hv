@@ -9,6 +9,7 @@ What each Ignis release brings, the newest first.
 - **Streams for other apps:** in a camera's settings, switch on RTSP, MJPEG, HLS or a snapshot picture for Home Assistant, VLC or a TV. Each stream has its own private address with **Copy**; **New address** or switching the stream off shuts the old address out. RTSP opens only on the networks you pick (Cameras › Streams for other apps), with an entry per camera in the firewall. MJPEG, HLS and the snapshot need the next system update.
 - **Before, one user and password let other apps watch every camera over RTSP.** If that was on, each camera now has its RTSP stream switched on instead, at a new address. Copy the new addresses from the cameras' settings into your other apps.
 - **Live view fits the screen:** 1, 4, 9 or 16 cameras fill the page without scrolling, and full screen shows every camera whole, on wide monitors too.
+- **One camera at a time:** click a camera in the Cameras list (or right-click it and choose **Watch live**) to watch it live in a window of its own, with full screen and a shortcut to its recordings.
 
 ### 🪟 Windows Apps and app screens
 - **Uploading into a bottle works again** ("could not write the file into the bottle"), and the Windows desktop shows instead of staying black.
