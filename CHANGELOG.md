@@ -46,6 +46,8 @@ What each Ignis release brings, the newest first.
 - Pages and dialogs open with a short, gentle animation (off if your system asks for less motion).
 
 ### 🛠️ Smaller fixes
+- **Ignis Recovery** shows French, Spanish, German and Russian correctly on every screen; accents and Cyrillic letters were garbled before.
+- The last user account with user rights can be deleted when root has a password, since root still signs in as an admin then.
 - In every app, settings you turn on or off are now switches, the same everywhere; boxes you tick to pick things (shares, cameras, days, networks) stay checkboxes.
 - **Android Apps** has Android's taskbar at the bottom of the full screen: your pinned apps, all apps and Back, Home and Recents, for switching between apps like on a tablet. Switch it off under Settings › Screen; it shows from the next start.
 - **Android Apps** opens on the full Android screen with its home screen by default. With **One window per app**, the page now says that Android shows only the apps you open, with buttons to open an app or switch to the full screen, and **Home** opens the app list.
