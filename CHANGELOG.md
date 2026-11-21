@@ -4,11 +4,19 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 🚑 Starting your computer
+- **Ignis starts again on newer UEFI computers.** On computers whose firmware protects its memory (common on recent mainboards), an installed Ignis stopped right after the boot menu and the computer went back to its firmware setup. The boot loader is fixed, and an update now brings the fixed boot loader to your disks too, so an installed Ignis keeps starting.
+- **If your Ignis does not start at all:** start the computer from the new installation USB stick and choose to update the existing installation. Your machines, data and settings stay; the boot loader on your disks is written new.
+- **Boot menu entry:** Ignis now also adds itself to your computer's firmware boot menu as **Ignis HV**, so computers that only look there find it.
+- **Smaller computers can install Ignis:** the installation USB stick and the live mode now start with 2 GB of memory; before, they needed about 6 GB.
+
 ### 🌐 Network & WiFi
 - **WiFi:** a new **WiFi** app brings the drivers for WiFi cards from Intel, MediaTek, Realtek, Qualcomm Atheros and Broadcom, so only appliances with a WiFi card download them. With it, Network & Firewall › Adapters lets a WiFi card join a WiFi (even as the internet connection) or serve one of its own, with WPA2/WPA3, 2.4 or 5 GHz and an automatic channel. Ticked as a local network under Router, your WiFi gets its own addresses and rules, like a guest WiFi.
 - **WiFi timer:** choose for each weekday when your WiFi is on, turn it off now until the next on-time, or keep it always on.
 - **Dual band and more:** tick 2.4, 5 and 6 GHz for your WiFi -- each band needs a radio of its own, such as two WiFi cards or a card that is two radios. Keep one name and password on all bands, so devices move between them, or give every band its own WiFi and network, like a guest WiFi on 2.4 GHz beside a private one on 5 GHz. Wider channels and WiFi 6 and 7 are used where your card supports them.
-- **WiFi tab:** WiFi now has a tab of its own in Network & Firewall, with a page per WiFi card: each one serves a WiFi, joins one or stays off, so one card can share your network while another connects to the internet. Every access point has its own timer, or uses the timer of the card it shares a name with; **Off until** pauses it to the next on-time.
+- **WiFi tab:** WiFi now has a tab of its own in Network & Firewall, with a page per WiFi. Tick every band a WiFi should be on and Ignis picks the cards; **New WiFi** adds a second one, like a guest WiFi with its own name, password and network, which can share a card with your main WiFi where the card supports it. Every WiFi has its own timer, or uses another WiFi's; **Off until** pauses it to the next on-time. A card can also join a WiFi, for example as the internet connection.
+- **Network overview:** the first tab of Network & Firewall is a map of your network: the internet, Ignis and each of your networks with its devices, which network may use the internet and which may reach another. Right-click a network, a device or a line (or press and hold it) to switch its internet, AdGuard filter or reach, change its DHCP range, keep a device off the internet, give it a fixed address or wake it.
+- **Always allow an address:** right-click an address on the Blocked tab to never block it again, by blocklists, port-scan detection or failed sign-ins.
 - **Router devices:** give a device a name of your own and an address of your choice; it gets it the next time it connects, and answers to its name on your network.
 - **Network boot:** Network & Firewall › Network boot lets computers on the networks you pick start from Ignis over the network: Ignis Recovery, ISOs from your storage, or netboot.xyz. Choose the default entry and how long the menu waits. It is off until you switch it on, its ports open only while it is on, and only accounts with the new **Network boot** permission can change it.
 
