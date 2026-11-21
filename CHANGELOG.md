@@ -58,6 +58,7 @@ What each Ignis release brings, the newest first.
 - **Leave out** folders you pick by name and kinds of files (`*.iso`, `*.log` …); every scan skips them, new files included. A finding's menu has **Exclude this folder**.
 
 ### 🛠️ Smaller fixes
+- **Network Shares:** accounts made for shares can sign in again; before, only root got in. Each account now sees just the shares it may open.
 - **Ignis Recovery** shows French, Spanish, German and Russian correctly on every screen; accents and Cyrillic letters were garbled before.
 - The last user account with user rights can be deleted when root has a password, since root still signs in as an admin then.
 - In every app, settings you turn on or off are now switches, the same everywhere; boxes you tick to pick things (shares, cameras, days, networks) stay checkboxes.
