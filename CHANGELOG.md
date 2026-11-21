@@ -24,8 +24,8 @@ What each Ignis release brings, the newest first.
 - **Virtual Networks** is the new name of the page for your machines' networks, so it is not confused with Network & Firewall.
 - **Extensions** are grouped like the sidebar and can be searched.
 - Hints that name a place in Ignis are links that take you there.
-
 - **Right-click menus in the apps:** right-click a row, a tile or a box (or press and hold it on a touch screen) in AdGuard, VPN, Surveillance, Download Station, Game Servers, Photos, Video Station, Audio Station, Web & Mail, Network Shares and Backup & Sync for its actions, such as blocking a domain right from the query log, or pausing a backup task.
+- **New actions in the apps:** record a camera right now (for a while or until you stop it), open a download's folder in Drive, back up a website with one click, delete photos into Drive's recycle bin, play a film on your TV or receiver with **Play on**, and switch a WireGuard device off and on without deleting it.
 
 ### 🛠️ Smaller fixes
 - **SSD trim:** Ignis now tells your SSDs once a week which space is free, so they stay fast and wear evenly (Monitor › Storage Health, with Trim now). Virtual machines already free the space of files you delete inside them.
