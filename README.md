@@ -59,7 +59,7 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 ### 🌐 Network
 
-* **Networks for your machines**: private networks, or bridges that put machines straight on your network. VLANs and bonded network cards are supported, also per machine
+* **Networks for your machines**: private networks, bridges that put machines straight on your network, or a VLAN from your switch for them. Ignis's own VLANs and bonded network cards are set up under Network & Firewall
 * **Network & Firewall**: Ignis's own addresses, a firewall that decides who reaches which service, blocklists, countries and port scans, port forwards, and a **router**: one network card to the internet, the others as local networks. Each local network can reach the internet or stay local only, may or may not reach the other local networks, and gets its own DHCP range if you switch it on. A device list shows who is connected, with names of your own and fixed addresses
 * **Network boot**: Ignis can start the computers on your network over the network, BIOS and UEFI alike: Ignis Recovery, ISOs from Storage, or netboot.xyz's menu. One switch turns it on
 * **HTTPS**: with your own certificate or a free one from Let's Encrypt
@@ -135,13 +135,13 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **Virtual Machines** | Create, start, stop and edit machines, open their display, take snapshots, clone, import and export |
 | **LXC** | Linux containers from ready images: start, stop, console, snapshots, backups and clones |
 | **Containers** | Run containers and compose projects, see their logs and usage, update and clean up |
-| **Virtual Networks** | The networks your machines and containers use: private networks, or bridges that put them straight on your network, with VLANs and bonded network cards |
+| **Virtual Networks** | The networks your machines and containers use: private networks, bridges that put them straight on your network, or a VLAN from your switch for them |
 | **Storage** | Disk images, ISOs, uploads, extra volumes and the drives in your box, shown like a file manager. You choose how large an upload may be (4 GB unless you change it) |
 | **Schedules** | Timed start, shutdown, snapshot, backup, container and data check tasks, and the tasks your apps offer: website and mail backups, WordPress updates, downloads only at night, cameras on and off, and more |
 | **Passthrough** | Graphics cards, PCI and USB devices your machines can use |
 | **Monitor** | The host right now, its **History** over time, **Storage Health**, and the **Storage Analyzer**: what uses the space |
 | **Users** | Accounts, roles and their permissions, and who sees which machines and pages |
-| **Network & Firewall** | Ignis's own network cards and addresses, the router with its local networks, DHCP and connected devices, and the firewall: access, zones, protection, outgoing traffic, port forwards and what was blocked |
+| **Network & Firewall** | Ignis's own network cards and addresses, VLANs and bonded network cards, the router with its local networks, DHCP and connected devices, and the firewall: access, zones, protection, outgoing traffic, port forwards and what was blocked |
 | **System** | The host's name, time, CPU (governor, turbo and clock limits) and fans, linked hosts, the smart home interface, email, services, updates, a terminal, and **shortlinks**: addresses of your own such as `http://<ip>/download` that open a page straight away |
 | **Extensions** | Install, update, turn on, restart and remove apps, see which apps need each other and what each package includes |
 | **Info** | What this host supports, and a report to copy into a bug report |
