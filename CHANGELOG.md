@@ -27,6 +27,7 @@ What each Ignis release brings, the newest first.
 - The Sessions and Screen settings of Windows Apps, Web Browser and Android Apps are tidied into one row, with what the screen is drawn on shown beside them.
 
 ### 🛠️ Smaller fixes
+- **Network Shares** follow a changed network address again: after Shares had restarted once, every later update of its addresses got stuck in the background, and the stuck updates piled up.
 - No more false "data volume is not mounted" message on the console at every start.
 - **Android Apps** start on Intel and AMD graphics cards again (faster than on the processor). If Android cannot start on the card, it switches to the processor by itself and tells you.
 - The top bar looks the same in the classic and the desktop layout (the desktop's slim bar), with the bell, the layout switch and your account in the same places. The desktop's "Show desktop" button is gone: Alt+Shift+D or a right-click on the desktop or the taskbar still does it.
