@@ -107,6 +107,7 @@ What each Ignis release brings, the newest first.
 - **Each user has their own documents**, and can share single documents with other users or a role. Admins see everything and choose the archive and inbox under **Settings**.
 
 ### 🛠️ Smaller fixes
+- **Dialogs** waste less space: slimmer title and button bars, less padding, forms use the window's height instead of scrolling inside a small box, logs and consoles fill nearly the whole window, and on a phone every dialog takes the whole screen. **Remote Desktop**'s file upload works.
 - **Network Shares**: Ignis shows up by itself under Network in Windows Explorer, in the Finder on a Mac and in Linux file managers (a switch on the Connect tab turns it off).
 - **Network Shares:** accounts made for shares can sign in again; before, only root got in. Each account now sees just the shares it may open.
 - **Ignis Recovery** shows French, Spanish, German and Russian correctly on every screen; accents and Cyrillic letters were garbled before.
