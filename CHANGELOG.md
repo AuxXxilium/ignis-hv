@@ -4,6 +4,13 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 📝 Office Editor (new app) and editing in Drive
+- **Edit Word, Excel and PowerPoint files right in Drive:** with the new **Office Editor** installed, Drive's preview has an **Edit** button for .docx, .xlsx, .pptx and the OpenDocument files (.odt, .ods, .odp) and their older kin. The file opens in a full office editor in the same window and is saved straight back into the share as you work. Several people can edit the same file at once and see each other's changes.
+- **Edit** is also in the right-click menu and in the bar that appears when you select a file. Only people who may write to that share get it.
+- The Office Editor is Collabora Online, the online edition of LibreOffice. It starts by itself when you open a document (a few seconds) and stops again after half an hour without one, so it only uses memory (about 500 MB) while someone edits. Switch on **Keep running** on its page if documents should open at once.
+- **Without the Office Editor**, Drive still edits text files: plain text, Markdown, code and CSV open in a simple editor with **Save** (or Ctrl+S). If someone changed the file in the meantime, Drive tells you instead of overwriting it. For an Office file, **Edit** tells you to install the Office Editor and takes you there.
+- **A bigger preview:** Drive's preview has slimmer bars and no frame around the document; a page is shown as wide as a page, and while editing the editor fills nearly the whole window. Videos and large pictures in the preview fit the window without scrolling.
+
 ### 📊 Storage Analyzer (new)
 - **Monitor › Storage Analyzer** shows what uses the space on your volumes: a map of the folders you can click into, the space by kind of file and by when files last changed, the biggest files and folders, files that are there more than once, empty folders, files nobody has changed for three years, and a line of how the used space grows day by day.
 - It scans every night (02:30 unless you choose another time) or when you press **Scan now**, at the lowest priority so your machines don't notice. Duplicates are compared by their content; what was read once is remembered, so later scans are quick.
