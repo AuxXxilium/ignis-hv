@@ -71,6 +71,13 @@ What each Ignis release brings, the newest first.
 - **Groups and sharing:** sort connections into groups, keep them for yourself or share them with all users or the ones you pick. The list shows which computers answer, the ones used last come first, and **Test** tries a connection before you save it. **Wake** starts a PC that sleeps (Wake-on-LAN). Your Ignis machines' consoles stay on the Virtual Machines page.
 - It shows on its own port, **6176** (UDP and TCP), with an entry of its own in the firewall; change it under Graphics Runtime. Requires the Graphics Runtime.
 
+### 📄 Documents (new app)
+- **Documents** is a paperless archive. Scans, PDFs, photos of letters and office files are read with text recognition (German, English, French, Spanish and Russian) and kept as **searchable PDFs** beside the original, in a share you choose, sorted by year.
+- **Getting documents in:** drop files on the page, let your scanner save to the inbox folder (scan to share), or have Documents collect the attachments from a mailbox (IMAP). A file it already has is set aside, not filed twice.
+- **Filing:** correspondents, document types, tags and fields of your own (an amount, a contract number, a date …). Documents learns from what you file and suggests, or fills in by itself, the correspondent, type and tags of the next letter; **rules** file what always looks the same. The date of the letter is found in its text.
+- **Finding:** search for any word in a document, also the start of one (`stadtw*`), with the place it was found; filter by correspondent, type, tag and date, and save a search as a view. Open a document to read it in the page, or download the original or the searchable PDF.
+- **Each user has their own documents**, and can share single documents with other users or a role. Admins see everything and choose the archive and inbox under **Settings**.
+
 ### 🛠️ Smaller fixes
 - **Network Shares**: Ignis shows up by itself under Network in Windows Explorer, in the Finder on a Mac and in Linux file managers (a switch on the Connect tab turns it off).
 - **Network Shares:** accounts made for shares can sign in again; before, only root got in. Each account now sees just the shares it may open.
