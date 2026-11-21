@@ -9,6 +9,11 @@ What each Ignis release brings, the newest first.
 - **WiFi timer:** choose for each weekday when your WiFi is on, turn it off now until the next on-time, or keep it always on.
 - **Dual band and more:** tick 2.4, 5 and 6 GHz for your WiFi -- each band needs a radio of its own, such as two WiFi cards or a card that is two radios. Keep one name and password on all bands, so devices move between them, or give every band its own WiFi and network, like a guest WiFi on 2.4 GHz beside a private one on 5 GHz. Wider channels and WiFi 6 and 7 are used where your card supports them.
 - **Router devices:** give a device a name of your own and an address of your choice; it gets it the next time it connects, and answers to its name on your network.
+- **Network boot:** Network & Firewall › Network boot lets computers on the networks you pick start from Ignis over the network: Ignis Recovery, ISOs from your storage, or netboot.xyz. Choose the default entry and how long the menu waits. It is off until you switch it on, its ports open only while it is on, and only accounts with the new **Network boot** permission can change it.
+
+### 💾 Backups
+- **System backups:** Backup & Sync keeps a copy of a computer's whole disk, every partition with its layout. Open a partition of any system backup right on the page and restore single files from it into a share. For now Linux computers make system backups with a small script; the Ignis app follows.
+- **Ignis Recovery:** a small boot system to put a whole computer back from a system backup. Download it on the Backup & Sync page as an ISO or an image for a USB stick, or start it over the network. It finds your Ignis, signs you in, and lets you pick the computer, the date and the disk to write to, in English, German, French, Spanish or Russian. Over the network it starts on computers in BIOS (legacy) mode for now; for the others, use the USB stick.
 
 ### 🎨 Easier to use
 - **Getting started:** a short checklist on the Virtual Machines page for new installations (your own admin account, email, two-factor sign-in, apps, backups). Every step opens the right page and ticks itself.
@@ -19,7 +24,7 @@ What each Ignis release brings, the newest first.
 - **Extensions** are grouped like the sidebar and can be searched.
 - Hints that name a place in Ignis are links that take you there.
 
-- **Right-click menus in the apps:** right-click a row, a tile or a box (or press and hold it on a touch screen) in AdGuard, VPN, Surveillance, Download Station, Game Servers, Photos, Video Station, Audio Station, Web & Mail and Network Shares for its actions, such as blocking a domain right from the query log.
+- **Right-click menus in the apps:** right-click a row, a tile or a box (or press and hold it on a touch screen) in AdGuard, VPN, Surveillance, Download Station, Game Servers, Photos, Video Station, Audio Station, Web & Mail, Network Shares and Backup & Sync for its actions, such as blocking a domain right from the query log, or pausing a backup task.
 
 ### 🛠️ Smaller fixes
 - **SSD trim:** Ignis now tells your SSDs once a week which space is free, so they stay fast and wear evenly (Monitor › Storage Health, with Trim now). Virtual machines already free the space of files you delete inside them.
