@@ -4,6 +4,10 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 🌐 Network boot
+- **UEFI computers start from the network too:** Network & Firewall › Network boot now also starts newer computers that boot with UEFI, both on networks where Ignis hands out the addresses and next to your router. They get a short menu with **Ignis Recovery**; the ISO images and netboot.xyz are one entry further. Secure Boot has to be off on that computer for network boot.
+- **Network boot no longer stops answering** after a computer's second try, and it no longer keeps a processor core busy. Android Apps now starts while network boot is on.
+
 ### 📹 Surveillance
 - **HTTP cameras:** when you add a camera, choose what its address is: an RTSP stream, an MJPEG stream, a snapshot picture fetched every few seconds, or an HLS stream. An example address is shown for each. **Test** now works for https cameras too, without the Video Compute Runtime, and says what the camera sends.
 - **Streams for other apps:** in a camera's settings, switch on RTSP, MJPEG, HLS or a snapshot picture for Home Assistant, VLC or a TV. Each stream has its own private address with **Copy**; **New address** or switching the stream off shuts the old address out. RTSP opens only on the networks you pick (Cameras › Streams for other apps), with an entry per camera in the firewall. MJPEG, HLS and the snapshot need the next system update.
