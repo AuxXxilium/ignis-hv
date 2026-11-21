@@ -7,6 +7,7 @@ What each Ignis release brings, the newest first.
 ### 🛠️ Smaller fixes
 - No more false "data volume is not mounted" message on the console at every start.
 - **Android Apps** start on Intel and AMD graphics cards again (faster than on the processor). If Android cannot start on the card, it switches to the processor by itself and tells you.
+- The top bar looks the same in the classic and the desktop layout (the desktop's slim bar), with the bell, the layout switch and your account in the same places. The desktop's "Show desktop" button is gone: Alt+Shift+D or a right-click on the desktop or the taskbar still does it.
 
 ## 26.11.21
 
