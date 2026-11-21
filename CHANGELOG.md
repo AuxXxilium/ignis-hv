@@ -54,6 +54,7 @@ What each Ignis release brings, the newest first.
 - **The old Office formats too**: .doc, .dot, .ppt, .pot, .pps and Works .wps show their text (slide by slide for presentations, with their pictures); Download gives you the original.
 - **More previews**: .rtf, .epub e-books, Markdown, code and settings files with line numbers and colours, .csv and .tsv as a table, what is inside .zip and .tar archives, HEIC and TIFF pictures. Share links show the same previews.
 - Previews open in a closed-off frame that cannot reach your session; very large and password-protected files are not previewed, Download opens them.
+- **Convert files** (Drive and Video Station): videos into H.264 in MP4, which plays almost everywhere (or H.265 / AV1), at their size or at most 1080p or 720p; music into AAC or MP3; HEIC, TIFF and WebP pictures into JPEG. Beside the original or into another folder, and the original into the recycle bin if you like. **Convert new files here…** on a folder converts everything that arrives there once its upload is finished. The **Conversions** tab shows the progress, and the bell tells you when it is done. Uses the graphics card when it can; needs the Graphics Runtime.
 
 ### 🎨 A fresher look
 - Boxes lift off the background with a soft shadow, and box titles carry a touch of your highlight colour.
