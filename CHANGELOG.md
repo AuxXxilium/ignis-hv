@@ -17,6 +17,13 @@ What each Ignis release brings, the newest first.
 - **Element, FluffyChat and other Matrix apps** can show your conversations too: open Chat's settings (the gear) and make a password for them, and enter your recovery key there as their Security Key (they do not unlock by the Ignis sign-in). It is shown once, and a new one signs those apps out; your Ignis password is never used. Phone apps need a trusted certificate (System › Host). Calls stay in Ignis and the Ignis app.
 - When an Ignis user is deleted, their chat account is closed a few minutes later.
 
+### 🔑 App passwords
+- **Sign-in for other apps**, in your profile: network shares (SMB), FTP/FTPS/SFTP, Calendar & Contacts, Chat apps like Element, and music apps (Subsonic) take your Ignis password as before, and **app passwords** alongside it.
+- Make an app password for a device you don't fully trust, give it a name, and switch on only the services it may open. Let Ignis generate a secure one, or type your own (12 characters at least). It is shown once; **New password** replaces it and **Revoke** cuts that device off, without changing your Ignis password.
+- Switch **Allow my Ignis password** off and these apps take only app passwords.
+- Network shares hold one password per user: while an app password opens them, they take it instead of your Ignis password, and get it back when that app password is revoked.
+- These apps cannot ask for a second factor; the profile says so when you have 2FA on.
+
 ### 🌍 Web Browser
 - **No more minimize, maximize and close buttons** in Chromium's own controls. They did nothing useful in the browser window, and close ended the browser. The tab strip, address bar and menu stay.
 
