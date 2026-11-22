@@ -12,6 +12,7 @@ What each Ignis release brings, the newest first.
 - Calls go straight between the devices and your Ignis: on your network, over the VPN or wherever its ports TCP 7881 and UDP 7882 can be reached. The Firewall opens them while Chat runs.
 - **End-to-end encrypted:** messages, pictures, files and calls are encrypted on your device; the appliance stores and forwards only what it cannot read, so a stolen disk, backups, other users and admins see nothing.
 - **Signing in unlocks them.** Sign in to Ignis on a new browser, phone or in the Ignis app and your messages are there, older ones included: a key derived from your password on your device opens them. Because the appliance checks that password at sign-in, whoever controls the appliance at that moment could do the same; nothing else can.
+- An account whose Chat was set up before this needs its **recovery key once** (or an approval from another device); from then on the Ignis sign-in unlocks it everywhere, in every tab of the browser.
 - **Add a device by its code:** a new device can also show a QR code with 16 numbers; scan or type it under **Add a device** on one you already use. And your **recovery key**, made the first time you open Chat, unlocks them anywhere if all else fails (after an admin reset your password, say).
 - **The bell tells you** about a new message when Chat isn't open (one line per conversation, at most every two minutes; nothing for what you already read) and about a call at once. Only you see your own lines.
 - **Element, FluffyChat and other Matrix apps** can show your conversations too: open Chat's settings (the gear) and make a password for them, and enter your recovery key there as their Security Key (they do not unlock by the Ignis sign-in). It is shown once, and a new one signs those apps out; your Ignis password is never used. Phone apps need a trusted certificate (System › Host). Calls stay in Ignis and the Ignis app.
@@ -23,6 +24,21 @@ What each Ignis release brings, the newest first.
 - Switch **Allow my Ignis password** off and these apps take only app passwords.
 - Network shares hold one password per user: while an app password opens them, they take it instead of your Ignis password, and get it back when that app password is revoked.
 - These apps cannot ask for a second factor; the profile says so when you have 2FA on.
+
+### 📺 Video Station and Audio Station: who may use the media server
+- **Devices seen** lists every TV, receiver and player that has asked the DLNA server, with its address, its hardware address and what it says it is.
+- **Block** shuts a device out at once: it can neither browse nor play (the Firewall drops it too). **Allow** and **Forget** undo it.
+- Switch on **Only devices I allow** and every device you have not allowed is refused, new ones included.
+- In Video Station under **TV and players**, in Audio Station in its settings. Each server has its own list.
+
+### 💽 Storage
+- **Storage Health** and the **Storage Analyzer** moved from Monitor into **Storage**: one page with **Storage**, **Health** and **Analyzer** switched under its title. Monitor keeps Monitor, History and Benchmark. Accounts without the storage permission find Health there, as before under Monitor.
+
+### ⚡ Faster
+- **The interface loads with a quarter of the data**: the web server now compresses it (brotli or gzip), about 0.5 MB instead of 2 MB on first load, and much less per language.
+- **Every page answers sooner:** each request did about 0.15 s of needless work checking old sign-ins; that is gone. The list of virtual machines builds about three times faster with several machines.
+- Pages left open in a background tab stop asking the appliance every few seconds, and catch up the moment you look at them again.
+- Logs of the apps are kept to a few MB each instead of growing without end.
 
 ### 🌍 Web Browser
 - **No more minimize, maximize and close buttons** in Chromium's own controls. They did nothing useful in the browser window, and close ended the browser. The tab strip, address bar and menu stay.
