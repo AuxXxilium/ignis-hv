@@ -18,6 +18,11 @@ What each Ignis release brings, the newest first.
 - **Deduplication for ZFS** works as data is written. It needs about 5 GB of RAM per TB of data, which the page says before you switch it on.
 - **ZFS volumes are back.** Pools now come back after a restart and after an update; we checked mirrors, reboots and updates before offering ZFS again.
 
+### ⚙️ Settings behind a gear
+- **Every page's settings now open from a gear button right beside the page's ?**, instead of a **Settings** tab among the page's views. This applies to Containers and to every app with settings: AdGuard Home, Android Apps, Antivirus, Audio Station, Documents, Drive, Download Station, Live TV, Photos, Remote Desktop, Video Station, Web & Mail and Windows Apps.
+- The gear is highlighted while the settings are open; click it again to go back to the view you came from. People who may not change an app's settings don't see the gear, just as they didn't see the tab.
+- A game server's own **Settings** tab stays where it is: it belongs to that server, not to Game Servers as a whole.
+
 ### 🏠 Overview (new first page)
 - **Overview** is the first page in the sidebar and where admins land after signing in: what the box is (name, Ignis version and whether an update is out, uptime, processor, memory, graphics cards, network cards with speed and address, drives, the UPS), what runs on it (machines, LXC and containers running of all, CPU, memory and storage, the space used per volume), the newest bell messages, and every installed app as a tile in its sidebar section. Every line and tile opens its page; **Add apps** leads to Extensions.
 - **Getting started** moved here from Virtual Machines, with **Hide** and **Don't show again** as before.

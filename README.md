@@ -76,37 +76,208 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 
 Apps that belong together come as one package: **Web & Mail**, **Drive & Shares**, **Backup & Sync**, the **Graphics Runtime**, and **Docker** with App Station. One switch turns the whole package on or off, updates and removes it, and its page has a tab for each part. If you had one of the parts installed on its own before, it moves into its package with everything it holds.
 
-| App | What it does |
-| :-- | :-- |
-| **Docker** | Runs containers on the Containers page. With **App Station**: popular self-hosted apps such as Jellyfin, Immich, Nextcloud and Home Assistant in one click |
-| **Drive & Shares** | **Drive** shows your shared folders in the browser: upload, preview and share files with a link, also with people who have no account. The preview opens Word, Excel and PowerPoint files (the old .doc, .xls and .ppt too), OpenDocument, PDF, e-books, Markdown and code, and lists what is inside archives. **Network Shares** shares the folders over SMB like a NAS, and over SFTP and FTPS if you want |
-| **Office Editor** | Edits Word, Excel and PowerPoint files (and OpenDocument) right in Drive's preview, saved straight back into the share, with several people in one document at once. Collabora Online, which starts when you open a document and stops again when nobody edits. Without it, Drive still edits text, Markdown, code and CSV files |
-| **Antivirus** | Scans your shares for viruses and other malware with ClamAV: by hand, on a schedule, and new files as they arrive. Infected files go into a quarantine you can restore from or empty, and the virus definitions update themselves every day |
-| **Documents** | A paperless archive: scans, PDFs and photos of letters become searchable PDFs, filed by correspondent, type and tags with suggestions learned from what you file. Feed it from a scanner, a mailbox or the page, and find any letter again by a word in it |
-| **Backup & Sync** | **Backup** makes encrypted, versioned backups of your folders, your computers and your VMware and Hyper-V machines, to a disk, another Ignis or the cloud, on a schedule. A computer that fails is brought back whole with **Ignis Recovery**, started from a USB stick, a CD image or over the network. **Cloud Sync** keeps folders in step with Google Drive, OneDrive, Dropbox, S3 and many more |
-| **Calendar & Contacts** | Your calendars, tasks and contacts on Ignis, for every phone and computer (CalDAV and CardDAV). In the browser too: month, week and list views with repeating events, reminders and tasks, and an address book with photos |
-| **Ignis Sync** | Keeps folders the same on your phones and computers, peer to peer and end-to-end encrypted, with the Syncthing apps |
-| **Photos** | Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them |
-| **Video Station** | Your movies and TV shows with posters, played in the browser. Also plays on TVs, consoles and Kodi |
-| **Audio Station** | Your music by album, artist, genre and folder, with playlists, favourites, lyrics and internet radio. Plays in the browser, in music apps that speak Subsonic, and on receivers, speakers and TVs |
-| **Live TV** | Watch TV in the browser from DVB-T/T2, cable and satellite tuners, HDHomeRun and SAT>IP tuners on your network or IPTV playlists, with a programme guide. Records from the guide or by series rules into a folder Video Station shows, and passes the channels on to Plex, Jellyfin, Kodi and TVs as a playlist or an HDHomeRun |
-| **Surveillance** | Records your IP cameras (RTSP, or HTTP: MJPEG, snapshots and HLS), live view in a grid that fits your screen, motion events and playback. Can recognise people, vehicles, faces and number plates, and alert you. Each camera can also be passed on to Home Assistant, VLC or another recorder, at an address of its own that you can renew at any time. Open any camera from the list in a window of its own; pass cameras on to Home Assistant or VLC at addresses you can renew |
-| **Download Station** | Downloads links, torrents and magnet links into a folder you choose |
-| **Web & Mail** | **Web Station** hosts your own websites and their subdomains with the newest PHP or one of the two before it, and databases, including WordPress and phpMyAdmin in one click, each with its own certificate, and a DNS server for your own domains that fills in its records by itself. **Mail Server** is email for your own domain, with a spam filter and help with the DNS settings, and **Webmail** reads it in the browser |
-| **VPN** | Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN |
-| **SAN Manager** | Offers storage to other computers over iSCSI |
-| **Game Servers** | Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, backups and timetables. Requires Docker |
-| **AI** | Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat |
-| **Web Browser** | A browser that runs on Ignis and shows inside the page, with tabs and a toolbar like the browser you know. Open your router, cameras and other devices on your home network from anywhere, look something up while you work, and save downloads straight to a shared folder. You choose whether it may reach the internet, your home network or both |
-| **Remote Desktop** | Reach the PCs, servers and machines on your network in the browser, over RDP, VNC and SSH. Save connections in groups, for you or shared with others, with the password kept encrypted or asked each time; wake a PC that sleeps; copy and paste, Ctrl+Alt+Del, full screen, and a shared folder Windows sees as a drive. Requires the Graphics Runtime |
-| **Windows Apps** | Runs Windows programs on Ignis and shows them in your browser, without a Windows licence. Each set of programs gets its own Windows with its own drive C:, and sees only the shared folders you allow, plus a folder of your own that all your programs share. Per set, you choose whether it may reach the internet and your home network. Programs open on their own, each filling the screen without the Windows desktop, or on a whole Windows desktop. Drop an installer or a file on the screen to install or upload it |
-| **Android Apps** | Runs Android apps on Ignis and shows them in your browser, as a whole Android screen with its home screen and a taskbar, or each app in a window of its own. You choose Android with Google's apps or without. Requires the Graphics Runtime |
-| **Graphics Runtime** | The screen that Web Browser, Windows Apps, Android Apps and Remote Desktop run on (Display Runtime), using your graphics card when one is free, and video conversion on your GPU for the media apps with 3D graphics for Linux machines without passing a card through (Video Compute Runtime). Installed by itself with the apps that need it |
-| **DSM machines** | Sets up Synology DSM machines with the Arx loader and keeps the loader up to date |
-| **AdGuard Home** | Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose |
-| **UPS** | Watches the UPS your box runs on, over USB, its network card or another NUT server such as a Synology: battery, runtime and load, with a day of history. When the power fails it shuts down your machines, containers and apps in the order you choose, then Ignis, and starts them again when the power is back. Other devices on the same UPS can follow it through Ignis |
-| **NVIDIA** | The NVIDIA driver, so containers can use the GPU |
-| **Vision Runtime** | The image recognition that Photos and Surveillance use |
+<sub>Each screenshot shows the app's own page, some with sample data.</sub>
+
+#### 📁 Files
+
+##### Drive & Shares
+
+**Drive** shows your shared folders in the browser: upload, preview and share files with a link, also with people who have no account. The preview opens Office files, OpenDocument, PDF, e-books, Markdown, code and archives. **Network Shares** shares the folders over SMB like a NAS, and over SFTP and FTPS if you want.
+
+<img alt="Drive: the Family share with its folders" src="assets/screenshots/apps/drive.png" width="100%">
+<p><img alt="Drive: share links with their limits" src="assets/screenshots/apps/drive-links.png" width="49%"> <img alt="Network Shares: the shares" src="assets/screenshots/apps/shares.png" width="49%"></p>
+
+##### Office Editor
+
+Edits Word, Excel and PowerPoint files (and OpenDocument) right in Drive's preview, with several people in one document at once. It starts when a document is opened and stops again when nobody edits.
+
+<img alt="Office Editor: its state and settings" src="assets/screenshots/apps/office.png" width="100%">
+
+##### Antivirus
+
+Scans your shares for viruses with ClamAV: by hand, on a schedule, and new files as they arrive. Infected files go into a quarantine, and the virus definitions update themselves.
+
+<img alt="Antivirus: definitions, last scan, quarantine and scanner" src="assets/screenshots/apps/antivirus.png" width="100%">
+
+##### Documents
+
+A paperless archive: scans, PDFs and photos of letters become searchable PDFs, filed by correspondent, type and tags. Find any letter again by a word in it.
+
+<img alt="Documents: the archive with its search and filters" src="assets/screenshots/apps/documents.png" width="100%">
+
+##### Backup & Sync
+
+**Backup** makes encrypted, versioned backups of your folders, computers and VMware and Hyper-V machines, to a disk, another Ignis or the cloud. **Ignis Recovery** brings a failed computer back whole. **Cloud Sync** keeps folders in step with Google Drive, OneDrive, Dropbox, S3 and more.
+
+<p><img alt="Backup: tasks, destinations, VM hosts and computers" src="assets/screenshots/apps/backup.png" width="49%"> <img alt="Cloud Sync: tasks and connections" src="assets/screenshots/apps/cloudsync.png" width="49%"></p>
+
+##### Calendar & Contacts
+
+Your calendars, tasks and contacts for every phone and computer (CalDAV and CardDAV), and in the browser with month, week and list views and an address book.
+
+<img alt="Calendar & Contacts: a month view" src="assets/screenshots/apps/calendar.png" width="100%">
+
+##### Ignis Sync
+
+Keeps folders the same on your phones and computers, peer to peer and end-to-end encrypted, with the Syncthing apps.
+
+<img alt="Ignis Sync: folders, devices and this appliance" src="assets/screenshots/apps/sync.png" width="100%">
+
+##### SAN Manager
+
+Offers storage to other computers over iSCSI.
+
+<img alt="SAN Manager: targets, LUNs and sessions" src="assets/screenshots/apps/san.png" width="100%">
+
+##### Download Station
+
+Downloads links, torrents and magnet links into a folder you choose.
+
+<img alt="Download Station: a download queue with progress" src="assets/screenshots/apps/downloads.png" width="100%">
+
+#### 🎬 Media
+
+##### Photos
+
+Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them.
+
+<img alt="Photos: a timeline of pictures grouped by day" src="assets/screenshots/apps/photos.png" width="100%">
+
+##### Video Station
+
+Your movies and TV shows with posters, played in the browser, and on TVs, consoles and Kodi.
+
+<img alt="Video Station: Continue watching and Recently added" src="assets/screenshots/apps/video.png" width="100%">
+
+##### Audio Station
+
+Your music by album, artist, genre and folder, with playlists, lyrics and internet radio. Plays in the browser, in Subsonic apps and on receivers, speakers and TVs.
+
+<img alt="Audio Station: the home view" src="assets/screenshots/apps/audio.png" width="100%">
+
+##### Live TV
+
+Watch TV in the browser from DVB, HDHomeRun and SAT>IP tuners or IPTV playlists, with a programme guide. Records from the guide or by series rules, and passes the channels on to Plex, Jellyfin, Kodi and TVs.
+
+<img alt="Live TV: channels and the player" src="assets/screenshots/apps/tv.png" width="100%">
+
+##### Surveillance
+
+Records your IP cameras, with a live grid that fits your screen, motion events and playback. Recognises people, vehicles, faces and number plates, and alerts you.
+
+<img alt="Surveillance: four cameras live in a grid" src="assets/screenshots/apps/surveillance.png" width="100%">
+
+#### 🌐 Web & Mail
+
+##### Web & Mail
+
+**Web Station** hosts your websites and subdomains with PHP, databases, WordPress and phpMyAdmin, each with its own certificate, and a DNS server for your domains. **Mail Server** is email for your own domain with a spam filter, and **Webmail** reads it in the browser.
+
+<img alt="Web Station: websites with their subdomains, PHP and certificates" src="assets/screenshots/apps/web.png" width="100%">
+<p><img alt="Mail Server: today's mail, services and certificates" src="assets/screenshots/apps/mail.png" width="49%"> <img alt="Web Station's DNS server and zones" src="assets/screenshots/apps/dns.png" width="49%"></p>
+<img alt="Webmail: addresses and mail servers" src="assets/screenshots/apps/webmail.png" width="100%">
+
+#### 🔒 Network
+
+##### VPN
+
+Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN.
+
+<img alt="VPN: servers, tunnels and who is connected" src="assets/screenshots/apps/vpn.png" width="100%">
+
+##### AdGuard Home
+
+Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose.
+
+<img alt="AdGuard Home: protection and the last 24 hours" src="assets/screenshots/apps/adguard.png" width="100%">
+
+##### Speedtest
+
+Measures your internet connection with Ookla's servers and keeps a history.
+
+<img alt="Speedtest: the latest result and the history" src="assets/screenshots/apps/speedtest.png" width="100%">
+
+##### WiFi
+
+Turns a WiFi card into an access point, or connects Ignis to a WiFi network. It has no page of its own: you set it up under **Network & Firewall**.
+
+#### 🧩 Apps
+
+##### Docker
+
+Runs containers on the **Containers** page. With **App Station**: self-hosted apps such as Jellyfin, Immich, Nextcloud and Home Assistant in one click.
+
+<img alt="Containers: the container list with a compose project" src="assets/screenshots/containers.png" width="100%">
+
+##### Game Servers
+
+Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, mods, backups and timetables. Requires Docker.
+
+<p><img alt="Game Servers: five servers with players and usage" src="assets/screenshots/apps/games.png" width="49%"> <img alt="Game Servers: a Minecraft server's add-ons from Modrinth" src="assets/screenshots/apps/games-addons.png" width="49%"></p>
+
+##### AI
+
+Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat.
+
+<img alt="AI: engine, models and getting started" src="assets/screenshots/apps/ai.png" width="100%">
+
+##### Web Browser
+
+A browser on Ignis, inside the page, with tabs. Open your router and other devices at home from anywhere, and save downloads straight to a share.
+
+<img alt="Web Browser: the browser page" src="assets/screenshots/apps/browser.png" width="100%">
+
+##### Remote Desktop
+
+Reach the PCs, servers and machines on your network in the browser over RDP, VNC and SSH, with saved connections and wake-on-LAN. Requires the Graphics Runtime.
+
+<img alt="Remote Desktop: the connections" src="assets/screenshots/apps/remote.png" width="100%">
+
+##### Windows Apps
+
+Runs Windows programs in your browser without a Windows licence. Each set of programs has its own Windows, and sees only the folders and networks you allow.
+
+<img alt="Windows Apps: a set with its programs" src="assets/screenshots/apps/winapps.png" width="100%">
+
+##### Android Apps
+
+Runs Android apps in your browser, as a whole Android screen or each app in its own window, with Google's apps or without. Requires the Graphics Runtime.
+
+<img alt="Android Apps: the Android screen" src="assets/screenshots/apps/android.png" width="100%">
+
+##### DSM machines
+
+Sets up Synology DSM machines with the Arx loader and keeps the loader up to date.
+
+<img alt="Arx DSM: machines and a new DSM machine" src="assets/screenshots/apps/dsm.png" width="100%">
+
+#### ⚙️ Misc
+
+##### Graphics Runtime
+
+The screen the Web Browser, Windows Apps, Android Apps and Remote Desktop run on (**Display Runtime**), and GPU video conversion and 3D graphics for Linux machines (**Video Compute Runtime**). Installed by itself with the apps that need it.
+
+<p><img alt="Display Runtime: graphics card, sessions and ports" src="assets/screenshots/apps/display.png" width="49%"> <img alt="Video Compute Runtime: the FFmpeg builds" src="assets/screenshots/apps/vcrt.png" width="49%"></p>
+
+##### UPS
+
+Watches the UPS your box runs on. When the power fails it shuts down your machines, containers and apps in the order you choose, then Ignis, and starts them again when the power is back.
+
+<img alt="UPS: status, the last day and the UPS" src="assets/screenshots/apps/ups.png" width="100%">
+
+##### LED Control
+
+Drives the front panel LEDs of UGREEN NAS boxes from the activity and temperature of your disks.
+
+<img alt="LED Control: mode, front panel and bays" src="assets/screenshots/apps/ledcontrol.png" width="100%">
+
+##### NVIDIA
+
+The NVIDIA driver, so containers can use the GPU. It has no page of its own.
+
+##### Vision Runtime
+
+The image recognition that Photos and Surveillance use. It has no page of its own.
 
 > [!NOTE]
 > Some of these apps are brand new. If one is not on the Extensions tab yet, it comes with one of the next releases. **Web & Mail** needs ports 80 and 443 for your websites, so it moves the Ignis interface to ports 8080 and 8443. It asks you to confirm the move first. Web Station's DNS server and AdGuard Home can run side by side, each on its own network card: for example the DNS server on the card that faces the internet and AdGuard Home on your home network's.
@@ -149,7 +320,7 @@ Ignis keeps two things apart: **the system**, which each update replaces as a wh
 | **Extensions** | Install, update, turn on, restart and remove apps, see which apps need each other and what each package includes |
 | **Info** | What this host supports, and a report to copy into a bug report |
 
-Every page has a **?** button with help for that page.
+Every page has a **?** button with help for that page, and a page with settings has a gear button right beside it.
 
 Pick the look you like from the account menu: a light or dark mode, an accent colour, a wallpaper (northern lights, mountains, waves, dunes and more, or a picture of your own) and either the classic layout with a sidebar or a **desktop** where every page opens in a window of its own, with a taskbar. Both layouts share one top bar, and the layout looks the same whether you choose solid or glass boxes. Each group in the sidebar has its own colour, pages show their key numbers at the top, and whatever runs has a coloured edge for its state, with live CPU and memory rings for machines and containers. Your language and a 12- or 24-hour clock are saved with your account. The account menu is also where you restart or shut down Ignis, if your account may. Settings are switches, and a short note at the bottom of the screen confirms what you saved. The address bar shows just Ignis's address, whatever page you are on.
 
@@ -172,41 +343,6 @@ Pick the look you like from the account menu: a light or dark mode, an accent co
     <td colspan="2"><img alt="The desktop layout: Virtual Machines, Monitor and Containers in windows of their own" src="assets/screenshots/desktop.png"><br><sub><b>Desktop</b>: every page in a window of its own, with a taskbar and your wallpaper</sub></td>
   </tr>
 </table>
-
-### 🧩 Apps in action
-
-<table>
-  <tr>
-    <td width="50%"><img alt="Photos: a timeline of pictures grouped by day" src="assets/screenshots/apps/photos.png"><br><sub><b>Photos</b>: your pictures as a timeline, by people, places and things</sub></td>
-    <td width="50%"><img alt="Video Station: posters under Continue watching and Recently added" src="assets/screenshots/apps/video.png"><br><sub><b>Video Station</b>: your films and shows with posters, in the browser and on your TV</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img alt="Surveillance: four cameras live in a grid" src="assets/screenshots/apps/surveillance.png"><br><sub><b>Surveillance</b>: live view that fits your screen, recordings, alerts, and streams for other apps</sub></td>
-    <td width="50%"><img alt="Drive: a folder of pictures as thumbnails" src="assets/screenshots/apps/drive.png"><br><sub><b>Drive</b>: your shared folders in the browser, with previews of documents, sheets and slides, and share links</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img alt="Web &amp; Mail on its Web Station tab: example.com with its docs and shop subdomains, each with its PHP version, certificate and buttons" src="assets/screenshots/apps/web.png"><br><sub><b>Web &amp; Mail</b>: Web Station's websites, each in a box with its controls, subdomains nested inside, its PHP version and HTTPS per site; Mail Server is a tab away</sub></td>
-    <td width="50%"><img alt="Game Servers: five servers with players and usage" src="assets/screenshots/apps/games.png"><br><sub><b>Game Servers</b>: Minecraft, Valheim and about 150 more, with console and backups</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img alt="Download Station: a download queue with progress" src="assets/screenshots/apps/downloads.png"><br><sub><b>Download Station</b>: links and torrents straight onto your storage</sub></td>
-    <td width="50%"><img alt="VPN: WireGuard devices with their QR codes" src="assets/screenshots/apps/vpn.png"><br><sub><b>VPN</b>: WireGuard, OpenVPN, IPsec and Tailscale, with a QR code per device</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img alt="Mail Server: the DNS records to set for a domain" src="assets/screenshots/apps/mail.png"><br><sub><b>Mail Server</b>: email for your own domain, with a DNS check</sub></td>
-    <td width="50%"><img alt="Web Station's DNS tab: the DNS server on the internet-facing adapter, and zones with records from Web Station and Mail Server" src="assets/screenshots/apps/dns.png"><br><sub><b>DNS server</b>: your domains' records, filled in by your websites and mail</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img alt="Drive: three share links in boxes, with their limits and buttons" src="assets/screenshots/apps/drive-links.png"><br><sub><b>Drive</b>: share links for files and folders, with passwords, expiry, download limits and upload requests</sub></td>
-    <td width="50%"><img alt="Game Servers: a Minecraft server's Add-ons tab with its installed Modrinth plugins" src="assets/screenshots/apps/games-addons.png"><br><sub><b>Game Servers</b>: add mods and plugins from Modrinth, with a console, config files and backups per server</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img alt="Web Browser settings: start page, downloads folder, the switches for the internet and the home network, and the screen" src="assets/screenshots/apps/browser.png"><br><sub><b>Web Browser</b>: a browser on Ignis, inside the page, with tabs; you choose what it may reach and where downloads go</sub></td>
-    <td width="50%"><img alt="Windows Apps: two bottles, each with its drives and buttons, one without internet" src="assets/screenshots/apps/winapps.png"><br><sub><b>Windows Apps</b>: Windows programs in your browser, each set in a bottle that sees only the folders and networks you allow</sub></td>
-  </tr>
-</table>
-
-<sub>Screenshots of the real interface with sample data.</sub>
 
 ---
 
