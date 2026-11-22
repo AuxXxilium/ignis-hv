@@ -9,6 +9,14 @@ What each Ignis release brings, the newest first.
 - **A RAID keeps working with one disk missing.** If a disk fails or is unplugged, Ignis now starts the data volume with the remaining disks instead of without it, and says so on the console. Replace the disk soon: until then there is no spare copy.
 - **A disk that comes back is taken in again.** A disk that was missing for a while (a loose cable, unplugged for one start) is added back to its RAID by itself and rebuilt in the background.
 - If the data volume can't be started at all — a disk is missing *and* the machine was not shut down cleanly — the console and the **Storage** page now say so and what to do, instead of only "did not mount".
+- **Replace a failed disk from Storage.** When a disk of the system or data RAID is missing, **Storage** shows a card with both arrays and the free disks that are big enough. Pick one and choose **Use this disk**: it gets the same partitions as the other disks, the boot loader, and is rebuilt into the RAID in the background (hours on large disks; the machine keeps running, and the card shows the progress). Afterwards the new disk can start the machine on its own. **Monitor › Storage Health** points there too.
+
+### 🗜️ Compression and deduplication for volumes
+- **Choose per volume, when you create it or later** (right-click the volume › **Settings…**). Only what the filesystem can do is offered.
+- **Compression** for btrfs and ZFS: off, fast or strong. It applies to what is written from then on.
+- **Deduplication** for btrfs and XFS: once a week or every day, **at a time you choose** (and a weekday for weekly). At that time identical blocks of files already written are shared, at the lowest priority; the run is also listed in **Schedules**, and **Deduplicate now** starts one at once. The dialog shows the last run and how much it freed.
+- **Deduplication for ZFS** works as data is written. It needs about 5 GB of RAM per TB of data, which the page says before you switch it on.
+- **ZFS volumes are back.** Pools now come back after a restart and after an update; we checked mirrors, reboots and updates before offering ZFS again.
 
 ### 🏠 Overview (new first page)
 - **Overview** is the first page in the sidebar and where admins land after signing in: what the box is (name, Ignis version and whether an update is out, uptime, processor, memory, graphics cards, network cards with speed and address, drives, the UPS), what runs on it (machines, LXC and containers running of all, CPU, memory and storage, the space used per volume), the newest bell messages, and every installed app as a tile in its sidebar section. Every line and tile opens its page; **Add apps** leads to Extensions.
