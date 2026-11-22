@@ -24,7 +24,8 @@ What each Ignis release brings, the newest first.
 - A game server's own **Settings** tab stays where it is: it belongs to that server, not to Game Servers as a whole.
 
 ### 🌍 Web Browser
-- **Your tabs are visible now.** A tab strip under the toolbar shows every open tab with its title. Click one to switch to it, or its **×** to close it. Before, a second tab could stay open without you knowing.
+- **Chromium's own controls on a computer.** The browser now shows Chromium's own tab strip, address bar and menu, just as you know them, while downloads, full screen and **More** sit in the page header. On a phone or a narrow window the Ignis toolbar stays, which is easier to use by touch. Change it per device under **Settings › On this device › Controls**; the browser follows the device that opened it last.
+- **Your tabs are visible with the Ignis toolbar too.** A tab strip under the toolbar shows every open tab with its title. Click one to switch to it, or its **×** to close it. Before, a second tab could stay open without you knowing.
 - **The address bar shows the page's address again.** Since the last update it stayed empty.
 - **One connection per person.** Opening the browser again — a reload, a second browser tab, or coming back after the network dropped — now takes over your earlier connection instead of counting you twice ("2 watching"). Two connections at once had split the bandwidth between them and turned the picture blurry. The older tab says the browser was opened elsewhere and stays closed, so the two don't take it from each other.
 - **Your own mouse pointer** is used over the browser, instead of a picture of the browser's pointer.
@@ -37,6 +38,9 @@ What each Ignis release brings, the newest first.
 - **Getting started** moved here from Virtual Machines, with **Hide** and **Don't show again** as before.
 - In the desktop layout Overview is the first icon too.
 - **The Host statistics** are now a small **Host** tab on the bottom edge, at the right. Click it and the statistics slide up; click again and they slide away. Pages keep only that tab's height free at the bottom, so a long page no longer ends with a big gap.
+
+- **This appliance looks tidier:** the Ignis version with its update state as a badge, the processor, graphics cards, memory and UPS as tiles, and the network cards and drives as short lists with their link, address, size and kind.
+- **The Overview shows its values at once:** it remembers the last ones in your browser and refreshes them in the background, instead of filling in row by row.
 
 ### 📝 Office Editor (new app) and editing in Drive
 - **Edit Word, Excel and PowerPoint files right in Drive:** with the new **Office Editor** installed, Drive's preview has an **Edit** button for .docx, .xlsx, .pptx and the OpenDocument files (.odt, .ods, .odp) and their older kin. The file opens in a full office editor in the same window and is saved straight back into the share as you work. Several people can edit the same file at once and see each other's changes.
