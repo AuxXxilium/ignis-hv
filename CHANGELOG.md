@@ -11,6 +11,15 @@ What each Ignis release brings, the newest first.
 - **In the Ignis app too:** a **Chat** tab with the same conversations and calls, on phones and computers.
 - Calls go straight between the devices and your Ignis: on your network, over the VPN or wherever its ports TCP 7881 and UDP 7882 can be reached. The Firewall opens them while Chat runs.
 - Messages are protected by the HTTPS connection, not end-to-end encrypted: whoever has root on the appliance could read them, as with the shares.
+- **The bell tells you** about a new message when Chat isn't open (one line per conversation, at most every two minutes; nothing for what you already read) and about a call at once. Only you see your own lines.
+- **Element, FluffyChat and other Matrix apps** can show your conversations too: open Chat's settings (the gear) and make a password for them. It is shown once, and a new one signs those apps out; your Ignis password is never used. Phone apps need a trusted certificate (System › Host). Calls stay in Ignis and the Ignis app.
+- When an Ignis user is deleted, their chat account is closed a few minutes later.
+
+### 🌍 Web Browser
+- **No more minimize, maximize and close buttons** in Chromium's own controls. They did nothing useful in the browser window, and close ended the browser. The tab strip, address bar and menu stay.
+
+### 🧩 Extensions
+- **The list of apps loads faster** when it was asked for a moment ago (the sidebar, the bell and the Extensions tab all use it): about a quarter of the time. Installing, removing, switching on or off shows at once.
 
 ## 26.11.22
 
