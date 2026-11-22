@@ -10,9 +10,10 @@ What each Ignis release brings, the newest first.
 - **No sign-up, nothing outside your Ignis.** Every Ignis user already has their chat account and is signed in with their Ignis sign-in. Nobody without an Ignis account can join, and your Ignis talks to no other chat server. Messages and files stay on the data volume.
 - **In the Ignis app too:** a **Chat** tab with the same conversations and calls, on phones and computers.
 - Calls go straight between the devices and your Ignis: on your network, over the VPN or wherever its ports TCP 7881 and UDP 7882 can be reached. The Firewall opens them while Chat runs.
-- Messages are protected by the HTTPS connection, not end-to-end encrypted: whoever has root on the appliance could read them, as with the shares.
+- **End-to-end encrypted:** messages, pictures, files and calls are encrypted on your device; only the devices of the people in the conversation can read them, not your Ignis and not whoever has root on it.
+- **Your recovery key** is made the first time you open Chat in the browser. Keep it safe: it unlocks your messages, older ones included, in a new browser, on a new phone and in the Ignis app. Lost it? Start over in Chat's settings; older messages then stay unreadable on new devices.
 - **The bell tells you** about a new message when Chat isn't open (one line per conversation, at most every two minutes; nothing for what you already read) and about a call at once. Only you see your own lines.
-- **Element, FluffyChat and other Matrix apps** can show your conversations too: open Chat's settings (the gear) and make a password for them. It is shown once, and a new one signs those apps out; your Ignis password is never used. Phone apps need a trusted certificate (System › Host). Calls stay in Ignis and the Ignis app.
+- **Element, FluffyChat and other Matrix apps** can show your conversations too: open Chat's settings (the gear) and make a password for them, and enter your recovery key there as their Security Key. It is shown once, and a new one signs those apps out; your Ignis password is never used. Phone apps need a trusted certificate (System › Host). Calls stay in Ignis and the Ignis app.
 - When an Ignis user is deleted, their chat account is closed a few minutes later.
 
 ### 🌍 Web Browser
