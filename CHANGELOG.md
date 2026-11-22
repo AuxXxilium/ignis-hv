@@ -31,6 +31,11 @@ What each Ignis release brings, the newest first.
 - Switch on **Only devices I allow** and every device you have not allowed is refused, new ones included.
 - In Video Station under **TV and players**, in Audio Station in its settings. Each server has its own list.
 
+### 🎬 Video Station in player apps (Jellyfin, Infuse)
+- **Watch your Video Station library in the Jellyfin apps** (Android, Android TV, iPhone and Apple TV with Swiftfin, Findroid, the web player) **and in Infuse.** Add a server with the address `https://<your Ignis>:8443/ext/ignis-video/jf.cgi` and sign in with your Ignis user name and password, or with an app password made in your profile for **Video apps (Jellyfin, Infuse)**.
+- Movies, TV shows with seasons and episodes, home videos, search, continue watching and watched are all there; what you watch in an app counts in Video Station too. The apps play the files as they are.
+- Revoking that app password signs the apps out. No Jellyfin software runs on your Ignis: Video Station answers the apps itself.
+
 ### 💽 Storage
 - **Storage Health** and the **Storage Analyzer** moved from Monitor into **Storage**: one page with **Storage**, **Health** and **Analyzer** switched under its title. Monitor keeps Monitor, History and Benchmark. Accounts without the storage permission find Health there, as before under Monitor.
 
