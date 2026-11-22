@@ -76,206 +76,206 @@ Add apps from the **Extensions** tab. Install only the ones you need; each one i
 
 Apps that belong together come as one package: **Web & Mail**, **Drive & Shares**, **Backup & Sync**, the **Graphics Runtime**, and **Docker** with App Station. One switch turns the whole package on or off, updates and removes it, and its page has a tab for each part. If you had one of the parts installed on its own before, it moves into its package with everything it holds.
 
-<sub>Each screenshot shows the app's own page, some with sample data.</sub>
+<sub>Each screenshot shows the app's own page, with sample data.</sub>
 
-#### 📁 Files
+### 📁 Files
 
-##### Drive & Shares
+#### 📂 Drive & Shares
 
 **Drive** shows your shared folders in the browser: upload, preview and share files with a link, also with people who have no account. The preview opens Office files, OpenDocument, PDF, e-books, Markdown, code and archives. **Network Shares** shares the folders over SMB like a NAS, and over SFTP and FTPS if you want.
 
 <img alt="Drive: the Family share with its folders" src="assets/screenshots/apps/drive.png" width="100%">
-<p><img alt="Drive: share links with their limits" src="assets/screenshots/apps/drive-links.png" width="49%"> <img alt="Network Shares: the shares" src="assets/screenshots/apps/shares.png" width="49%"></p>
+<p><img alt="Drive: share links with their limits" src="assets/screenshots/apps/drive-links.png" width="49%"> <img alt="Network Shares: the shares and who may use them" src="assets/screenshots/apps/shares.png" width="49%"></p>
 
-##### Office Editor
+#### 📝 Office Editor
 
 Edits Word, Excel and PowerPoint files (and OpenDocument) right in Drive's preview, with several people in one document at once. It starts when a document is opened and stops again when nobody edits.
 
-<img alt="Office Editor: its state and settings" src="assets/screenshots/apps/office.png" width="100%">
+<img alt="Office Editor: ready to edit, with two documents open" src="assets/screenshots/apps/office.png" width="100%">
 
-##### Antivirus
+#### 🛡️ Antivirus
 
 Scans your shares for viruses with ClamAV: by hand, on a schedule, and new files as they arrive. Infected files go into a quarantine, and the virus definitions update themselves.
 
-<img alt="Antivirus: definitions, last scan, quarantine and scanner" src="assets/screenshots/apps/antivirus.png" width="100%">
+<img alt="Antivirus: definitions, a clean last scan, the quarantine and the scanner watching new files" src="assets/screenshots/apps/antivirus.png" width="100%">
 
-##### Documents
+#### 🗂️ Documents
 
 A paperless archive: scans, PDFs and photos of letters become searchable PDFs, filed by correspondent, type and tags. Find any letter again by a word in it.
 
-<img alt="Documents: the archive with its search and filters" src="assets/screenshots/apps/documents.png" width="100%">
+<img alt="Documents: filed letters as tiles with their correspondents, types and tags" src="assets/screenshots/apps/documents.png" width="100%">
 
-##### Backup & Sync
+#### 💾 Backup & Sync
 
 **Backup** makes encrypted, versioned backups of your folders, computers and VMware and Hyper-V machines, to a disk, another Ignis or the cloud. **Ignis Recovery** brings a failed computer back whole. **Cloud Sync** keeps folders in step with Google Drive, OneDrive, Dropbox, S3 and more.
 
-<p><img alt="Backup: tasks, destinations, VM hosts and computers" src="assets/screenshots/apps/backup.png" width="49%"> <img alt="Cloud Sync: tasks and connections" src="assets/screenshots/apps/cloudsync.png" width="49%"></p>
+<p><img alt="Backup: five backup tasks with their state and buttons" src="assets/screenshots/apps/backup.png" width="49%"> <img alt="Cloud Sync: sync tasks with Google Drive, OneDrive, Dropbox, WebDAV and S3" src="assets/screenshots/apps/cloudsync.png" width="49%"></p>
 
-##### Calendar & Contacts
+#### 📅 Calendar & Contacts
 
 Your calendars, tasks and contacts for every phone and computer (CalDAV and CardDAV), and in the browser with month, week and list views and an address book.
 
-<img alt="Calendar & Contacts: a month view" src="assets/screenshots/apps/calendar.png" width="100%">
+<img alt="Calendar & Contacts: a month of family events and a task list" src="assets/screenshots/apps/calendar.png" width="100%">
 
-##### Ignis Sync
+#### 🔄 Ignis Sync
 
 Keeps folders the same on your phones and computers, peer to peer and end-to-end encrypted, with the Syncthing apps.
 
-<img alt="Ignis Sync: folders, devices and this appliance" src="assets/screenshots/apps/sync.png" width="100%">
+<img alt="Ignis Sync: synced folders and a device asking to connect" src="assets/screenshots/apps/sync.png" width="100%">
 
-##### SAN Manager
+#### 🧱 SAN Manager
 
 Offers storage to other computers over iSCSI.
 
-<img alt="SAN Manager: targets, LUNs and sessions" src="assets/screenshots/apps/san.png" width="100%">
+<img alt="SAN Manager: targets, LUNs and two connected initiators" src="assets/screenshots/apps/san.png" width="100%">
 
-##### Download Station
+#### ⬇️ Download Station
 
 Downloads links, torrents and magnet links into a folder you choose.
 
 <img alt="Download Station: a download queue with progress" src="assets/screenshots/apps/downloads.png" width="100%">
 
-#### 🎬 Media
+### 🎬 Media
 
-##### Photos
+#### 🖼️ Photos
 
 Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them.
 
 <img alt="Photos: a timeline of pictures grouped by day" src="assets/screenshots/apps/photos.png" width="100%">
 
-##### Video Station
+#### 🎞️ Video Station
 
 Your movies and TV shows with posters, played in the browser, and on TVs, consoles and Kodi.
 
 <img alt="Video Station: Continue watching and Recently added" src="assets/screenshots/apps/video.png" width="100%">
 
-##### Audio Station
+#### 🎵 Audio Station
 
 Your music by album, artist, genre and folder, with playlists, lyrics and internet radio. Plays in the browser, in Subsonic apps and on receivers, speakers and TVs.
 
-<img alt="Audio Station: the home view" src="assets/screenshots/apps/audio.png" width="100%">
+<img alt="Audio Station: recently added and most played albums" src="assets/screenshots/apps/audio.png" width="100%">
 
-##### Live TV
+#### 📺 Live TV
 
 Watch TV in the browser from DVB, HDHomeRun and SAT>IP tuners or IPTV playlists, with a programme guide. Records from the guide or by series rules, and passes the channels on to Plex, Jellyfin, Kodi and TVs.
 
-<img alt="Live TV: channels and the player" src="assets/screenshots/apps/tv.png" width="100%">
+<img alt="Live TV: the programme guide with a recording" src="assets/screenshots/apps/tv.png" width="100%">
 
-##### Surveillance
+#### 📹 Surveillance
 
 Records your IP cameras, with a live grid that fits your screen, motion events and playback. Recognises people, vehicles, faces and number plates, and alerts you.
 
 <img alt="Surveillance: four cameras live in a grid" src="assets/screenshots/apps/surveillance.png" width="100%">
 
-#### 🌐 Web & Mail
+### 🌐 Web & Mail
 
-##### Web & Mail
+#### ✉️ Web & Mail
 
 **Web Station** hosts your websites and subdomains with PHP, databases, WordPress and phpMyAdmin, each with its own certificate, and a DNS server for your domains. **Mail Server** is email for your own domain with a spam filter, and **Webmail** reads it in the browser.
 
 <img alt="Web Station: websites with their subdomains, PHP and certificates" src="assets/screenshots/apps/web.png" width="100%">
 <p><img alt="Mail Server: today's mail, services and certificates" src="assets/screenshots/apps/mail.png" width="49%"> <img alt="Web Station's DNS server and zones" src="assets/screenshots/apps/dns.png" width="49%"></p>
-<img alt="Webmail: addresses and mail servers" src="assets/screenshots/apps/webmail.png" width="100%">
+<img alt="Webmail: its addresses and the mail servers it reads" src="assets/screenshots/apps/webmail.png" width="100%">
 
-#### 🔒 Network
+### 🔒 Network
 
-##### VPN
+#### 🔐 VPN
 
 Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN.
 
-<img alt="VPN: servers, tunnels and who is connected" src="assets/screenshots/apps/vpn.png" width="100%">
+<img alt="VPN: WireGuard, OpenVPN, IKEv2 and Tailscale with the devices connected now" src="assets/screenshots/apps/vpn.png" width="100%">
 
-##### AdGuard Home
+#### 🚫 AdGuard Home
 
 Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose.
 
-<img alt="AdGuard Home: protection and the last 24 hours" src="assets/screenshots/apps/adguard.png" width="100%">
+<img alt="AdGuard Home: a day of queries, the most asked and blocked domains and the busiest clients" src="assets/screenshots/apps/adguard.png" width="100%">
 
-##### Speedtest
+#### ⚡ Speedtest
 
 Measures your internet connection with Ookla's servers and keeps a history.
 
-<img alt="Speedtest: the latest result and the history" src="assets/screenshots/apps/speedtest.png" width="100%">
+<img alt="Speedtest: the latest result and a history of tests" src="assets/screenshots/apps/speedtest.png" width="100%">
 
-##### WiFi
+#### 📶 WiFi
 
 Turns a WiFi card into an access point, or connects Ignis to a WiFi network. It has no page of its own: you set it up under **Network & Firewall**.
 
-#### 🧩 Apps
+### 🧩 Apps
 
-##### Docker
+#### 🐳 Docker
 
 Runs containers on the **Containers** page. With **App Station**: self-hosted apps such as Jellyfin, Immich, Nextcloud and Home Assistant in one click.
 
 <img alt="Containers: the container list with a compose project" src="assets/screenshots/containers.png" width="100%">
 
-##### Game Servers
+#### 🎮 Game Servers
 
 Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, mods, backups and timetables. Requires Docker.
 
 <p><img alt="Game Servers: five servers with players and usage" src="assets/screenshots/apps/games.png" width="49%"> <img alt="Game Servers: a Minecraft server's add-ons from Modrinth" src="assets/screenshots/apps/games-addons.png" width="49%"></p>
 
-##### AI
+#### 🤖 AI
 
 Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat.
 
-<img alt="AI: engine, models and getting started" src="assets/screenshots/apps/ai.png" width="100%">
+<img alt="AI: the engine on the GPU, local models and online providers" src="assets/screenshots/apps/ai.png" width="100%">
 
-##### Web Browser
+#### 🌍 Web Browser
 
 A browser on Ignis, inside the page, with tabs. Open your router and other devices at home from anywhere, and save downloads straight to a share.
 
-<img alt="Web Browser: the browser page" src="assets/screenshots/apps/browser.png" width="100%">
+<img alt="Web Browser: who watches and controls the browser, and its log" src="assets/screenshots/apps/browser.png" width="100%">
 
-##### Remote Desktop
+#### 🖥️ Remote Desktop
 
 Reach the PCs, servers and machines on your network in the browser over RDP, VNC and SSH, with saved connections and wake-on-LAN. Requires the Graphics Runtime.
 
-<img alt="Remote Desktop: the connections" src="assets/screenshots/apps/remote.png" width="100%">
+<img alt="Remote Desktop: saved connections in groups, two of them open" src="assets/screenshots/apps/remote.png" width="100%">
 
-##### Windows Apps
+#### 🪟 Windows Apps
 
 Runs Windows programs in your browser without a Windows licence. Each set of programs has its own Windows, and sees only the folders and networks you allow.
 
-<img alt="Windows Apps: a set with its programs" src="assets/screenshots/apps/winapps.png" width="100%">
+<img alt="Windows Apps: three sets of Windows programs with their icons" src="assets/screenshots/apps/winapps.png" width="100%">
 
-##### Android Apps
+#### 📱 Android Apps
 
 Runs Android apps in your browser, as a whole Android screen or each app in its own window, with Google's apps or without. Requires the Graphics Runtime.
 
-<img alt="Android Apps: the Android screen" src="assets/screenshots/apps/android.png" width="100%">
+<img alt="Android Apps: the installed apps" src="assets/screenshots/apps/android.png" width="100%">
 
-##### DSM machines
+#### 🗄️ DSM machines
 
 Sets up Synology DSM machines with the Arx loader and keeps the loader up to date.
 
-<img alt="Arx DSM: machines and a new DSM machine" src="assets/screenshots/apps/dsm.png" width="100%">
+<img alt="Arx DSM: four DSM machines, one with a loader update" src="assets/screenshots/apps/dsm.png" width="100%">
 
-#### ⚙️ Misc
+### ⚙️ Misc
 
-##### Graphics Runtime
+#### 🎨 Graphics Runtime
 
 The screen the Web Browser, Windows Apps, Android Apps and Remote Desktop run on (**Display Runtime**), and GPU video conversion and 3D graphics for Linux machines (**Video Compute Runtime**). Installed by itself with the apps that need it.
 
-<p><img alt="Display Runtime: graphics card, sessions and ports" src="assets/screenshots/apps/display.png" width="49%"> <img alt="Video Compute Runtime: the FFmpeg builds" src="assets/screenshots/apps/vcrt.png" width="49%"></p>
+<p><img alt="Display Runtime: the graphics cards and the running sessions" src="assets/screenshots/apps/display.png" width="49%"> <img alt="Video Compute Runtime: the FFmpeg builds" src="assets/screenshots/apps/vcrt.png" width="49%"></p>
 
-##### UPS
+#### 🔋 UPS
 
 Watches the UPS your box runs on. When the power fails it shuts down your machines, containers and apps in the order you choose, then Ignis, and starts them again when the power is back.
 
-<img alt="UPS: status, the last day and the UPS" src="assets/screenshots/apps/ups.png" width="100%">
+<img alt="UPS: on mains power, the battery and a day with a short power cut" src="assets/screenshots/apps/ups.png" width="100%">
 
-##### LED Control
+#### 💡 LED Control
 
 Drives the front panel LEDs of UGREEN NAS boxes from the activity and temperature of your disks.
 
-<img alt="LED Control: mode, front panel and bays" src="assets/screenshots/apps/ledcontrol.png" width="100%">
+<img alt="LED Control: the front panel and four bays with their disks" src="assets/screenshots/apps/ledcontrol.png" width="100%">
 
-##### NVIDIA
+#### 🟩 NVIDIA
 
 The NVIDIA driver, so containers can use the GPU. It has no page of its own.
 
-##### Vision Runtime
+#### 👁️ Vision Runtime
 
 The image recognition that Photos and Surveillance use. It has no page of its own.
 

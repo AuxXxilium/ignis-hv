@@ -23,6 +23,15 @@ What each Ignis release brings, the newest first.
 - The gear is highlighted while the settings are open; click it again to go back to the view you came from. People who may not change an app's settings don't see the gear, just as they didn't see the tab.
 - A game server's own **Settings** tab stays where it is: it belongs to that server, not to Game Servers as a whole.
 
+### 🌍 Web Browser
+- **Your tabs are visible now.** A tab strip under the toolbar shows every open tab with its title. Click one to switch to it, or its **×** to close it. Before, a second tab could stay open without you knowing.
+- **The address bar shows the page's address again.** Since the last update it stayed empty.
+- **One connection per person.** Opening the browser again — a reload, a second browser tab, or coming back after the network dropped — now takes over your earlier connection instead of counting you twice ("2 watching"). Two connections at once had split the bandwidth between them and turned the picture blurry. The older tab says the browser was opened elsewhere and stays closed, so the two don't take it from each other.
+- **Your own mouse pointer** is used over the browser, instead of a picture of the browser's pointer.
+- **Settings** open from the gear beside the page's **?**; the toolbar's menu is now **More** (⋮).
+- The browser no longer runs into the bottom edge of the window.
+- The same one-connection rule applies to Windows Apps, Android Apps, Remote Desktop and the machine consoles: opening one again in a second tab takes it over.
+
 ### 🏠 Overview (new first page)
 - **Overview** is the first page in the sidebar and where admins land after signing in: what the box is (name, Ignis version and whether an update is out, uptime, processor, memory, graphics cards, network cards with speed and address, drives, the UPS), what runs on it (machines, LXC and containers running of all, CPU, memory and storage, the space used per volume), the newest bell messages, and every installed app as a tile in its sidebar section. Every line and tile opens its page; **Add apps** leads to Extensions.
 - **Getting started** moved here from Virtual Machines, with **Hide** and **Don't show again** as before.
