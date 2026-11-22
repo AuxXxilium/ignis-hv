@@ -55,6 +55,11 @@ What each Ignis release brings, the newest first.
 - **ArcDNS.tech**, free for Ignis and Arc, and presets for DuckDNS, No-IP, Dynu, deSEC, dynv6, FreeDNS, IPv64, Cloudflare, Namecheap, Strato and Hurricane Electric, or any service that speaks dyndns2.
 - Ignis checks the address every five minutes and tells the provider when it changed; **Update now** does it at once and shows the answer.
 
+### 📺 Live TV: free channels by country
+- **Pluto TV** and **iptv-org** as sources: under **Add a source › IPTV**, pick **Channels from** and your country.
+- Pluto TV brings free channels with ads and a programme guide (14 countries); iptv-org collects channels that are freely available (about 250 countries), without a guide.
+- Some channels only play in their own country. Like all Live TV channels, they also reach Kodi, Plex, Jellyfin and your TVs.
+
 ### 🪟 Tidier pages
 - **Forms open as dialogs** instead of panels under the lists: in Backup & Sync (tasks, destinations, restore, VM hosts, system backups and more) and in Ignis Sync (folders, devices, Leave out). No half-empty wide page any more.
 - **Settings behind the gear:** Ignis Sync's appliance ID and settings, and Calendar & Contacts' calendars and address books, devices and Google account. Their tab bars keep what you use every day.
