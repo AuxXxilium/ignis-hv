@@ -36,13 +36,24 @@ What each Ignis release brings, the newest first.
 - Movies, TV shows with seasons and episodes, home videos, search, continue watching and watched are all there; what you watch in an app counts in Video Station too. The apps play the files as they are.
 - Revoking that app password signs the apps out. No Jellyfin software runs on your Ignis: Video Station answers the apps itself.
 
+### 📂 Drive & Shares: one page
+- **Drive and Network Shares are one page now.** Make a share with **New share** under the shares on the left, and change one with the pencil next to it. A share Drive cannot open (not offered on the network, say) is shown dimmed, still with its pencil.
+- **Each share's editor shows both access lists side by side:** who may use it **on the network (SMB, FTP and SFTP)** and who may open it **in Drive**. They stay two lists, as before.
+- **Behind the gear:** how to connect (with the addresses to copy), FTP and SFTP, showing the appliance in the network, who signs in to the shares, the storage, and Drive's links and recycle bin.
+
 ### 📂 Drive: your FTP, FTPS and SFTP servers
 - **Open other servers in Drive:** under **Remote servers**, **Add a server** with its address, user name and password (or a private key for SFTP), and browse it next to your shares. FTPS works with explicit and implicit TLS; for a server with its own certificate there is **Accept any certificate**.
 - Open, download and upload files, make folders, rename and delete on the server, and **move or copy** between a server and your shares.
 - **Test** checks the connection before you save it. Each user sees only their own servers; the password is kept on the appliance, never in the page.
 
-### ☁️ Cloud Sync
+### 🗄️ Backup & Sync: one page
+- **Cloud Sync has no page of its own any more:** its sync tasks are under **Tasks**, below the backup tasks, and its connections under **Destinations** as **Cloud connections**.
 - rclone is now part of the system, shared by Cloud Sync and Drive, and updated with each system update.
+
+### 🪟 Tidier pages
+- **Forms open as dialogs** instead of panels under the lists: in Backup & Sync (tasks, destinations, restore, VM hosts, system backups and more) and in Ignis Sync (folders, devices, Leave out). No half-empty wide page any more.
+- **Settings behind the gear:** Ignis Sync's appliance ID and settings, and Calendar & Contacts' calendars and address books, devices and Google account. Their tab bars keep what you use every day.
+- **The clock in the classic layout**, in the same place as on the desktop: the time, and a click shows the month and the way to the date and time settings.
 
 ### 💽 Storage
 - **Storage Health** and the **Storage Analyzer** moved from Monitor into **Storage**: one page with **Storage**, **Health** and **Analyzer** switched under its title. Monitor keeps Monitor, History and Benchmark. Accounts without the storage permission find Health there, as before under Monitor.
