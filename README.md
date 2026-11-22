@@ -74,22 +74,25 @@ Ignis turns a PC or server into a small, dedicated host for virtual machines, co
 
 Add apps from the **Extensions** tab. Install only the ones you need; each one is updated on its own, apart from Ignis. In the sidebar your apps sit right under the machines, grouped into **Files**, **Media**, **Web & Mail**, **Network**, **Apps** and **Misc**, and each group can be folded away. When an app requires another one, the tab tells you and installs it with a click, and apps you have switched on start by themselves when Ignis starts.
 
-Apps that belong together come as one package: **Web & Mail**, **Drive & Shares**, **Backup & Sync**, the **Graphics Runtime**, and **Docker** with App Station. One switch turns the whole package on or off, updates and removes it, and its page has a tab for each part. If you had one of the parts installed on its own before, it moves into its package with everything it holds.
+Apps that belong together come as one package: **Web & Mail**, **Drive & Shares**, **Backup & Sync**, the **Graphics Runtime**, and **Docker** with App Station. One switch turns the whole package on or off, updates and removes it. If you had one of the parts installed on its own before, it moves into its package with everything it holds.
 
-<sub>Each screenshot shows the app's own page, with sample data.</sub>
+<sub>Each screenshot shows the app's own page, with sample data. Under each app, **Use it for** names what people typically do with it.</sub>
 
 ### 📁 Files
 
 #### 📂 Drive & Shares
 
-**Drive** shows your shared folders in the browser: upload, preview and share files with a link, also with people who have no account. The preview opens Office files, OpenDocument, PDF, e-books, Markdown, code and archives. **Network Shares** shares the folders over SMB like a NAS, and over SFTP and FTPS if you want.
+One page for your shared folders. In the browser, upload, preview and share files with a link, also with people who have no account. The preview opens Office files, OpenDocument, PDF, e-books, Markdown, code and archives. On the network, the same folders are shared over SMB like a NAS, and over SFTP and FTPS if you want. Each share says who may use it on the network and who in the browser. **Remote servers** opens your own FTP, FTPS and SFTP servers next to the shares.
 
-<img alt="Drive: the Family share with its folders" src="assets/screenshots/apps/drive.png" width="100%">
-<p><img alt="Drive: share links with their limits" src="assets/screenshots/apps/drive-links.png" width="49%"> <img alt="Network Shares: the shares and who may use them" src="assets/screenshots/apps/shares.png" width="49%"></p>
+**Use it for:** a family or office file server for Windows, Macs and Linux; getting at your files from anywhere in the browser; sending a large file to someone with a link that expires; Time Machine backups of your Macs; moving files between your NAS and a web host's FTP server.
+
+<p><img alt="Drive: the Family share with its folders" src="assets/screenshots/apps/drive.png" width="49%"> <img alt="Drive: share links with their limits" src="assets/screenshots/apps/drive-links.png" width="49%"></p>
 
 #### 📝 Office Editor
 
 Edits Word, Excel and PowerPoint files (and OpenDocument) right in Drive's preview, with several people in one document at once. It starts when a document is opened and stops again when nobody edits.
+
+**Use it for:** working on documents and spreadsheets together without Microsoft 365 or Google Docs; a quick change to a file on your NAS from any browser.
 
 <img alt="Office Editor: ready to edit, with two documents open" src="assets/screenshots/apps/office.png" width="100%">
 
@@ -97,23 +100,31 @@ Edits Word, Excel and PowerPoint files (and OpenDocument) right in Drive's previ
 
 Scans your shares for viruses with ClamAV: by hand, on a schedule, and new files as they arrive. Infected files go into a quarantine, and the virus definitions update themselves.
 
+**Use it for:** checking what Windows PCs, downloads and guests put on your shares; a scheduled scan of everything at night.
+
 <img alt="Antivirus: definitions, a clean last scan, the quarantine and the scanner watching new files" src="assets/screenshots/apps/antivirus.png" width="100%">
 
 #### 🗂️ Documents
 
 A paperless archive: scans, PDFs and photos of letters become searchable PDFs, filed by correspondent, type and tags. Find any letter again by a word in it.
 
+**Use it for:** going paperless at home or in a small office; finding last year's invoice or a contract by a word in it; a scanner that saves into a share and Documents files it.
+
 <img alt="Documents: filed letters as tiles with their correspondents, types and tags" src="assets/screenshots/apps/documents.png" width="100%">
 
 #### 💾 Backup & Sync
 
-**Backup** makes encrypted, versioned backups of your folders, computers and VMware and Hyper-V machines, to a disk, another Ignis or the cloud. **Ignis Recovery** brings a failed computer back whole. **Cloud Sync** keeps folders in step with Google Drive, OneDrive, Dropbox, S3 and more.
+One page for backups and cloud sync. **Backup** makes encrypted, versioned backups of your folders, computers and VMware and Hyper-V machines, to a disk, another Ignis or the cloud. **Ignis Recovery** brings a failed computer back whole. **Cloud Sync** keeps folders in step with Google Drive, OneDrive, Dropbox, S3 and more: its sync tasks sit with the backup tasks, its connections with the destinations.
 
-<p><img alt="Backup: five backup tasks with their state and buttons" src="assets/screenshots/apps/backup.png" width="49%"> <img alt="Cloud Sync: sync tasks with Google Drive, OneDrive, Dropbox, WebDAV and S3" src="assets/screenshots/apps/cloudsync.png" width="49%"></p>
+**Use it for:** the 3-2-1 rule (a USB disk, a second Ignis at a friend's, the cloud); backing up the family's laptops every day; restoring a dead PC's whole disk; keeping a copy of your Google Drive or OneDrive at home; backing up the VMs of an ESXi or Hyper-V host.
+
+<img alt="Backup: five backup tasks with their state and buttons" src="assets/screenshots/apps/backup.png" width="100%">
 
 #### 📅 Calendar & Contacts
 
-Your calendars, tasks and contacts for every phone and computer (CalDAV and CardDAV), and in the browser with month, week and list views and an address book.
+Your calendars, tasks and contacts for every phone and computer (CalDAV and CardDAV), and in the browser with month, week and list views and an address book. Keeps them in step with a Google account if you want.
+
+**Use it for:** a shared family calendar on everyone's phone; contacts without Google or iCloud; to-do lists that sync to Thunderbird and your phone.
 
 <img alt="Calendar & Contacts: a month of family events and a task list" src="assets/screenshots/apps/calendar.png" width="100%">
 
@@ -121,11 +132,15 @@ Your calendars, tasks and contacts for every phone and computer (CalDAV and Card
 
 Keeps folders the same on your phones and computers, peer to peer and end-to-end encrypted, with the Syncthing apps.
 
+**Use it for:** a folder that is always the same on your laptop, desktop and phone; your phone's photos landing on your NAS by themselves; syncing without any cloud service in between.
+
 <img alt="Ignis Sync: synced folders and a device asking to connect" src="assets/screenshots/apps/sync.png" width="100%">
 
 #### 🧱 SAN Manager
 
 Offers storage to other computers over iSCSI.
+
+**Use it for:** a disk for a Windows PC or server that behaves like a local one (games, databases, Steam libraries); shared storage for a VMware or Proxmox cluster.
 
 <img alt="SAN Manager: targets, LUNs and two connected initiators" src="assets/screenshots/apps/san.png" width="100%">
 
@@ -133,19 +148,25 @@ Offers storage to other computers over iSCSI.
 
 Downloads links, torrents and magnet links into a folder you choose.
 
+**Use it for:** large downloads that keep running while your PC is off; Linux ISOs and other torrents straight onto your NAS.
+
 <img alt="Download Station: a download queue with progress" src="assets/screenshots/apps/downloads.png" width="100%">
 
 ### 🎬 Media
 
 #### 🖼️ Photos
 
-Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them.
+Your photos as a timeline and in albums, sorted by people, places and things. Edit and share them. The Ignis app backs up your phone's camera roll into it.
+
+**Use it for:** a private Google Photos for the family; finding every photo of one person or one trip; sharing an album with a link.
 
 <img alt="Photos: a timeline of pictures grouped by day" src="assets/screenshots/apps/photos.png" width="100%">
 
 #### 🎞️ Video Station
 
-Your movies and TV shows with posters, played in the browser, and on TVs, consoles and Kodi.
+Your movies and TV shows with posters, played in the browser, and on TVs, consoles and Kodi. The Jellyfin apps and Infuse play your library too.
+
+**Use it for:** your own Netflix of the films and series you own; watching on the smart TV over DLNA or in a Jellyfin app; continuing a film on another device where you stopped.
 
 <img alt="Video Station: Continue watching and Recently added" src="assets/screenshots/apps/video.png" width="100%">
 
@@ -153,17 +174,23 @@ Your movies and TV shows with posters, played in the browser, and on TVs, consol
 
 Your music by album, artist, genre and folder, with playlists, lyrics and internet radio. Plays in the browser, in Subsonic apps and on receivers, speakers and TVs.
 
+**Use it for:** your music collection on your phone with a Subsonic app; playing on the AV receiver or a networked speaker; internet radio in the browser.
+
 <img alt="Audio Station: recently added and most played albums" src="assets/screenshots/apps/audio.png" width="100%">
 
 #### 📺 Live TV
 
 Watch TV in the browser from DVB, HDHomeRun and SAT>IP tuners or IPTV playlists, with a programme guide. Records from the guide or by series rules, and passes the channels on to Plex, Jellyfin, Kodi and TVs.
 
+**Use it for:** one tuner for the whole home; recording a series every week by itself; watching TV on a laptop in any room.
+
 <img alt="Live TV: the programme guide with a recording" src="assets/screenshots/apps/tv.png" width="100%">
 
 #### 📹 Surveillance
 
 Records your IP cameras, with a live grid that fits your screen, motion events and playback. Recognises people, vehicles, faces and number plates, and alerts you.
+
+**Use it for:** watching the front door and the yard, live and recorded, without a cloud subscription; an alert when a car or a stranger arrives; finding the moment something happened.
 
 <img alt="Surveillance: four cameras live in a grid" src="assets/screenshots/apps/surveillance.png" width="100%">
 
@@ -172,6 +199,8 @@ Records your IP cameras, with a live grid that fits your screen, motion events a
 #### ✉️ Web & Mail
 
 **Web Station** hosts your websites and subdomains with PHP, databases, WordPress and phpMyAdmin, each with its own certificate, and a DNS server for your domains. **Mail Server** is email for your own domain with a spam filter, and **Webmail** reads it in the browser.
+
+**Use it for:** a blog or a club's website at home; email addresses for the family or a small business on your own domain; your own DNS for your domains.
 
 <img alt="Web Station: websites with their subdomains, PHP and certificates" src="assets/screenshots/apps/web.png" width="100%">
 <p><img alt="Mail Server: today's mail, services and certificates" src="assets/screenshots/apps/mail.png" width="49%"> <img alt="Web Station's DNS server and zones" src="assets/screenshots/apps/dns.png" width="49%"></p>
@@ -183,11 +212,15 @@ Records your IP cameras, with a live grid that fits your screen, motion events a
 
 Reach your home network from anywhere with WireGuard, OpenVPN, IPsec or Tailscale, or send machines and containers through a VPN.
 
+**Use it for:** your NAS, cameras and home devices from your phone on the road; safe surfing on hotel WiFi through your home connection; a VM or container that goes online through a VPN provider.
+
 <img alt="VPN: WireGuard, OpenVPN, IKEv2 and Tailscale with the devices connected now" src="assets/screenshots/apps/vpn.png" width="100%">
 
 #### 🚫 AdGuard Home
 
 Blocks ads and trackers for your whole network as its DNS server, on the network cards you choose.
+
+**Use it for:** fewer ads and trackers on every device at home, smart TVs included; keeping children away from adult sites; seeing which device talks to where.
 
 <img alt="AdGuard Home: a day of queries, the most asked and blocked domains and the busiest clients" src="assets/screenshots/apps/adguard.png" width="100%">
 
@@ -195,17 +228,29 @@ Blocks ads and trackers for your whole network as its DNS server, on the network
 
 Measures your internet connection with Ookla's servers and keeps a history.
 
+**Use it for:** checking that your provider delivers what you pay for; finding when the line gets slow.
+
 <img alt="Speedtest: the latest result and a history of tests" src="assets/screenshots/apps/speedtest.png" width="100%">
 
 #### 📶 WiFi
 
 Turns a WiFi card into an access point, or connects Ignis to a WiFi network. It has no page of its own: you set it up under **Network & Firewall**.
 
+**Use it for:** Ignis as your home router with WiFi; a guest network of its own; a box without a network cable.
+
 ### 🧩 Apps
+
+#### 💬 Chat & Calls
+
+Messages, pictures and files between the people who have an account on your Ignis, in twos or in groups, and voice and video calls with screen sharing. End-to-end encrypted, with no sign-up and nothing outside your Ignis. In the browser and in the Ignis app.
+
+**Use it for:** a private family chat instead of WhatsApp; video calls with relatives without any outside service; a team chat for a small office.
 
 #### 🐳 Docker
 
 Runs containers on the **Containers** page. With **App Station**: self-hosted apps such as Jellyfin, Immich, Nextcloud and Home Assistant in one click.
+
+**Use it for:** Home Assistant for your smart home; any self-hosted app that comes as a container; compose projects you already have.
 
 <img alt="Containers: the container list with a compose project" src="assets/screenshots/containers.png" width="100%">
 
@@ -213,11 +258,15 @@ Runs containers on the **Containers** page. With **App Station**: self-hosted ap
 
 Runs servers for Minecraft, Valheim, Factorio and about 145 more games, with a console, mods, backups and timetables. Requires Docker.
 
+**Use it for:** a Minecraft world for your children and their friends; a server for your gaming group that runs when nobody's PC is on.
+
 <p><img alt="Game Servers: five servers with players and usage" src="assets/screenshots/apps/games.png" width="49%"> <img alt="Game Servers: a Minecraft server's add-ons from Modrinth" src="assets/screenshots/apps/games-addons.png" width="49%"></p>
 
 #### 🤖 AI
 
 Runs language models on your own GPU, beside online services such as OpenAI, Anthropic and Gemini, all in one chat.
+
+**Use it for:** asking questions about your own documents without sending them anywhere; trying open models on the GPU you have; one chat for the online services you already pay for.
 
 <img alt="AI: the engine on the GPU, local models and online providers" src="assets/screenshots/apps/ai.png" width="100%">
 
@@ -225,11 +274,15 @@ Runs language models on your own GPU, beside online services such as OpenAI, Ant
 
 A browser on Ignis, inside the page, with tabs. Open your router and other devices at home from anywhere, and save downloads straight to a share.
 
+**Use it for:** your router's or printer's settings from outside; downloads that go straight onto the NAS.
+
 <img alt="Web Browser: who watches and controls the browser, and its log" src="assets/screenshots/apps/browser.png" width="100%">
 
 #### 🖥️ Remote Desktop
 
 Reach the PCs, servers and machines on your network in the browser over RDP, VNC and SSH, with saved connections and wake-on-LAN. Requires the Graphics Runtime.
+
+**Use it for:** helping your parents on their PC; your office desktop from a tablet; a server's console without installing anything.
 
 <img alt="Remote Desktop: saved connections in groups, two of them open" src="assets/screenshots/apps/remote.png" width="100%">
 
@@ -237,17 +290,23 @@ Reach the PCs, servers and machines on your network in the browser over RDP, VNC
 
 Runs Windows programs in your browser without a Windows licence. Each set of programs has its own Windows, and sees only the folders and networks you allow.
 
+**Use it for:** an old Windows program you still need, from any device; a tool that should only see one folder.
+
 <img alt="Windows Apps: three sets of Windows programs with their icons" src="assets/screenshots/apps/winapps.png" width="100%">
 
 #### 📱 Android Apps
 
 Runs Android apps in your browser, as a whole Android screen or each app in its own window, with Google's apps or without. Requires the Graphics Runtime.
 
+**Use it for:** the app of a device that has no web page (a heating system, a camera, a robot vacuum); Android apps on a PC.
+
 <img alt="Android Apps: the installed apps" src="assets/screenshots/apps/android.png" width="100%">
 
 #### 🗄️ DSM machines
 
 Sets up Synology DSM machines with the Arx loader and keeps the loader up to date.
+
+**Use it for:** Synology's own apps in a virtual machine beside Ignis.
 
 <img alt="Arx DSM: four DSM machines, one with a loader update" src="assets/screenshots/apps/dsm.png" width="100%">
 
@@ -257,11 +316,15 @@ Sets up Synology DSM machines with the Arx loader and keeps the loader up to dat
 
 The screen the Web Browser, Windows Apps, Android Apps and Remote Desktop run on (**Display Runtime**), and GPU video conversion and 3D graphics for Linux machines (**Video Compute Runtime**). Installed by itself with the apps that need it.
 
+**Use it for:** you rarely add it yourself; it lets the apps above use your graphics card, and gives Linux VMs 3D graphics.
+
 <p><img alt="Display Runtime: the graphics cards and the running sessions" src="assets/screenshots/apps/display.png" width="49%"> <img alt="Video Compute Runtime: the FFmpeg builds" src="assets/screenshots/apps/vcrt.png" width="49%"></p>
 
 #### 🔋 UPS
 
 Watches the UPS your box runs on. When the power fails it shuts down your machines, containers and apps in the order you choose, then Ignis, and starts them again when the power is back.
+
+**Use it for:** no broken disks or VMs after a power cut; other servers on the same UPS told to shut down too.
 
 <img alt="UPS: on mains power, the battery and a day with a short power cut" src="assets/screenshots/apps/ups.png" width="100%">
 
@@ -269,15 +332,21 @@ Watches the UPS your box runs on. When the power fails it shuts down your machin
 
 Drives the front panel LEDs of UGREEN NAS boxes from the activity and temperature of your disks.
 
+**Use it for:** a UGREEN NAS whose lights show what its disks do, as they did with UGREEN's own system.
+
 <img alt="LED Control: the front panel and four bays with their disks" src="assets/screenshots/apps/ledcontrol.png" width="100%">
 
 #### 🟩 NVIDIA
 
 The NVIDIA driver, so containers can use the GPU. It has no page of its own.
 
+**Use it for:** Jellyfin or Plex transcoding, AI and other containers on an NVIDIA card.
+
 #### 👁️ Vision Runtime
 
 The image recognition that Photos and Surveillance use. It has no page of its own.
+
+**Use it for:** you do not add it yourself: Photos and Surveillance bring it for faces, objects and number plates.
 
 > [!NOTE]
 > Some of these apps are brand new. If one is not on the Extensions tab yet, it comes with one of the next releases. **Web & Mail** needs ports 80 and 443 for your websites, so it moves the Ignis interface to ports 8080 and 8443. It asks you to confirm the move first. Web Station's DNS server and AdGuard Home can run side by side, each on its own network card: for example the DNS server on the card that faces the internet and AdGuard Home on your home network's.
