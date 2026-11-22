@@ -2,7 +2,9 @@
 
 What each Ignis release brings, the newest first.
 
-## Next
+## 26.11.22
+
+*2026-11-22*
 
 ### 💽 RAID installs: important fix
 - **The data volume now mounts on machines installed with RAID.** On an install across several disks, the data volume was not mounted when Ignis started, so machines, settings and apps were stored on the much smaller system volume instead. After this update the data volume is used, and everything that ended up on the system volume is moved onto it automatically at the first start; nothing is lost. If something exists in both places, the copy from the system volume is kept in the hidden folder `.from-system-volume` on the data volume. The first start after the update can take a little longer while this happens.
