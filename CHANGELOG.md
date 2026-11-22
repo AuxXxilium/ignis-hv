@@ -50,6 +50,11 @@ What each Ignis release brings, the newest first.
 - **Cloud Sync has no page of its own any more:** its sync tasks are under **Tasks**, below the backup tasks, and its connections under **Destinations** as **Cloud connections**.
 - rclone is now part of the system, shared by Cloud Sync and Drive, and updated with each system update.
 
+### 🌍 Dynamic DNS
+- **A host name that always points at your Ignis**, even when your internet provider changes its address: **System › Host › Dynamic DNS**.
+- **ArcDNS.tech**, free for Ignis and Arc, and presets for DuckDNS, No-IP, Dynu, deSEC, dynv6, FreeDNS, IPv64, Cloudflare, Namecheap, Strato and Hurricane Electric, or any service that speaks dyndns2.
+- Ignis checks the address every five minutes and tells the provider when it changed; **Update now** does it at once and shows the answer.
+
 ### 🪟 Tidier pages
 - **Forms open as dialogs** instead of panels under the lists: in Backup & Sync (tasks, destinations, restore, VM hosts, system backups and more) and in Ignis Sync (folders, devices, Leave out). No half-empty wide page any more.
 - **Settings behind the gear:** Ignis Sync's appliance ID and settings, and Calendar & Contacts' calendars and address books, devices and Google account. Their tab bars keep what you use every day.
