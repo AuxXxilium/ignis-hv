@@ -36,6 +36,14 @@ What each Ignis release brings, the newest first.
 - Movies, TV shows with seasons and episodes, home videos, search, continue watching and watched are all there; what you watch in an app counts in Video Station too. The apps play the files as they are.
 - Revoking that app password signs the apps out. No Jellyfin software runs on your Ignis: Video Station answers the apps itself.
 
+### 📂 Drive: your FTP, FTPS and SFTP servers
+- **Open other servers in Drive:** under **Remote servers**, **Add a server** with its address, user name and password (or a private key for SFTP), and browse it next to your shares. FTPS works with explicit and implicit TLS; for a server with its own certificate there is **Accept any certificate**.
+- Open, download and upload files, make folders, rename and delete on the server, and **move or copy** between a server and your shares.
+- **Test** checks the connection before you save it. Each user sees only their own servers; the password is kept on the appliance, never in the page.
+
+### ☁️ Cloud Sync
+- rclone is now part of the system, shared by Cloud Sync and Drive, and updated with each system update.
+
 ### 💽 Storage
 - **Storage Health** and the **Storage Analyzer** moved from Monitor into **Storage**: one page with **Storage**, **Health** and **Analyzer** switched under its title. Monitor keeps Monitor, History and Benchmark. Accounts without the storage permission find Health there, as before under Monitor.
 
