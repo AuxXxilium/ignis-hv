@@ -33,6 +33,10 @@ What each Ignis release brings, the newest first.
 - The browser no longer runs into the bottom edge of the window.
 - The same one-connection rule applies to Windows Apps, Android Apps, Remote Desktop and the machine consoles: opening one again in a second tab takes it over.
 
+### 📏 Benchmark
+- **Monitor › Benchmark is tidier:** all scores in one card as tiles — CPU single and multi core, storage with its IOPS, and the GPU's video encoding. While it runs you see each part as a step: done, running or waiting.
+- The system details use Ignis's own words: the Ignis version instead of "Loader", and no more "DSM" line.
+
 ### 🏠 Overview (new first page)
 - **Overview** is the first page in the sidebar and where admins land after signing in: what the box is (name, Ignis version and whether an update is out, uptime, processor, memory, graphics cards, network cards with speed and address, drives, the UPS), what runs on it (machines, LXC and containers running of all, CPU, memory and storage, the space used per volume), the newest bell messages, and every installed app as a tile in its sidebar section. Every line and tile opens its page; **Add apps** leads to Extensions.
 - **Getting started** moved here from Virtual Machines, with **Hide** and **Don't show again** as before.
