@@ -53,7 +53,7 @@ What each Ignis release brings, the newest first.
 ### 🪟 Tidier pages
 - **Forms open as dialogs** instead of panels under the lists: in Backup & Sync (tasks, destinations, restore, VM hosts, system backups and more) and in Ignis Sync (folders, devices, Leave out). No half-empty wide page any more.
 - **Settings behind the gear:** Ignis Sync's appliance ID and settings, and Calendar & Contacts' calendars and address books, devices and Google account. Their tab bars keep what you use every day.
-- **The clock in the classic layout**, in the same place as on the desktop: the time, and a click shows the month and the way to the date and time settings.
+- **The clock in the classic layout**, in the same place and with the same calendar as on the desktop: a click shows the month with your Calendar & Contacts events, adds one with **+**, and opens Calendar & Contacts or the date and time settings.
 
 ### 💽 Storage
 - **Storage Health** and the **Storage Analyzer** moved from Monitor into **Storage**: one page with **Storage**, **Health** and **Analyzer** switched under its title. Monitor keeps Monitor, History and Benchmark. Accounts without the storage permission find Health there, as before under Monitor.
