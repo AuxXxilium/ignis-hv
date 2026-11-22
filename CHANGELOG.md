@@ -2,6 +2,16 @@
 
 What each Ignis release brings, the newest first.
 
+## Next
+
+### 💬 Chat & Calls (new app)
+- **Messages, pictures and files between the people who have an account on your Ignis**, in a conversation of two or in a group. Unread counts, who is writing, files up to 100 MB by the paper clip, by dragging them in or by pasting a picture.
+- **Voice and video calls** in any conversation, with screen sharing. Everyone else in it sees a **Join** card while they have Chat open, and the conversation shows that a call is going on until the last one leaves.
+- **No sign-up, nothing outside your Ignis.** Every Ignis user already has their chat account and is signed in with their Ignis sign-in. Nobody without an Ignis account can join, and your Ignis talks to no other chat server. Messages and files stay on the data volume.
+- **In the Ignis app too:** a **Chat** tab with the same conversations and calls, on phones and computers.
+- Calls go straight between the devices and your Ignis: on your network, over the VPN or wherever its ports TCP 7881 and UDP 7882 can be reached. The Firewall opens them while Chat runs.
+- Messages are protected by the HTTPS connection, not end-to-end encrypted: whoever has root on the appliance could read them, as with the shares.
+
 ## 26.11.22
 
 *2026-11-22*
