@@ -2,6 +2,51 @@
 
 What each Ignis release brings, the newest first.
 
+## Next
+
+### 🎞️ Media Runtime (new) and a Runtimes group
+- **One copy of the media libraries for every app**: FFmpeg (with ffmpeg and ffprobe, graphics-card encoding by VAAPI and NVENC, x264 and x265), ICU, TagLib, libexif and Pillow with HEIC. Video Station, Audio Station, Photos, Documents, Live TV, Surveillance, Drive and Web & Mail use it instead of each carrying their own; it installs itself with the first app that needs it.
+- **Much smaller apps:** Video Station and Audio Station shrink from about 80 MB to 13 MB, Photos from 26 MB to 1.5 MB, Documents and Web & Mail by 20 and 75 MB.
+- **The media apps no longer need the Graphics Runtime.** It is recommended for converting on the graphics card and still used first when it is there; Video Station now converts on the processor without it.
+- Web Browser and Windows Apps use the Graphics Runtime's own copies of the X11 libraries and fonts instead of carrying them twice.
+- **Extensions has a Runtimes group:** Media Runtime, Graphics Runtime and NVIDIA GPU, shown and installable like any other extension.
+- **An extension brings what it requires**, however it is installed: from the page, from a file or by an update. A runtime it needs in a newer version is updated first; one that can't be brought is named, and nothing is installed half.
+- The system itself no longer carries FFmpeg, TagLib, libexif or Pillow: it stays a hypervisor, and the media parts come with the apps that use them.
+
+### 🌐 Web Station: Python and Node.js apps, scheduled tasks
+- **Python apps and Node.js apps** as website types, like other hosting panels. Both are **off until you switch them on** in Web Station's settings (the gear); while off, nothing changes for any website.
+- Give an app its folder and how it starts (a file, a WSGI app, or a command like `gunicorn`, `uvicorn` or `npm start`), environment variables (secret ones are never shown again) and an optional folder nginx serves directly. **Install dependencies** runs `pip install -r requirements.txt` or `npm ci`/`npm install`.
+- Each app runs as its website's own account on a private port behind nginx, with HTTPS and WebSockets, and is **restarted within a second if it crashes**. Start, Stop, Restart, its state and its log are on the website.
+- Python uses the system's Python with its own environment per website. Node.js (the newest LTS) is downloaded only when you switch it on, kept up to date, and removed when you switch it off.
+- **Scheduled tasks for every website:** run a command in the site's folder (as the site's account, with its Python, Node.js or PHP) or call a URL, every few minutes, hourly, daily, weekly, monthly or by a cron expression. Each has a switch, a time limit, **Run now** and its last runs with their output; a failing task rings the bell (and your email or webhook, if you route it there). The Schedules tab lists them too.
+- The box has no compiler: Python and npm packages need their ready-built versions, which most have.
+
+### 👥 Users from the command line
+- `ignis-user add <name> <preset>` makes an account with that preset (admin, operator or viewer) at once. Without a preset it can do nothing yet, and the Users page marks it **Choose permissions** until an admin picks them and saves.
+- Either way the account can now sign in to network shares and the other apps straight away; before, one made on the command line could not until the Users page saved it once.
+- `ignis-user role` gives the preset's permissions too, so it really makes someone an admin again, and `ignis-user delete` removes the account's share access and app passwords as the Users page does.
+
+### 🔒 Security
+- **Chat's sign-in stops guessing:** ten wrong passwords from one address in ten minutes (a hundred overall) and it refuses to check more for a while; each failure is logged.
+- **Backup & Sync:** listing what is in a backup now needs the storage permission, as restoring does; before, any account could see every backed-up file's name.
+- **Live TV:** a playlist can only name network streams. A line pointing at a file on the box was played, and could show any file to a viewer.
+- **Passwords and secrets never appear in the process list any more:** signing in, changing a password, 2FA codes, Drive's share links and linked hosts used to put them on a command line any program on the box could read.
+- **Disabling an account signs it out everywhere at once:** Ignis itself (from the Users page and the command line), Chat within 20 seconds, and the Jellyfin and Infuse apps of Video Station. Removing someone's Video Station permission signs their apps out within half a minute.
+- Live TV's internal service only answers its own page now, not any program on the box.
+
+### 🧩 Extensions
+- **Mail Server: changes from the page work again.** Its programs held a lock after they started, so adding a mailbox or a domain waited a minute and failed with an empty message. Web Station, AdGuard Home, SAN Manager, Shares and VPN had the same flaw and are fixed too.
+- An update replaces an extension's files whole: a page, library or font a newer version leaves out no longer stays behind (the old Network Shares page next to Drive & Shares, for one).
+- A system one release behind is only offered extensions it can run, so it can still install them instead of having each install refused.
+- Drive converts audio and video with the Media Runtime.
+- The Web Browser's self-test checks the way the page really reaches the browser today.
+
+### ⚙️ System
+- **The kernel stays on 6.18.65** and moves only on purpose, together with the extensions that carry kernel drivers (WiFi, NVIDIA GPU, Live TV's tuners). Following every new point release meant a new kernel about once a week, which left those extensions unable to start after each system update until they were rebuilt.
+- Leftovers in the data volume's temporary folder are cleared at every start once they are a day old.
+- The start-up messages no longer show "vmtoolsd: FAIL" on machines that aren't VMware guests, nor "ntpd: FAIL" (two time services were started).
+- Installer: with a single disk, that disk is ticked already, and the last screen no longer breaks a word onto its own line.
+
 ## 26.11.23
 
 *2026-11-23*
