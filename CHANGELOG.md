@@ -35,7 +35,7 @@ What each Ignis release brings, the newest first.
 - Live TV's internal service only answers its own page now, not any program on the box.
 
 ### 🧩 Extensions
-- **Mail Server: changes from the page work again.** Its programs held a lock after they started, so adding a mailbox or a domain waited a minute and failed with an empty message. Web Station, AdGuard Home, SAN Manager, Shares and VPN had the same flaw and are fixed too.
+- **Mail Server: changes from the page work again.** Its programs held a lock after they started, so adding a mailbox or a domain waited a minute and failed with an empty message. Web Station, AdGuard Home, SAN Manager, Shares and VPN had the same flaw and are fixed too, and so do the system's own: after a system update, the extensions it started kept the update's lock, so no later update of the extensions could run until a restart.
 - An update replaces an extension's files whole: a page, library or font a newer version leaves out no longer stays behind (the old Network Shares page next to Drive & Shares, for one).
 - A system one release behind is only offered extensions it can run, so it can still install them instead of having each install refused.
 - Drive converts audio and video with the Media Runtime.
