@@ -8,6 +8,7 @@ What each Ignis release brings, the newest first.
 - **Antivirus:** "Update now" said an update was already running from the first timed update on, until a restart. Definitions now update by hand again, and clamd and the new-files watcher no longer keep the scan or update lock.
 - **Live TV:** each live channel you stopped left a finished FFmpeg process behind until Live TV restarted. They are cleaned up now.
 - **Web Station:** a scheduled task that leaves something running in the background no longer stops its later runs ("still running from before").
+- **WiFi:** after a restart of the WiFi extension, the system kept using the old list of drivers until a reboot, so drivers changed by an update weren't found. A restart now loads the new list.
 
 ## 26.11.23.1
 
