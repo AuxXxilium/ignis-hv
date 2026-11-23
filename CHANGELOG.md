@@ -2,7 +2,9 @@
 
 What each Ignis release brings, the newest first.
 
-## Next
+## 26.11.23
+
+*2026-11-23*
 
 ### 💬 Chat & Calls (new app)
 - **Messages, pictures and files between the people who have an account on your Ignis**, in a conversation of two or in a group. Unread counts, who is writing, files up to 100 MB by the paper clip, by dragging them in or by pasting a picture.
