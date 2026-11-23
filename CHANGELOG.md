@@ -2,7 +2,9 @@
 
 What each Ignis release brings, the newest first.
 
-## Next
+## 26.11.23.1
+
+*2026-11-23*
 
 ### 🎞️ Media Runtime (new) and a Runtimes group
 - **One copy of the media libraries for every app**: FFmpeg (with ffmpeg and ffprobe, graphics-card encoding by VAAPI and NVENC, x264 and x265), ICU, TagLib, libexif and Pillow with HEIC. Video Station, Audio Station, Photos, Documents, Live TV, Surveillance, Drive and Web & Mail use it instead of each carrying their own; it installs itself with the first app that needs it.
