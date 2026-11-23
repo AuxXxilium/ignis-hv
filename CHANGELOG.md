@@ -2,6 +2,13 @@
 
 What each Ignis release brings, the newest first.
 
+## Next
+
+### 🛠️ Fixes
+- **Antivirus:** "Update now" said an update was already running from the first timed update on, until a restart. Definitions now update by hand again, and clamd and the new-files watcher no longer keep the scan or update lock.
+- **Live TV:** each live channel you stopped left a finished FFmpeg process behind until Live TV restarted. They are cleaned up now.
+- **Web Station:** a scheduled task that leaves something running in the background no longer stops its later runs ("still running from before").
+
 ## 26.11.23.1
 
 *2026-11-23*
