@@ -4,6 +4,9 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### 🎨 Interface
+- **No more thin light borders:** cards, fields, menus, dialogs, windows and the extension pages no longer have a light edge around them, in the solid and the glass look. In dark mode, fields stand out by their fill.
+
 ### 🛠️ Fixes
 - **Antivirus:** "Update now" said an update was already running from the first timed update on, until a restart. Definitions now update by hand again, and clamd and the new-files watcher no longer keep the scan or update lock.
 - **Live TV:** each live channel you stopped left a finished FFmpeg process behind until Live TV restarted. They are cleaned up now.
