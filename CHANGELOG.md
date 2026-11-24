@@ -2,7 +2,9 @@
 
 What each Ignis release brings, the newest first.
 
-## Next
+## 26.11.24.1
+
+*2026-11-24*
 
 ### 🛠️ Fixes
 - **Storage:** once a storage volume existed, the Storage page listed no drives at all, so a newly added disk could not be seen or used. All drives show again, and if the list cannot be read the page now says why.
