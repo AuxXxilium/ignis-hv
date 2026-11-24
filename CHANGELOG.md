@@ -2,7 +2,9 @@
 
 What each Ignis release brings, the newest first.
 
-## Next
+## 26.11.24
+
+*2026-11-24*
 
 ### 🎨 Interface
 - **No more thin light borders:** cards, fields, menus, dialogs, windows and the extension pages no longer have a light edge around them, in the solid and the glass look. In dark mode, fields stand out by their fill.
