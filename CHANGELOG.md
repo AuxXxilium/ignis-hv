@@ -2,6 +2,18 @@
 
 What each Ignis release brings, the newest first.
 
+## Next
+
+### 🔒 Trusted HTTPS without a warning
+- **Ignis has its own certificate authority:** install it once on a computer or phone, and the browser trusts your Ignis by its address and its name, with no warning. System › Host › Certificate has the download; the page's help says how to install it on Windows, macOS, iPhone, Android, Linux and in Firefox.
+- **The certificate keeps itself current:** it is renewed on its own before it runs out, and when the appliance gets a new address or name. Devices that installed the authority keep trusting it.
+- **It can only vouch for your own network:** the authority is limited to private addresses and local names, so even its key could never stand in for a website on the internet. For a public domain, Let's Encrypt stays the right choice.
+- New installations start with it. On an existing Ignis, choose **Use this Ignis's own certificate** under System › Host when you want it.
+
+### 🛠️ Fixes
+- **Downloading a system update** no longer fails with "Failed with status: 504" when Ignis is reached through a reverse proxy. The download runs on the appliance, and the page follows it until the update is ready.
+- **The sign-in page** no longer says only the installer's account can sign in: any Ignis account can, and admins add them under System › Users.
+
 ## 26.11.24.1
 
 *2026-11-24*
