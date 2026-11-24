@@ -2,7 +2,9 @@
 
 What each Ignis release brings, the newest first.
 
-## Next
+## 26.11.24.2
+
+*2026-11-24*
 
 ### 🔒 Trusted HTTPS without a warning
 - **Ignis has its own certificate authority:** install it once on a computer or phone, and the browser trusts your Ignis by its address and its name, with no warning. System › Host › Certificate has the download; the page's help says how to install it on Windows, macOS, iPhone, Android, Linux and in Firefox.
