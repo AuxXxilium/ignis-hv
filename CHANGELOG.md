@@ -7,6 +7,8 @@ What each Ignis release brings, the newest first.
 ### 🛠️ Fixes
 - **Storage:** once a storage volume existed, the Storage page listed no drives at all, so a newly added disk could not be seen or used. All drives show again, and if the list cannot be read the page now says why.
 - **Disks added while running (Ignis as a virtual machine):** a disk hot-added in Proxmox, QEMU or Hyper-V now appears without a restart.
+- **Refresh on the Storage page looks for new drives:** a drive plugged in while running that the system was not told about (a SATA port with hot-plug off in the BIOS, older SCSI and RAID cards) shows up after Refresh instead of only after a restart.
+- **Storage names the right drive after drives were added:** adding a drive or controller can change the drives' order, and Storage could then show the wrong drive as part of a volume and skip the warning before erasing the right one. Each volume's drives are now found by what is on them.
 
 ## 26.11.24
 
