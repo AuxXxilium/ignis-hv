@@ -2,7 +2,9 @@
 
 What each Ignis release brings, the newest first.
 
-## Next
+## 26.11.27
+
+*2026-11-27*
 
 ### ⚠️ Changes you may need to act on
 - **Monitoring API: the key only in a header.** Home Assistant, Prometheus, ioBroker and other apps that read the monitoring API must send the key as `Authorization: Bearer <key>` (or `X-Api-Key: <key>`). A key in the address (`?key=`) is now refused, because addresses end up in logs. If you used `?key=`, make a new key under System › API — the old one may be in a log — and paste the updated configuration from **Connect an app** into your app.
