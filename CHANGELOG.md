@@ -4,6 +4,10 @@ What each Ignis release brings, the newest first.
 
 ## Next
 
+### ⚠️ Changes you may need to act on
+- **Monitoring API: the key only in a header.** Home Assistant, Prometheus, ioBroker and other apps that read the monitoring API must send the key as `Authorization: Bearer <key>` (or `X-Api-Key: <key>`). A key in the address (`?key=`) is now refused, because addresses end up in logs. If you used `?key=`, make a new key under System › API — the old one may be in a log — and paste the updated configuration from **Connect an app** into your app.
+- **WiFi, Live TV and the NVIDIA driver need their new packages** for this release's kernel. Extensions update themselves after the system update; until they have, those three do not start.
+
 ### 🔧 Hardware
 - **Driver Check on Info:** every storage, network, WiFi, display and USB device with the driver it uses. A device without a driver says why and what to do: the system has a driver that did not load, or an extension carries one (WiFi, Live TV, NVIDIA GPU) that you can install, start, or get again for this release. A device whose driver could not load its firmware, or a WiFi card whose radio is switched off by a switch or in the BIOS, is shown too. Bluetooth devices are listed as not supported, without a warning. You can switch off the warning for hardware you don't use; System Health on the Overview counts the rest.
 - **System Health on the Overview:** one tile each for storage, drivers, temperatures, fans and the UPS, green, yellow or red, each opening the page that explains it. **Clear** puts away a warning you know about until it gets worse or comes back. Home Assistant and Prometheus can read the same tiles through the monitoring API.
@@ -11,7 +15,7 @@ What each Ignis release brings, the newest first.
 - **Processes in the Monitor:** every process on the host with its CPU, memory and disk use right now, its details, and ending one. Ignis refuses to end what it cannot live without, and asks twice for what belongs to it, an extension or a service.
 - **System log on Info:** the kernel log and the system log with search, and how the machine booted: its kernel command line and the modules loaded.
 - **This machine on Info:** the board, BIOS, processor and memory modules beside a picture of the board, which you can replace with a photo of your own machine.
-- **Frequency statistics on the CPU page:** how much of the time the processor spent at each clock.
+- **Frequency statistics on the CPU page:** how much of the time the processor spent at each clock since the start, as the kernel counts it.
 - **Download logs on Info:** the hardware and boot logs as one zip for a support request — kernel log, devices and drivers, extensions with drivers, network, disks, how the system booted — with passwords, keys, tokens, email addresses and serial numbers taken out. The page's help lists what is removed.
 
 ### 🛠️ Fixes
