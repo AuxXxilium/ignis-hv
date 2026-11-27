@@ -2,6 +2,12 @@
 
 What each Ignis release brings, the newest first.
 
+## Next
+
+### 🔧 Hardware
+- **Driver Check on Info:** every storage, network, WiFi, display and USB device with the driver it uses. A device without a driver says why and what to do: the system has a driver that did not load, or an extension carries one (WiFi, Live TV, NVIDIA GPU) that you can install, start, or get again for this release. A device whose driver could not load its firmware, or a WiFi card whose radio is switched off by a switch or in the BIOS, is shown too. Bluetooth devices are listed as not supported, without a warning. You can switch off the warning for hardware you don't use; the Overview counts the rest.
+- **Download logs on Info:** the hardware and boot logs as one zip for a support request — kernel log, devices and drivers, extensions with drivers, network, disks, how the system booted — with passwords, keys, tokens, email addresses and serial numbers taken out. The page's help lists what is removed.
+
 ## 26.11.24.2
 
 *2026-11-24*
