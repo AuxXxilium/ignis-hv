@@ -14,6 +14,10 @@ What each Ignis release brings, the newest first.
 - **Frequency statistics on the CPU page:** how much of the time the processor spent at each clock.
 - **Download logs on Info:** the hardware and boot logs as one zip for a support request — kernel log, devices and drivers, extensions with drivers, network, disks, how the system booted — with passwords, keys, tokens, email addresses and serial numbers taken out. The page's help lists what is removed.
 
+### 🛠️ Fixes
+- **A physical disk passed through to a virtual machine stays the machine's after a restart.** A disk set up in DSM in an Arx machine (or any disk carrying another system's RAID) was taken by Ignis at startup: Storage showed it as "In use by something else", the machine would not start, and the disk could not be added back. Ignis now only brings up its own RAID arrays, lets go of anything it still holds on such a disk before machines start, and Storage says which machine the disk is passed through to. Nothing on the disk was changed, so DSM finds its volume as before. In the machine's settings, a passed-through disk that is missing or held by the host stays in place with the reason, and **Release** frees it.
+- **A machine whose passed-through disk is not connected** no longer starts without it; it says the disk is missing instead.
+
 ## 26.11.24.2
 
 *2026-11-24*
