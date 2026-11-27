@@ -17,6 +17,7 @@ What each Ignis release brings, the newest first.
 ### 🛠️ Fixes
 - **A physical disk passed through to a virtual machine stays the machine's after a restart.** A disk set up in DSM in an Arx machine (or any disk carrying another system's RAID) was taken by Ignis at startup: Storage showed it as "In use by something else", the machine would not start, and the disk could not be added back. Ignis now only brings up its own RAID arrays, lets go of anything it still holds on such a disk before machines start, and Storage says which machine the disk is passed through to. Nothing on the disk was changed, so DSM finds its volume as before. In the machine's settings, a passed-through disk that is missing or held by the host stays in place with the reason, and **Release** frees it.
 - **A machine whose passed-through disk is not connected** no longer starts without it; it says the disk is missing instead.
+- **The machine card shows a passed-through disk's real size** instead of "9 B".
 
 ## 26.11.24.2
 
